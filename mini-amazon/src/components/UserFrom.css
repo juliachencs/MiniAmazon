@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowarp;
+  justify-content: space-evenly;
+  padding: 64px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: max-content;
+}
+
+
+.card .subfoot {
+  font-size: 0.7em;
+}
+
+.signin input {
+  width: 100%;
+  height: 48px;
+  opacity: 1;
+  border-radius: 4px;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--primary-hl-bg-color);
+  color: var(--primary-hl-color);
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+
+.card h2 {
+  text-align: center;
+}
+
+.mini-amazon-user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-amazon-user-form input {
+  width: 100%;
+  height: 48px;
+  opacity: 1;
+  border-radius: 4px;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

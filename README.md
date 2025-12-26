@@ -14,6 +14,7 @@ MiniAmazon was developed as a **full-stack demo project** to simulate a real-wor
 
 ## Core Features
 -   **Responsive Design:** A seamless user interface fully optimized for both desktop and mobile devices.
+-   
 -   **Secure Authentication:** User registration and login system to protect account access and data.
 -   **User Functions:** Core features available to all users, including browsing the product catalog and full **Cart Operations** (add, remove, and update quantities).
 -   **Product Management (Seller Only):** A professional management dashboard that allows sellers to Create, Read, Update, and Delete (**CRUD**) their own product listings.
@@ -24,6 +25,7 @@ MiniAmazon was developed as a **full-stack demo project** to simulate a real-wor
 -   **Database:** MongoDB
 -   **Design Tool:** Figma
 -   **Development Tool:** VS Code
+
 
 ## Team Members
 -   Jiaxuan Xie    
