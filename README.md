@@ -15,7 +15,7 @@ MiniAmazon was developed as a **full-stack demo project** to simulate a real-wor
 ## Core Features
 -   **Responsive Design:** A seamless user interface fully optimized for both desktop and mobile devices.
 
-<video  height="240" src="https://github.com/juliachencs/MiniAmazon/blob/JuliaChen/docs/Responsive%20Desgin%20of%20the%20sign-in%20page.mp4"> </video>
+    <video src="https://github.com/user-attachments/assets/b55e2e0c-c92f-4731-806c-13b5af7e678e"> </video>
 
 -   **Secure Authentication:** User registration and login system to protect account access and data.
 -   **User Functions:** Core features available to all users, including browsing the product catalog and full **Cart Operations** (add, remove, and update quantities).
