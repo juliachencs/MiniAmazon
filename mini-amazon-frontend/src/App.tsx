@@ -3,6 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import { Link } from 'react-router-dom'
+
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +25,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+      
+        <Link to="/sign-in">Sign in</Link>
+        <Link to='/sign-up'>Sign up</Link>
+        <Link to='/recover-password'>Recover password</Link>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

@@ -33,6 +33,12 @@ Use the Express Application Generator to quickly create a mock backend
   SET DEBUG=mini-amazon-backend-mock:* & npm start
 ```
 
+## Issues and Fixes
+
+- Failed to resolve import "react-router"
+```bash
+  npm install react-router-dom
+```
 
 ## TODOs
 
