@@ -19,6 +19,9 @@ Select a framework:
 │  Yes
 ```
 
+## convert to router
+https://reactrouter.com/tutorials/quickstart
+
 ## Create a mock backend for debug
 Use the Express Application Generator to quickly create a mock backend
 

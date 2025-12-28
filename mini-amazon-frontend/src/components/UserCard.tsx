@@ -1,11 +1,12 @@
 import { Link } from "react-router";
+import './UserCard.css';
 
 function UserForm({buttonText, onSubmitHandler, hasPasswordField=true}: {buttonText: string, hasPasswordField?: boolean, onSubmitHandler?: () => void}) {
   return (
     <form className="user-form" onSubmit={onSubmitHandler}>
       <div className="user-form-email">
-        <p>Email</p>
-        <input type="text" placeholder="example@example.com" />
+        {hasPasswordField && <p>Email</p>}
+        <input type="email" placeholder="example@example.com" />
       </div>
 
       {hasPasswordField && 
@@ -14,8 +15,7 @@ function UserForm({buttonText, onSubmitHandler, hasPasswordField=true}: {buttonT
           <input type="password" placeholder="Password" />
         </div>
       }
-
-      <button className="user-form-button" type="submit">{buttonText}</button>
+      <button className="user-form-submit" type="submit">{buttonText}</button>
     </form>
   );
 }

@@ -5,16 +5,14 @@ import './index.css'
 import App from './App.tsx'
 import DefaultHeader from './components/header.tsx'
 import DefaultFooter from './components/Footer.tsx'
-import { SignUpUserCard, SignInUserCard, RecoverPasswordUserCard } from './components/UserForm'
+import { SignUpUserCard, SignInUserCard, RecoverPasswordUserCard } from './components/UserCard.tsx'
 
 
 function DefaultLayout() { 
   return (
     <>
       <DefaultHeader />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
        <DefaultFooter />
     </>
   );
@@ -34,15 +32,3 @@ createRoot(document.getElementById('root')!).render(
 
 )
 
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import { BrowserRouter } from "react-router";
-// // import App from "./app";
-
-// // const root = document.getElementById("root");
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <BrowserRouter>
-//     <App />
-//   </BrowserRouter>,
-// );

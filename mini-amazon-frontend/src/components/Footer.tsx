@@ -1,8 +1,10 @@
 
+import "./Footer.css";
+
 export default function Footer() {
   return (
     <footer className="footer flexrow">
-      <div className="copyrights">&copy; 2023 MiniAmazon. All rights reserved. </div>
+      <div className="copyrights">&copy; 2025 All rights reserved. </div>
 
       <div className="socialmedia">
         <a className="fa fa-youtube"></a>
