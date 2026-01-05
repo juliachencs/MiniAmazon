@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { loginController } from "../controllers/auth/login.controller.js";
-import { signupController } from "../controllers/auth/register.controller.js";
+import { signupController } from "../controllers/auth/signup.controller.js";
 import { recoverPasswordController } from "../controllers/auth/recover-password.contoller.js";
 import { signoutController } from "../controllers/auth/signout.contoller.js";
 

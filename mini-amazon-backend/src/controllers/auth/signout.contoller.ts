@@ -6,7 +6,6 @@ export async function signoutController(
     next: NextFunction
 ): Promise<void> {
     try {
-
         res.status(200).json({
             success: true,
             data: 'signout successfull'
