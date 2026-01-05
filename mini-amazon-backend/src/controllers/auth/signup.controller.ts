@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import { registerService } from '../../services/auth/register.service.js';
 
-export const registerController = async (
+export const signupController = async (
     req: Request,
     res: Response,
     next: NextFunction

@@ -19,14 +19,18 @@ export const UserModel = {
         return userArray.find(user => user.email === email) ?? null;
     },
 
-    // async create(email : string, password : string): Promise<User> {
-    //     const user : User = {
-    //         id: Math.random().toString(),
-    //         email: email,
-    //         password: password,
-    //         role : Role.USER
-    //     }
-    //     userArray.push(user);
-    //     return user;
-    // }
+    async has(email : string): Promise<boolean>  {
+        return userArray.some(user => user.email === email);
+    },
+
+    async create(email : string, hashedPassword : string): Promise<User> {
+        const user : User = {
+            id: Math.random().toString(),
+            email: email,
+            password: hashedPassword,
+            role : Role.USER
+        }
+        userArray.push(user);
+        return user;
+    }
 }

@@ -23,8 +23,6 @@ export async function loginService(
     // const token = generateToken({ userRole: user.role });
     const token : string = "somethingsupercomplicated"
 
-    console.log(user.role)
-
     return {
         role: user.role,
         token: token
