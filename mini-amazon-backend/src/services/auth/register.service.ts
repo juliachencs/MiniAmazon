@@ -1,6 +1,7 @@
 import type { authRespond } from "../../types/authRespond.interface.js";
 import type { User } from "../../types/user.interface.js";
 import { UserModel } from "../../models/user.model.js";
+import { generateToken } from "../../utils/jwt.util.js";
 
 
 export async function registerService(email: string, password: string): Promise<authRespond> {
@@ -15,9 +16,7 @@ export async function registerService(email: string, password: string): Promise<
     const hashedPassword = password;
     const user : User = await UserModel.create(email, hashedPassword);
 
-    // TODO: finish token generator
-    // const token = generateToken({ userRole: user.role });
-    const token : string = "somethingsupercomplicatedNo." + Math.random()*100
+    const token = generateToken(user);
 
     return {
         role: user.role,

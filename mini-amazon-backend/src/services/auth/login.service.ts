@@ -2,6 +2,7 @@ import type { User } from "../../types/user.interface.js";
 import { UserModel } from "../../models/user.model.js";
 import { comparePassword } from "../../utils/password-comparer.util.js";
 import type { authRespond } from "../../types/authRespond.interface.js";
+import { generateToken } from "../../utils/jwt.util.js";
 
 export async function loginService(
     email : string,
@@ -19,9 +20,7 @@ export async function loginService(
         throw new Error('Password not match');
     }
 
-    // TODO: finish token generator
-    // const token = generateToken({ userRole: user.role });
-    const token : string = "somethingsupercomplicated"
+    const token = generateToken(user);
 
     return {
         role: user.role,
