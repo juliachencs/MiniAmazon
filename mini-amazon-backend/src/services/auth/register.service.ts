@@ -2,13 +2,14 @@ import type { authRespond } from "../../types/authRespond.interface.js";
 import type { User } from "../../types/user.interface.js";
 import { UserModel } from "../../models/user.model.js";
 import { generateToken } from "../../utils/jwt.util.js";
+import { HttpConfilctError } from "../../errors/conflict-error.js";
 
 
 export async function registerService(email: string, password: string): Promise<authRespond> {
     const hasUser: boolean = await UserModel.has(email);
 
     if (hasUser) {
-        throw new Error('User already exist');
+        throw new HttpConfilctError('User already exist');
     }
 
     //TODO
