@@ -1,11 +1,11 @@
 import type { Request, Response, NextFunction } from 'express';
 import { registerService } from '../../services/auth/register.service.js';
 
-export const signupController = async (
+export async function signupController (
     req: Request,
     res: Response,
     next: NextFunction
-) => {
+): Promise<void> {
     try {
         const { email, password } = req.body;
 

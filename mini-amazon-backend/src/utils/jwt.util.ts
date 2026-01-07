@@ -1,7 +1,7 @@
-import jwt from 'jsonwebtoken'
+import jwt, { type SignOptions } from 'jsonwebtoken'
 import type { User } from '../types/user.interface.js'
 
-const JWT_SecretKey = 'somethingsupersecret'
+const JWT_SecretKey = process.env.JWT_SECRET || 'somethingsupersecret';
 
 export function generateToken(user: User): string {
     const payload = {
@@ -10,5 +10,5 @@ export function generateToken(user: User): string {
         role: user.role
     }
 
-    return jwt.sign(payload, JWT_SecretKey);
+    return jwt.sign(payload, JWT_SecretKey, { expiresIn: '1h' });
 }
