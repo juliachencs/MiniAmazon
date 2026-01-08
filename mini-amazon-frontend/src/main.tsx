@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
-import DefaultHeader from './components/header.tsx'
+import DefaultHeader from './components/Header.tsx'
 import DefaultFooter from './components/Footer.tsx'
 import { SignUpUserCard, SignInUserCard, RecoverPasswordUserCard } from './components/UserCard.tsx'
 
@@ -13,7 +13,7 @@ function DefaultLayout() {
     <>
       <DefaultHeader />
       <Outlet />
-       <DefaultFooter />
+      <DefaultFooter />
     </>
   );
 }

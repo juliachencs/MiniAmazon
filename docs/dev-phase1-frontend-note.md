@@ -1,4 +1,10 @@
 
+# Frontend development notes
+
+# The process
+
+Notes along with the development.
+
 ## Create the mini-amazon-frontend project
 
 To create a new React application mini-amazon-frontend using Vite with npm:
@@ -19,8 +25,8 @@ Select a framework:
 │  Yes
 ```
 
-## convert to router
-https://reactrouter.com/tutorials/quickstart
+<!-- ## convert to router
+https://reactrouter.com/tutorials/quickstart -->
 
 ## Create a mock backend for debug
 Use the Express Application Generator to quickly create a mock backend
@@ -37,14 +43,14 @@ Use the Express Application Generator to quickly create a mock backend
 ```
 
 ## Issues and Fixes
-
 - Failed to resolve import "react-router"
 ```bash
   npm install react-router-dom
 ```
 
 ## TODOs
-
-- [] 
-
-
+- [ ] JWT Authentication
+  - [ ] draft the workflow 
+  - [ ] 
+- [ ] Validation
+- [ ] Responsive CSS Design
