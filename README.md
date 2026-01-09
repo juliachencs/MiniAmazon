@@ -11,6 +11,9 @@ MiniAmazon was developed as a **full-stack demo project** to simulate a real-wor
     
 -   **Role-Based UI:** Implemented **Role-Based Access Control (RBAC)** to ensure a tailored interface for both Buyers and Sellers, following modern frontend architecture standards.
 
+# Link to Project Document
+https://github.com/mercuryedge117/MAZ/blob/master/mini-amazon-project-document.md
+
 
 ## Core Features
 -   **Responsive Design:** A seamless user interface fully optimized for both desktop and mobile devices.
