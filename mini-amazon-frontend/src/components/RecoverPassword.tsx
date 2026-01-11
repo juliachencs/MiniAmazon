@@ -24,7 +24,7 @@ export default function RecoverPassword() {
         console.log("Cancelled");
       },
       okText: "Go to login",
-      cancelText: "return",
+      cancelText: "Return",
     });
   };
 

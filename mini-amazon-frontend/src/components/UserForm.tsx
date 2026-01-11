@@ -29,6 +29,7 @@ export default function UserForm({
       layout="vertical"
       name="userform"
       onFinish={handler}
+      initialValues={{ email: "regular@user.com", password: "ABC@abc@123" }}
       style={{ width: "100%" }}
       scrollToFirstError={{ behavior: "instant", block: "end", focus: true }}
     >
