@@ -10,7 +10,20 @@ const userArray :  User[] = [
         id: "1",
         email: "randon@abbc.com",
         password: "blablabla",
+        role: Role.USER
+    },
+
+    {
+        id: "2",
+        email: "admin@user.com",
+        password: "abc&ABC+1234",
         role: Role.ADMIN
+    },
+    {
+        id: "3",
+        email: "regular@user.com",
+        password: "ABC@abc@123",
+        role: Role.USER
     }
 ];
 
