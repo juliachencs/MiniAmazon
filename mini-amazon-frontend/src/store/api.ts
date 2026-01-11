@@ -35,6 +35,11 @@ export const api = createApi({
         body: credentials,
       }),
       
+      // Pick out data and prevent nested properties in a hook or selector
+      transformResponse: (response: { data: UserAuth}) => {
+        return response.data;
+      },
+      
     }),
 
     recover: build.mutation<UserAuth, UserInfo>({

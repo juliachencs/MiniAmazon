@@ -19,10 +19,10 @@ export type ProductListItem = Pick<Product, "id" | "name" | "price" | "image_url
 
 
 // User auth
-export type Role = 'admin' | 'regular' | 'guest';
+export type Role = 'admin' | 'regular' ;
 
 export interface UserAuth{
-  role: Role | null
+  role: Role | null;
   token: string | null
 }
 

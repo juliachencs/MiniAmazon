@@ -1,29 +1,31 @@
-import { Modal, message, Flex, Typography } from "antd";
+import { Modal, Flex, Typography } from "antd";
 
 import UserForm from "../components/UserForm";
-import { useState } from "react";
 import type { UserInfo } from "../types";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function RecoverPassword() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  const navigate = useNavigate();
 
   const onRecoverPassowrd = (values: UserInfo) => {
-    setUserEmail(values.email);
-    showModal();
+    Modal.confirm({
+      title: "Recover password",
+      content: (
+        <p>
+          A password reset email has been sent to {values.email}. Please check
+          your inbox.
+        </p>
+      ),
+      onOk: () => {
+        console.log("Confirmed");
+        navigate("/login");
+      },
+      onCancel: () => {
+        console.log("Cancelled");
+      },
+      okText: "Go to login",
+      cancelText: "return",
+    });
   };
 
   return (
@@ -42,29 +44,6 @@ export default function RecoverPassword() {
         <Typography.Text>Remember your password?</Typography.Text>{" "}
         <Typography.Link href="/login">Sign in</Typography.Link>{" "}
       </Flex>
-
-      <Modal
-        title="Basic Modal"
-        closable={{ "aria-label": "Custom Close Button" }}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        okText={<Link to="/login">Sign in</Link>}
-        cancelText="Return"
-        width={{
-          xs: "90%",
-          sm: "80%",
-          md: "70%",
-          lg: "60%",
-          xl: "50%",
-          xxl: "40%",
-        }}
-      >
-        <p>
-          A password reset email has been sent to {userEmail}. Please check your
-          inbox.
-        </p>
-      </Modal>
     </>
   );
 }

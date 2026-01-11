@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 
 const authSlice = createSlice({
   name: 'auth',
-  initialState: { role: "guest", token: null } as UserAuth,
+  initialState: { role: null, token: null } as UserAuth,
   reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
@@ -28,7 +28,7 @@ const authSlice = createSlice({
       api.endpoints.signout.matchFulfilled,
       (state) => {
         console.log("matcher: signout")
-        state.token = "guest"
+        state.token = null
         state.role = null
         console.log(state.token, state.role)
       },

@@ -1,8 +1,9 @@
-import { Typography, Button } from "antd";
+import { Typography, Button, message } from "antd";
 import "./Header.css";
 
 import { store } from "../store/store";
 import { useSignoutMutation } from "../store/api";
+import { useSelector } from "react-redux";
 function UserButton() {
   const [signout] = useSignoutMutation();
   // const [role, setRole] = useState(store.getState().auth.role);
@@ -10,11 +11,15 @@ function UserButton() {
   //   setRole(store.getState().auth.role);
   // });
 
-  const role = store.getState().auth.role;
+  const role = useSelector((state) => state.auth.role);
 
   const onSignout = () => {
+    console.log("before signout: " + role);
     signout()
-      .then(() => console.log("sign out"))
+      .then(() => {
+        message.info("You have signed out!");
+        console.log("sign out: " + role);
+      })
       .catch((e) => console.log(e));
   };
   const user = (
