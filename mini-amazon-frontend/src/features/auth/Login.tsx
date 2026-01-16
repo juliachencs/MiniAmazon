@@ -1,9 +1,9 @@
 import { Modal, message, Flex, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
-import { useLoginMutation } from "../store/api";
-import { type UserInfo } from "../types";
-import UserForm from "../components/UserForm";
+import { useLoginMutation } from "@/app/api";
+import { type UserInfo } from "@/app/types";
+import UserForm from "@/features/auth/UserForm";
 
 export default function Login() {
   const [login] = useLoginMutation();

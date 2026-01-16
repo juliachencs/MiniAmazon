@@ -1,6 +1,6 @@
 import { Button, Form, Input, InputNumber, Select, Image, Modal } from "antd";
 const { TextArea } = Input;
-import { type Product, allCategories } from "../types";
+import { type Product, allCategories } from "@/app/types";
 
 type ProductFormData = Omit<Product, "id">;
 const previewLogo =

@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {type UserAuth} from "../types"
-import {api} from "../store/api"
+import {type UserAuth} from "@/app/types"
+import {api} from "@/app/api"
 import { useMemo } from 'react';
 
 const authSlice = createSlice({

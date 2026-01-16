@@ -1,9 +1,9 @@
 import { Typography, Button, message } from "antd";
+
+import { useSignoutMutation } from "../app/api";
+import { useSelector } from "react-redux";
 import "./Header.css";
 
-import { store } from "../store/store";
-import { useSignoutMutation } from "../store/api";
-import { useSelector } from "react-redux";
 function UserButton() {
   const [signout] = useSignoutMutation();
   // const [role, setRole] = useState(store.getState().auth.role);

@@ -7,10 +7,10 @@ import { Button } from "antd";
 import "./App.css";
 import DefaultHeader from "./components/Header.tsx";
 import DefaultFooter from "./components/Footer.tsx";
-import Login from "./components/Login.tsx";
-import RecoverPassword from "./components/RecoverPassword.tsx";
-import Products from "./components/Products.tsx";
-import Signup from "./components/Signup.tsx";
+import Login from "./features/auth/Login.tsx";
+import RecoverPassword from "./features/auth/RecoverPassword.tsx";
+import Products from "./features/products/Products.tsx";
+import Signup from "./features/auth/Signup.tsx";
 
 // import ProductEditForm from "./components/ProductEditForm.tsx";
 

@@ -1,5 +1,5 @@
 import { Form, Input, Button } from "antd";
-import { type UserInfo } from "../types";
+import { type UserInfo } from "@/app/types";
 
 export default function UserForm({
   buttonText,

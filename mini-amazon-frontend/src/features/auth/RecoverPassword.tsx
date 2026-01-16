@@ -1,7 +1,7 @@
 import { Modal, Flex, Typography } from "antd";
 
-import UserForm from "../components/UserForm";
-import type { UserInfo } from "../types";
+import UserForm from "@/features/auth/UserForm";
+import type { UserInfo } from "@/app/types";
 import { useNavigate } from "react-router-dom";
 
 export default function RecoverPassword() {

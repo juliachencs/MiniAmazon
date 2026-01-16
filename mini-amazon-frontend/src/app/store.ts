@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {api} from "../store/api"
-import authReducer from '../store/authSlice'
+import {api} from "./api"
+import authReducer from '../features/auth/authSlice'
 import { useSelector } from 'react-redux';
 import { useMemo } from 'react';
 
