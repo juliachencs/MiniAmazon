@@ -1,5 +1,5 @@
 import type { UserI } from "../../types/user.interface.js";
-import { UserModel } from "../../models/user.model.js";
+import { User } from "../../models/user.model.js";
 import { comparePassword } from "../../utils/password-comparer.util.js";
 import type { authRespond } from "../../types/authRespond.interface.js";
 import { generateToken } from "../../utils/jwt.util.js";
@@ -10,8 +10,7 @@ export async function loginService(
     email : string,
     password : string
 ) : Promise<authRespond> {
-    const user : UserI | null = await UserModel.find(email);
-    // const user: UserI | null = await User.findOne({ email });
+    const user: UserI | null = await User.findOne({ email });
 
     if (!user) {
         throw new HttpNotFoundError('User not found');
