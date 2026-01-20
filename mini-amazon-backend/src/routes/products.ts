@@ -3,6 +3,9 @@ import * as productControllers from '../controllers/products/products.controller
 
 export const productsRouter = Router();
 
+// // DB population only
+// productsRouter.post('/bulk',productControllers.addProductBulk);
+
 productsRouter.get('/', productControllers.getProducts);
 productsRouter.get('/count', productControllers.getProductCounts);
 productsRouter.get('/:id', productControllers.getProductById);

@@ -13,10 +13,14 @@ export async function getProducts(
         // paginated product list request
         // TODO: edge conditions?
         if (req.query.offset && req.query.limit && req.query.sortby) {
-            // TODO: implement
+            const result: ProductI[] = await productsService.getProductsPaginatedService(
+                parseInt(req.query.offset as string),
+                parseInt(req.query.limit as string),
+                req.query.sortby as string
+            )
             res.status(200).json({
                 success: true,
-                data: `getProducts, but offset=${req.query.offset}, limit=${req.query.limit}, sort=${req.query.sortby}`
+                data: result
             });
         }
         // all product list request
@@ -132,13 +136,14 @@ export async function deleteProduct(
     }
 }
 
+
 // // DB population usage only
 // export async function addProductBulk(
 //     req: Request,
 //     res: Response,
 //     next: NextFunction): Promise<void> {
 //     try {
-//         const result = productsService.addProductBulkService(req.body);
+//         const result: ProductI[] = await productsService.addProductBulkService(req.body);
 
 //         res.status(201).json({
 //             success: true,
