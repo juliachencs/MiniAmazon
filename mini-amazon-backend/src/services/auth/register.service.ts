@@ -14,7 +14,7 @@ export async function registerService(email: string, password: string): Promise<
     }
 
     const hashedPassword = await hashPassword(password);
-    const user : UserI = await User.create({email: email, password: hashedPassword});
+    const user: UserI = await User.create({ email: email, password: hashedPassword });
 
     const token = generateToken(user);
 

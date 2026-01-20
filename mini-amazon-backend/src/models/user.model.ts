@@ -1,6 +1,3 @@
-// TODO
-// this is currently a dummy model and not have database attached with, just to mock the actual behavior of database
-// rework later
 import type { UserI } from "../types/user.interface.js";
 import { Role } from "../types/role.enum.js";
 import { model, Schema } from "mongoose";
