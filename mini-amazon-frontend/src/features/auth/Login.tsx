@@ -19,7 +19,7 @@ export default function Login() {
         if (response.error) {
           console.log(response.error);
           message.error(
-            "The email or password you entered is incorrect. Please try again."
+            "The email or password you entered is incorrect. Please try again.",
           );
         }
       })
@@ -33,18 +33,20 @@ export default function Login() {
   };
 
   return (
-    <Flex justify="center" align="center" vertical>
-      <Typography.Title level={3}> Sign in to your account</Typography.Title>
+    <div className="auth-card">
+      <Flex justify="center" align="center" vertical>
+        <Typography.Title level={3}> Sign in to your account</Typography.Title>
 
-      <UserForm handler={onLogin} buttonText="Sign in" />
+        <UserForm handler={onLogin} buttonText="Sign in" />
 
-      <div>
-        <Typography.Text>Don’t have an account?</Typography.Text>
-        <Typography.Link href="/signup">Sign up</Typography.Link>
-      </div>
-      <div>
-        <Typography.Link href="/recover">Forgot password?</Typography.Link>
-      </div>
-    </Flex>
+        <div>
+          <Typography.Text>Don’t have an account?</Typography.Text>
+          <Typography.Link href="/signup">Sign up</Typography.Link>
+        </div>
+        <div>
+          <Typography.Link href="/recover">Forgot password?</Typography.Link>
+        </div>
+      </Flex>
+    </div>
   );
 }

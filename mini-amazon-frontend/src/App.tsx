@@ -7,10 +7,17 @@ import { Button } from "antd";
 import "./App.css";
 import DefaultHeader from "./components/Header.tsx";
 import DefaultFooter from "./components/Footer.tsx";
+
 import Login from "./features/auth/Login.tsx";
 import RecoverPassword from "./features/auth/RecoverPassword.tsx";
-import Products from "./features/products/Products.tsx";
 import Signup from "./features/auth/Signup.tsx";
+
+import Products from "./features/products/Products.tsx";
+import CreateProduct from "./features/products/CreateProduct.tsx";
+import UpdateProduct from "./features/products/UpdateProduct.tsx";
+import Product from "./features/products/Product.tsx";
+import ErrorBoundary from "./components/ErrorBoundary.tsx";
+import { GoHomeButton } from "@/components/GoHome";
 
 // import ProductEditForm from "./components/ProductEditForm.tsx";
 
@@ -24,23 +31,18 @@ import Signup from "./features/auth/Signup.tsx";
 function DefaultLayout() {
   return (
     <>
-      <DefaultHeader />
-
-      <div
-        style={{
-          alignSelf: "center",
-          width: "max-content",
-          border: "1px solid gray",
-          padding: 32,
-        }}
-      >
-        <Outlet />
-      </div>
-      <DefaultFooter />
+      <ErrorBoundary>
+        <DefaultHeader />
+        <main>
+          <Outlet />
+        </main>
+        <DefaultFooter />
+      </ErrorBoundary>
     </>
   );
 }
-function NotFound() {
+
+function PageNotFound() {
   return (
     <>
       <h1>404</h1>
@@ -49,10 +51,7 @@ function NotFound() {
         Sorry, the page you are looking for might have been removed or moved to
         another URL.
       </p>
-      <Button href="/" type="primary">
-        {" "}
-        Go to Homepage{" "}
-      </Button>
+      <GoHomeButton />
     </>
   );
 }
@@ -64,10 +63,20 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Products />} />
+
             <Route path="/login" element={<Login />} />
-            <Route path="/recover" element={<RecoverPassword />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/recover" element={<RecoverPassword />} />
+
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/create" element={<CreateProduct />} />
+            <Route
+              path="/products/update/:productId"
+              element={<UpdateProduct />}
+            />
+            <Route path="/products/item/:productId" element={<Product />} />
+
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

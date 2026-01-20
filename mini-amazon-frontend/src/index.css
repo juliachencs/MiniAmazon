@@ -8,104 +8,50 @@
   --mobile-width: 480px;
 }
 
-.flexrow {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fa {
-  color: var(--second-color);
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 25px !important;
-}
-
-html, body, #root{
+html,
+body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  min-width: max-content;
-  min-height: 100vh;
-  height: 100vh;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-color);
 }
+
 
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+
   justify-content: space-between;
+  align-items: stretch;
+  
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+
 }
-@media screen and (max-width: 640px) {
-  body {
-    font-size: 14px;
-  }
 
-  input {
-    height: 32px;
-  }
+header {
+  background-color : var(--second-bg-color);
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
 
-  .flexrow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+main{
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
-  /*header setting*/
-  header {
-    margin: 0px;
-    padding: 10px 0px;
-  }
+footer {
+    background-color: var(--second-bg-color);
+    padding-top: 4px;
+    padding-bottom: 8px;
 
-  header .logo {
-    display: None;
-  }
+}
+.auth-card {
+  display:block;
+  text-align: center;
+  max-width: 512px;
+  margin: auto;
+  padding: 32px;
+  border: 1px solid gray;
+  box-shadow: 0 8px 6px -6px black;
 
-  header .minilog {
-    display: inline-block;
-  }
-
-  header .fa-user+span {
-    display: None;
-  }
-
-  header .searchbar {
-    width: 100%;
-  }
-
-  header input[type="search"] {
-    width: 100%;
-  }
-
-  header .statusbar {
-    order: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    /*var(--mobile-width);*/
-  }
-
-  header .searchbar {
-    order: 2;
-  }
-
-  /*foot setting*/
-  footer .socialmedia {
-    order: 1;
-  }
-
-  footer .footmenu {
-    order: 2;
-  }
-
-  footer .copyrights {
-    order: 3;
-  }
 }

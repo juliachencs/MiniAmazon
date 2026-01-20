@@ -31,15 +31,17 @@ export default function Signup() {
   };
 
   return (
-    <Flex justify="center" align="center" vertical>
-      <Typography.Title level={3}> Create an account</Typography.Title>
+    <div className="auth-card">
+      <Flex justify="center" align="center" vertical>
+        <Typography.Title level={3}> Create an account</Typography.Title>
 
-      <UserForm handler={onSignup} buttonText="Sign up" />
+        <UserForm handler={onSignup} buttonText="Sign up" />
 
-      <div>
-        <Typography.Text>Already have an account?</Typography.Text>
-        <Typography.Link href="/login">Sign in</Typography.Link>
-      </div>
-    </Flex>
+        <div>
+          <Typography.Text>Already have an account?</Typography.Text>
+          <Typography.Link href="/login">Sign in</Typography.Link>
+        </div>
+      </Flex>
+    </div>
   );
 }

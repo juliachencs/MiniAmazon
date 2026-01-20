@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
-import type { UserAuth, UserInfo } from './types';
-//import { type RootState }  from '../store/store' ;
+import type { ListResponse, ListQuery, ProductFull, UserAuth, UserInfo } from '@/app/types';
+import type { Product } from './types';
+
+
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
@@ -13,7 +15,9 @@ export const api = createApi({
     //   return headers;
     // },
   }),
-  
+
+  tagTypes: ['Products'],
+
   endpoints: (build) => ({
     login: build.mutation<UserAuth, UserInfo>({
       query: (credentials) => ({
@@ -58,7 +62,29 @@ export const api = createApi({
       }),
     }),
 
-  })
+    // the product related queries
+    listProducts: build.query<ListResponse<Product>, ListQuery >({
+      query: ({offset, limit, sortby}:ListQuery) => ({
+        url: `products?offset=${offset}&limit=${limit}&sortby=${sortby}`,
+        providesTags: (result) =>{
+         console.log(result);
+         return result
+          ? [ ...result.data.map(({ id }:ProductFull) => ({ type: 'Products' as const, id })),
+              { type: 'Products', id: 'PARTIAL-LIST' },
+          ]
+        : [{ type: 'Products', id: 'PARTIAL-LIST' }];
+        },
+
+      }),
+    }),
+
+    getProduct: build.query({
+      query: (productId:string) => `/products/${productId}`,
+    })
+  }),
 });
 
+//<, ListQuery,ListResponse<Product>>
+
 export const {useLoginMutation, useSignupMutation, useRecoverMutation, useSignoutMutation} = api
+export const {useListProductsQuery, useGetProductQuery} = api

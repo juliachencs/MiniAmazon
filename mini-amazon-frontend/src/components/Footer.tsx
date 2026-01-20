@@ -1,22 +1,53 @@
-
-import "./Footer.css";
+import { Button, Flex, Typography } from "antd";
+import { ConfigProvider, theme } from "antd";
+import { Col, Row } from "antd";
+import {
+  YoutubeFilled,
+  TwitterCircleFilled,
+  FacebookFilled,
+} from "@ant-design/icons";
 
 export default function Footer() {
   return (
-    <footer className="footer flexrow">
-      <div className="copyrights">&copy; 2025 All rights reserved. </div>
+    <ConfigProvider
+      theme={{
+        algorithm: theme.darkAlgorithm,
+      }}
+    >
+      <footer>
+        <Row wrap justify="space-between" align="middle">
+          <Col
+            style={{ display: "flex", justifyContent: "center" }}
+            xs={{ span: 24, order: 3 }}
+            sm={{ span: 24, order: 3 }}
+            md={{ span: 8, order: 1 }}
+          >
+            <Typography.Text> &copy; 2025 All rights reserved.</Typography.Text>
+          </Col>
 
-      <div className="socialmedia">
-        <a className="fa fa-youtube"></a>
-        <a className="fa fa-twitter"></a>
-        <a className="fa fa-facebook"></a>
-      </div>
+          <Col
+            style={{ display: "flex", justifyContent: "center" }}
+            xs={{ span: 24, order: 2 }}
+            sm={{ span: 24, order: 2 }}
+            md={{ span: 8, order: 2 }}
+          >
+            <Button icon=<YoutubeFilled /> type="text"></Button>
+            <Button icon=<TwitterCircleFilled /> type="text"></Button>
+            <Button icon=<FacebookFilled /> type="text"></Button>
+          </Col>
 
-      <div className="footmenu">
-        <span> Contact Us </span>
-        <span> Privacy Policies </span>
-        <span> Help </span>
-      </div>
-    </footer>
+          <Col
+            style={{ display: "flex", justifyContent: "center" }}
+            xs={{ span: 24, order: 1 }}
+            sm={{ span: 24, order: 1 }}
+            md={{ span: 8, order: 3 }}
+          >
+            <Button type="text"> Contact Us </Button>
+            <Button type="text"> Privacy Policies </Button>
+            <Button type="text"> Help </Button>
+          </Col>
+        </Row>
+      </footer>
+    </ConfigProvider>
   );
 }

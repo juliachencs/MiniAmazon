@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {type UserAuth} from "@/app/types"
 import {api} from "@/app/api"
-import { useMemo } from 'react';
+
 
 const authSlice = createSlice({
   name: 'auth',
@@ -13,6 +13,7 @@ const authSlice = createSlice({
       (state, { payload }) => {
         state.token = payload.token
         state.role = payload.role
+        console.log("auth-extra-reducer::login::fullfilled:", state.token, state.role)
       },
     );
 
@@ -21,6 +22,7 @@ const authSlice = createSlice({
       (state, { payload }) => {
         state.token = payload.token
         state.role = payload.role
+        console.log("auth-extra-reducer::signup::fullfilled:", state.token, state.role)
       },
     );
     
@@ -30,7 +32,7 @@ const authSlice = createSlice({
         console.log("matcher: signout")
         state.token = null
         state.role = null
-        console.log(state.token, state.role)
+        console.log("auth-extra-reducer::signout::fullfilled:", state.token, state.role)
       },
     );
 

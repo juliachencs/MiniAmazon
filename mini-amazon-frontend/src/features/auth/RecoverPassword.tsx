@@ -29,7 +29,7 @@ export default function RecoverPassword() {
   };
 
   return (
-    <>
+    <div className="auth-card">
       <Flex justify="center" align="center" vertical>
         <Typography.Title level={3}> Recover your password</Typography.Title>
         <Typography.Paragraph>
@@ -44,6 +44,6 @@ export default function RecoverPassword() {
         <Typography.Text>Remember your password?</Typography.Text>{" "}
         <Typography.Link href="/login">Sign in</Typography.Link>{" "}
       </Flex>
-    </>
+    </div>
   );
 }
