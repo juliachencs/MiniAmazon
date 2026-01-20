@@ -1,4 +1,6 @@
+// TODO: Enum fix - type name should be UpperCamel and member/value should be FULL_CAP
+
 export enum Role {
-  ADMIN = 'ADMIN',
-  USER = 'REGULAR'
+  ADMIN = 'admin',
+  USER = 'regular'
 }
