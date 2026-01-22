@@ -10,7 +10,7 @@ export async function recoverPasswordController (
 
         const result: string = `Success sent email to ${email}`;
 
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             data: result
         });
