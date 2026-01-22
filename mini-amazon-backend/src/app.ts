@@ -1,5 +1,5 @@
 import express from 'express';
-import { errorHandler } from './middlewares/error.handler.js'
+import { errorHandler } from './middlewares/error-handler.middleware.js'
 import { rootRouter } from './routes/index.js';
 import cors from 'cors';
 

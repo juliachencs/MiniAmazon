@@ -1,5 +1,5 @@
 export enum SortType {
-    TIMEDESC = 'Last',
-    PRICEASC = 'PriceAsc',
-    PRICEDESC = 'PriceDes'
+    TimeDesc = 'Last',
+    PriceAsc = 'PriceAsc',
+    PriceDesc = 'PriceDes'
 }

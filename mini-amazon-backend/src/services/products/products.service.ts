@@ -3,7 +3,6 @@ import { Product } from "../../models/product.model.js";
 import type { ProductI } from "../../types/product.interface.js";
 import { sortTypeManager } from "../../utils/product-sort-manager.util.js";
 
-//TODO: Authorization middleware
 
 export async function getProductsService(): Promise<ProductI[]> {
     return Product.find();

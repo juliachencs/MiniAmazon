@@ -6,14 +6,14 @@ export function sortTypeManager(sortByQuery: string): Record<string, SortOrder> 
     const sortBy: SortType =
         Object.values(SortType).includes(sortByQuery as SortType)
             ? (sortByQuery as SortType)
-            : SortType.TIMEDESC;
+            : SortType.TimeDesc;
 
     switch (sortBy) {
-        case SortType.TIMEDESC:
+        case SortType.TimeDesc:
             return { 'createAt': -1 }
-        case SortType.PRICEASC:
+        case SortType.PriceAsc:
             return { 'price': 1 }
-        case SortType.PRICEASC:
+        case SortType.PriceDesc:
             return { 'price': -1 }
         default:
             throw new HttpBadRequestError('invalid sorting param');
