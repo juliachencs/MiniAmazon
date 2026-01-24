@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, Typography } from "antd";
 
 export function GoHomeButton() {
   return (
@@ -7,4 +7,12 @@ export function GoHomeButton() {
       Go Home{" "}
     </Button>
   );
+}
+
+export function LargeHomeLogo() {
+  return <Typography.Link href="/">MiniAmazon</Typography.Link>;
+}
+
+export function MiniHomeLogo() {
+  return <Typography.Link href="/">MiniA</Typography.Link>;
 }

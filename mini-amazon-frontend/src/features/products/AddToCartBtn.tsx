@@ -1,14 +1,12 @@
 import { Button } from "antd";
-import { useAuth } from "../../app/store";
+import { useRole } from "@/app/hooks";
+import { isGuest } from "@/app/utils";
 
 export default function AddToCartBtn() {
-  const { role } = useAuth();
-  console.log(role);
-
+  const { role } = useRole();
   return (
-    <Button type="primary" disabled={!role}>
-      {" "}
-      Add{" "}
+    <Button type="primary" disabled={isGuest(role)}>
+      Add
     </Button>
   );
 }

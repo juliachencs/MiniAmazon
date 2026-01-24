@@ -1,8 +1,7 @@
-import { Modal, Flex, Typography } from "antd";
-
+import { Flex, Modal, Typography } from "antd";
 import UserForm from "@/features/auth/UserForm";
-import type { UserInfo } from "@/app/types";
 import { useNavigate } from "react-router-dom";
+import type { UserInfo } from "@/app/types";
 
 export default function RecoverPassword() {
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ export default function RecoverPassword() {
       onCancel: () => {
         console.log("Cancelled");
       },
-      okText: "Go to login",
+      okText: "Go back to login",
       cancelText: "Return",
     });
   };
@@ -33,14 +32,9 @@ export default function RecoverPassword() {
       <Flex justify="center" align="center" vertical>
         <Typography.Title level={3}> Recover your password</Typography.Title>
         <Typography.Paragraph>
-          {" "}
           Enter your email to recover your password{" "}
         </Typography.Paragraph>
-        <UserForm
-          buttonText="Update Password"
-          handler={onRecoverPassowrd}
-          hidden={true}
-        />
+        <UserForm type="recover" handler={onRecoverPassowrd} />
         <Typography.Text>Remember your password?</Typography.Text>{" "}
         <Typography.Link href="/login">Sign in</Typography.Link>{" "}
       </Flex>

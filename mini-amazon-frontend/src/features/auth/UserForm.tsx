@@ -1,15 +1,22 @@
 import { Form, Input, Button } from "antd";
 import { type UserInfo } from "@/app/types";
 
-export default function UserForm({
-  buttonText,
-  handler,
-  hidden = false,
-}: {
-  buttonText: string;
-  handler: (x: UserInfo) => void;
-  hidden?: boolean;
-}) {
+export interface UserFormProps {
+  type: "login" | "signup" | "recover";
+  handler: (values: UserInfo) => void;
+}
+
+export default function UserForm({ type, handler }: UserFormProps) {
+  const config = {
+    login: { buttonText: "Sign in", hidden: false },
+    signup: { buttonText: "Sign up", hidden: false },
+    recover: {
+      buttonText: "Update Password",
+      hidden: true,
+    },
+  };
+  const { buttonText, hidden } = config[type];
+
   const password_tooltip = (
     <div>
       A valid password consists of at least onenumber, letter and special
@@ -29,8 +36,8 @@ export default function UserForm({
       layout="vertical"
       name="userform"
       onFinish={handler}
-      initialValues={{ email: "regular@user.com", password: "ABC@abc@123" }}
       style={{ width: "100%" }}
+      initialValues={{ email: "regular@user.com", password: "ABC@abc@123" }}
       scrollToFirstError={{ behavior: "instant", block: "end", focus: true }}
     >
       <Form.Item
@@ -40,7 +47,7 @@ export default function UserForm({
           { required: true, message: "Please input your email!" },
           {
             pattern: new RegExp(
-              /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i
+              /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i,
             ),
             message: "Invalid email",
           },

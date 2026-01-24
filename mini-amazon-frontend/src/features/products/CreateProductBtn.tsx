@@ -1,4 +1,14 @@
 import { Button } from "antd";
+
+import { useRole } from "@/app/hooks";
+import { isAdmin } from "@/app/utils";
+
 export default function CreateProductBtn() {
-  return <Button href="/products/create"> Create Product</Button>;
+  const { role } = useRole();
+
+  return (
+    <Button href="/products/create" disabled={!isAdmin(role)}>
+      Create Product
+    </Button>
+  );
 }

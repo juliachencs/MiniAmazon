@@ -1,22 +1,19 @@
-
 // User auth
-export type Role = 'admin' | 'regular' ;
+export type Role = "ADMIN" | "REGULAR";
 
-export interface UserAuth{
+export interface UserAuth {
   role: Role | null;
-  token: string | null
+  token: string | null;
 }
 
-
-export interface UserInfo{
-  email: string
-  pasword: string
+export interface UserInfo {
+  email: string;
+  pasword: string;
 }
-
 
 // Product
-export const allCategories = ['mobile', 'computer', 'desktop'] as const;
-export type SortType = 'Last' | 'PriceAsc' | 'PriceDes';
+export const allCategories = ["mobile", "computer", "desktop"] as const;
+export type SortType = "Last" | "PriceAsc" | "PriceDes";
 
 export interface Product {
   id: string;
@@ -30,6 +27,14 @@ export interface Product {
   updateAt: Date;
 }
 
+export type ProductCreated = Omit<Product, "id" | "createAt" | "updateAt">;
+export type ProductUpdated = Omit<Product, "id"> | { _id: string };
+
+export interface ListProductsQuery {
+  offset: number;
+  limit: number;
+  sortby: SortType;
+}
 
 // ERROR
 export type ErrorCode =
@@ -38,19 +43,3 @@ export type ErrorCode =
   | "NO_PRODUCT"
   | "UNKOWN"
   | "NO_PERMISSION";
-
-
-// export interface ListResponse<T> {
-//   total: number; // the total number of products
-//   data: T[];
-// }
-
-// export interface ListQuery{
-//   offset: number;
-//   limit: number;
-//   sortby: SortType;
-// }
-  
-
-
-

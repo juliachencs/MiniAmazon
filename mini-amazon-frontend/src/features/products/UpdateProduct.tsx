@@ -1,3 +1,3 @@
-export default function EidtProduct() {
-  return <>EidtProduct</>;
+export default function UpdateProduct() {
+  return <>UpdateProduct</>;
 }

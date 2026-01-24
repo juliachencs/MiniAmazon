@@ -1,24 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit'
-import {api} from "./api"
-import authReducer from '../features/auth/authSlice'
-import { useSelector } from 'react-redux';
-import { useMemo } from 'react';
-
+import { configureStore } from "@reduxjs/toolkit";
+import { api } from "./api";
+import authReducer from "../features/auth/authSlice";
 
 export const store = configureStore({
   reducer: {
-    [api.reducerPath]: api.reducer,
     auth: authReducer,
+    [api.reducerPath]: api.reducer,
   },
-  
+
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware),
 });
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+// Infer the type of 'store'
+export type AppStore = typeof store;
 
-export const useAuth = () => {
-  const role = useSelector((state:RootState) => state.auth.role)
-  return useMemo(() => ({ role }), [role])
-}
+// Infer the "AppDispatch" type from the store itself
+export type AppDispatch = typeof store.dispatch;
+
+// Same for the 'RootState' type
+export type RootState = ReturnType<typeof store.getState>;

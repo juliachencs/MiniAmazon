@@ -1,14 +1,13 @@
+import { useRole } from "@/app/hooks";
+import { isAdmin } from "@/app/utils";
 import { Button } from "antd";
-import { useAuth } from "../../app/store";
 
 export default function EidtProductButton() {
-  const { role } = useAuth();
-  console.log(role);
+  const { role } = useRole();
 
   return (
-    <Button type="primary" disabled={role !== "Admin"}>
-      {" "}
-      Edit{" "}
+    <Button type="primary" disabled={!isAdmin(role)}>
+      Edit
     </Button>
   );
 }

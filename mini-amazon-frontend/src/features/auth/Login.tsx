@@ -1,48 +1,69 @@
-import { Modal, message, Flex, Typography } from "antd";
+import { Modal, message, Flex, Typography, Button, Space } from "antd";
 import { useNavigate } from "react-router-dom";
 
 import { useLoginMutation } from "@/app/api";
 import { type UserInfo } from "@/app/types";
 import UserForm from "@/features/auth/UserForm";
+import { getErrorProps } from "@/app/utils";
+import ErrorMessage from "@/components/ErrorMessage";
 
 export default function Login() {
-  const [login] = useLoginMutation();
+  const [login, { isLoading }] = useLoginMutation();
   const navigate = useNavigate();
 
   const onLogin = (values: UserInfo) => {
     login(values)
-      .then((response) => {
-        if (response.data) {
-          message.success("Success Login", 2);
-          navigate("/");
-        }
-        if (response.error) {
-          console.log(response.error);
-          message.error(
-            "The email or password you entered is incorrect. Please try again.",
-          );
-        }
+      .unwrap()
+      .then(() => {
+        message.success("You have successfully logged in!", 3);
+        navigate("/");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        const status = error?.status;
+        console.log(error);
+        if (status && (status === 400 || status === 404)) {
+          message.error(
+            "Incorrect username or password! Please check your input",
+          );
+          return;
+        }
+        const { issue, suggestion } = getErrorProps(error);
         Modal.error({
-          title: "Unknow Login Error",
-          content: JSON.stringify(err),
+          content: (
+            <ErrorMessage
+              trouble="Fail to sign in"
+              issue={issue}
+              suggestion={suggestion}
+            >
+              <Button type="primary" href="/login">
+                Sign in again
+              </Button>
+              <Button href="/"> Go Homepage</Button>
+              <Button href="/products">Browser Products</Button>
+            </ErrorMessage>
+          ),
+          footer: null,
         });
       });
   };
 
   return (
     <div className="auth-card">
-      <Flex justify="center" align="center" vertical>
+      <Flex
+        justify="center"
+        align="center"
+        vertical
+        style={{ opacity: isLoading ? 0.5 : 1 }}
+      >
         <Typography.Title level={3}> Sign in to your account</Typography.Title>
 
-        <UserForm handler={onLogin} buttonText="Sign in" />
+        <UserForm type="login" handler={onLogin} />
 
         <div>
           <Typography.Text>Don’t have an account?</Typography.Text>
           <Typography.Link href="/signup">Sign up</Typography.Link>
         </div>
+
         <div>
           <Typography.Link href="/recover">Forgot password?</Typography.Link>
         </div>

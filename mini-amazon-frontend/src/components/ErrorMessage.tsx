@@ -1,28 +1,31 @@
-import { ErrorIcon } from "@/components/Icons";
-import { Flex } from "antd";
+import { Result, Space } from "antd";
+import type { ReactNode } from "react";
 
-import { GoHomeButton } from "./GoHome";
-import { type ErrorCode } from "@/app/types";
-
-interface Props {
-  code: ErrorCode;
+export interface ErrorMessageCardProps {
+  trouble?: string; // what trouble happens
+  issue: string; // the issue caused the trouble
+  suggestion: string; // the suggestion for  user to do
+  children?: ReactNode;
 }
-export default function ErrorMessage({ code }: Props) {
-  const LOOKUP = {
-    AUTH_FAILED: "Authentication failed. Please check your credentials.",
-    NETWORK_ERROR: "A network error occurred. Please try again later.",
-    NO_PRODUCT: "No products available. Please come back later.",
-    NO_PERMISSION: "Sorry, you don't have access to this page",
-    UNKOWN: "Unkown issue!",
-  } satisfies Record<ErrorCode, string> as Record<ErrorCode, string>;
-  const message = LOOKUP[code];
 
+export default function ErrorMessageCard({
+  trouble,
+  issue,
+  suggestion,
+  children,
+}: ErrorMessageCardProps) {
   return (
-    <Flex align="center" vertical>
-      <ErrorIcon></ErrorIcon>
-      <h1>Oops, something went wrong!</h1>
-      <h2> {message} </h2>
-      <GoHomeButton />
-    </Flex>
+    <Result
+      status="error"
+      title="Oops, something went wrong!"
+      subTitle={trouble}
+      extra={children}
+    >
+      <p>
+        {issue} <Space /> {suggestion} <Space />
+        Feel free to contact us via email service@miniamazon.com for more
+        support!
+      </p>
+    </Result>
   );
 }

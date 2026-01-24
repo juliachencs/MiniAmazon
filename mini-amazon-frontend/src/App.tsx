@@ -1,58 +1,86 @@
-import { useState } from "react";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import { Button } from "antd";
+import {
+  BrowserRouter,
+  Outlet,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
-import "./App.css";
-import DefaultHeader from "./components/Header.tsx";
-import DefaultFooter from "./components/Footer.tsx";
+// import "./App.css";
+import DefaultHeader from "./components/Header";
+import DefaultFooter from "./components/Footer";
 
-import Login from "./features/auth/Login.tsx";
-import RecoverPassword from "./features/auth/RecoverPassword.tsx";
-import Signup from "./features/auth/Signup.tsx";
+import Login from "./features/auth/Login";
+import RecoverPassword from "./features/auth/RecoverPassword";
+import Signup from "./features/auth/Signup";
 
-import Products from "./features/products/Products.tsx";
-import CreateProduct from "./features/products/CreateProduct.tsx";
-import UpdateProduct from "./features/products/UpdateProduct.tsx";
-import Product from "./features/products/Product.tsx";
-import ErrorBoundary from "./components/ErrorBoundary.tsx";
+import Products from "./features/products/Products";
+import CreateProduct from "./features/products/CreateProduct";
+import UpdateProduct from "./features/products/UpdateProduct";
+import Product from "./features/products/Product";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { GoHomeButton } from "@/components/GoHome";
 
-// import ProductEditForm from "./components/ProductEditForm.tsx";
+import { useRole } from "@/app/hooks";
+import { Button, Progress, Result } from "antd";
+import { useEffect } from "react";
+import { isAdmin } from "@/app/utils";
+import DelayedRedirect from "@/components/DelayedRedirectRoute";
 
-// import { Link } from "react-router-dom";
-// import {
-//   SignUpUserCard,
-//   SignInUserCard,
-//   RecoverPasswordUserCard,
-// } from "./components/UserCard.tsx";
+function GuestOnly() {
+  const { role } = useRole();
+  if (role === null) {
+    return <Outlet />;
+  }
+  return <DelayedRedirect title="You have logged in!"></DelayedRedirect>;
+}
+function AdminOnly() {
+  const { role } = useRole();
+  if (isAdmin(role)) {
+    return <Outlet />;
+  }
 
-function DefaultLayout() {
   return (
-    <>
-      <ErrorBoundary>
-        <DefaultHeader />
-        <main>
-          <Outlet />
-        </main>
-        <DefaultFooter />
-      </ErrorBoundary>
-    </>
+    <DelayedRedirect
+      title="Sorry, you don't have the permission to access that page"
+      redirect="/"
+    ></DelayedRedirect>
   );
 }
 
 function PageNotFound() {
+  const subtitle =
+    "Sorry, the page you are looking for might have been removed or moved to another URL.";
+
   return (
-    <>
-      <h1>404</h1>
-      <h2>Oops! Page Not Found</h2>
-      <p>
-        Sorry, the page you are looking for might have been removed or moved to
-        another URL.
-      </p>
-      <GoHomeButton />
-    </>
+    <Result
+      status={404}
+      title="Oops! Page Not Found"
+      subTitle={subtitle}
+      extra={<GoHomeButton />}
+    />
+  );
+}
+
+//https://nicepage.com/landing-page/preview/text-with-two-buttons-726103
+function Home() {
+  return (
+    <Result
+      icon={<></>}
+      title="Welcome to mini-amazon"
+      subTitle="start your online shopping from"
+      className="welcome"
+      extra={
+        <>
+          <Button type="primary" href="/products">
+            Brower products
+          </Button>
+          <Button href="/login"> Sign in </Button>{" "}
+        </>
+      }
+    ></Result>
   );
 }
 
@@ -60,25 +88,35 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path="/" element={<Products />} />
+        <ErrorBoundary>
+          <DefaultHeader />
+          <Routes>
+            {/*open to all*/}
+            <Route>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/item/:productId" element={<Product />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Route>
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/recover" element={<RecoverPassword />} />
+            {/* only guest users can access these pages*/}
+            <Route element={<GuestOnly />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/recover" element={<RecoverPassword />} />
+            </Route>
 
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/create" element={<CreateProduct />} />
-            <Route
-              path="/products/update/:productId"
-              element={<UpdateProduct />}
-            />
-            <Route path="/products/item/:productId" element={<Product />} />
-
-            <Route path="*" element={<PageNotFound />} />
-          </Route>
-        </Routes>
+            {/* only admin users can access these pages*/}
+            <Route element={<AdminOnly />}>
+              <Route path="/products/create" element={<CreateProduct />} />
+              <Route
+                path="/products/update/:productId"
+                element={<UpdateProduct />}
+              />
+            </Route>
+          </Routes>
+          <DefaultFooter />
+        </ErrorBoundary>
       </BrowserRouter>
     </>
   );

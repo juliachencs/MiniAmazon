@@ -1,90 +1,125 @@
-import { createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
-import type { ListResponse, ListQuery, ProductFull, UserAuth, UserInfo } from '@/app/types';
-import type { Product } from './types';
-
-
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import type {
+  Product,
+  UserAuth,
+  UserInfo,
+  ListProductsQuery,
+  ProductCreated,
+  ProductUpdated,
+} from "@/app/types";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl:"http://localhost:5200/api/",
-    // prepareHeaders: (headers, {getState}) => {
-    //   const token = (getState() as RootState).auth.token;
-    //   if (token) {
-    //     headers.set("authorization", `Bearer ${token}`);
-    //   }
-    //   return headers;
-    // },
+    baseUrl: "http://localhost:5200/api/",
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().auth.token;
+      if (token) {
+        headers.set("authorization", `Bearer ${token}`);
+      }
+      return headers;
+    },
   }),
 
-  tagTypes: ['Products'],
+  tagTypes: ["Product"],
 
   endpoints: (build) => ({
+    // auth endpoints
     login: build.mutation<UserAuth, UserInfo>({
       query: (credentials) => ({
-        url: 'auth/login',
-        method: 'POST',
+        url: "auth/login",
+        method: "POST",
         body: credentials,
       }),
-      
+
       // Pick out data and prevent nested properties in a hook or selector
-      transformResponse: (response: { data: UserAuth}) => {
+      transformResponse: (response: { data: UserAuth }) => {
         return response.data;
       },
     }),
 
     signup: build.mutation<UserAuth, UserInfo>({
       query: (credentials) => ({
-        url: 'auth/signup',
-        method: 'POST',
+        url: "auth/signup",
+        method: "POST",
         body: credentials,
       }),
-      
+
       // Pick out data and prevent nested properties in a hook or selector
-      transformResponse: (response: { data: UserAuth}) => {
+      transformResponse: (response: { data: UserAuth }) => {
         return response.data;
       },
-      
     }),
 
     recover: build.mutation<UserAuth, UserInfo>({
       query: (credentials) => ({
-        url: 'auth/recover',
-        method: 'POST',
+        url: "auth/recover",
+        method: "POST",
         body: credentials,
       }),
-      
     }),
 
     signout: build.mutation({
       query: () => ({
-        url: 'auth/signout',
-        method: 'POST',
+        url: "auth/signout",
+        method: "POST",
       }),
     }),
 
     // the product related queries
-    listProducts: build.query<ListResponse<Product>, ListQuery >({
-      query: ({offset, limit, sortby}:ListQuery) => ({
+    listProducts: build.query<Product[], ListProductsQuery>({
+      query: ({ offset, limit, sortby }: ListProductsQuery) => ({
         url: `products?offset=${offset}&limit=${limit}&sortby=${sortby}`,
-        providesTags: (result) =>{
-         console.log(result);
-         return result
-          ? [ ...result.data.map(({ id }:ProductFull) => ({ type: 'Products' as const, id })),
-              { type: 'Products', id: 'PARTIAL-LIST' },
-          ]
-        : [{ type: 'Products', id: 'PARTIAL-LIST' }];
-        },
-
+        // providesTags: (result: Product[]) => {
+        //   console.log(result);
+        //   return result
+        //     ? [
+        //         ...result.map(({ id }) => ({ type: "Product", id })),
+        //         { type: "Product", id: "PARTIAL-LIST" },
+        //       ]
+        //     : [{ type: "Product", id: "PARTIAL-LIST" }];
+        // },
       }),
     }),
 
-    getProduct: build.query({
-      query: (productId:string) => `/products/${productId}`,
-    })
-  }),
+    getProduct: build.query<Product, string>({
+      query: (id: string) => `products/${id}`,
+    }),
+
+    countProducts: build.query<number, void>({
+      query: () => "products/count",
+    }),
+
+    updateProduct: build.mutation<ProductUpdated, Product>({
+      query: (product: Product) => ({
+        url: `products/${product.id}`,
+        method: "PUT",
+        body: product,
+      }),
+    }), // end updateProduct endpoint
+
+    createProduct: build.mutation<Product, ProductCreated>({
+      query: (product: ProductCreated) => ({
+        url: `products`,
+        method: "POST",
+        body: product,
+      }),
+    }), // end createProduct endpoint
+  }), // end definition of all endpoints
 });
 
-//<, ListQuery,ListResponse<Product>>
+// export Auth related auto-generated hooks
+export const {
+  useLoginMutation,
+  useSignupMutation,
+  useRecoverMutation,
+  useSignoutMutation,
+} = api;
 
-export const {useLoginMutation, useSignupMutation, useRecoverMutation, useSignoutMutation} = api
-export const {useListProductsQuery, useGetProductQuery} = api
+// export Product related auto-generated hooks
+export const {
+  useListProductsQuery,
+  useGetProductQuery,
+  useCountProductsQuery,
+  useCreateProductMutation,
+  useUpdateProductMutation,
+} = api;

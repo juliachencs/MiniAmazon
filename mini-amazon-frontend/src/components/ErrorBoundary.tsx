@@ -1,7 +1,8 @@
 import React from "react";
 import type { ErrorInfo, ReactNode } from "react";
-import { type ErrorCode } from "@/app/types";
 import ErrorMessage from "./ErrorMessage";
+import { getErrorProps } from "@/app/utils";
+import { GoHomeButton } from "@/components/GoHome";
 
 interface Props {
   children: ReactNode;
@@ -31,10 +32,20 @@ class ErrorBoundary extends React.Component<Props, State> {
   }
 
   render() {
+    const { issue, suggestion } = getErrorProps({ status: "UNKOWN_ISSUE" });
+
     if (this.state.hasError) {
       // Custom fallback UI
       return (
-        this.props.fallback || ErrorMessage({ code: "UNKOWN" as ErrorCode })
+        this.props.fallback || (
+          <ErrorMessage
+            trouble="Unknow system issue!"
+            issue={issue}
+            suggestion={suggestion}
+          >
+            <GoHomeButton />
+          </ErrorMessage>
+        )
       );
     }
 
