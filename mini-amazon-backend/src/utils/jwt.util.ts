@@ -1,11 +1,10 @@
-import jwt, { type SignOptions } from 'jsonwebtoken'
-import type { User } from '../types/user.interface.js'
+import jwt from 'jsonwebtoken'
+import type { UserI } from '../types/user.interface.js'
 
 const JWT_SecretKey = process.env.JWT_SECRET || 'somethingsupersecret';
 
-export function generateToken(user: User): string {
+export function generateToken(user: UserI): string {
     const payload = {
-        id: user.id,
         email: user.email,
         role: user.role
     }
