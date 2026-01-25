@@ -1,15 +1,26 @@
 import { useState } from "react";
-import { Typography, Select, Pagination } from "antd";
+import { Typography, Select, Pagination, Flex } from "antd";
 import ListProducts from "./ListProducts";
 import CreateProductBtn from "./CreateProductBtn";
 import type { SortType } from "@/app/types";
+import { useRole } from "@/app/hooks";
+import { useCountProductsQuery } from "@/app/api";
 
 export default function Products() {
+  const { role } = useRole();
+  console.log(role);
+
   const [page, setPage] = useState(1);
   const [sortby, setSortby] = useState<SortType>("Last");
+  const { data: num_products, isError: isGetCountError } =
+    useCountProductsQuery();
 
-  const page_size = 24; // the number of items per page
-  const total = 1000; // the total number of items
+  const page_size = 10; // the number of items per page
+  let total = 200; // the total number of items
+  if (!isGetCountError && num_products) {
+    console.log("the toatal number of products:", num_products);
+    total = num_products;
+  }
 
   const handlePageChange = (page: number, pageSize: number) => {
     console.log(page, pageSize);
@@ -26,30 +37,43 @@ export default function Products() {
 
   return (
     <>
-      <></>
-      <Typography.Title> Products </Typography.Title>
-      <div>
-        <Select
-          defaultValue="Last"
-          value={sortby}
-          onChange={handleSortbyChange}
-          options={[
-            { value: "Last", label: "Last added" },
-            { value: "PriceAsc", label: "Price: low to high" },
-            { value: "PriceDes", label: "Price: high to low" },
-          ]}
-        />
-        <CreateProductBtn />
-      </div>
-      <ListProducts offset={offset} limit={limit} sortby={sortby} />
-      <Pagination
-        defaultCurrent={1}
-        current={page}
-        pageSize={page_size}
-        total={total}
-        showSizeChanger={false}
-        onChange={handlePageChange}
-      />
+      <Flex
+        align="center"
+        justify="space-between"
+        vertical
+        className="products-container"
+      >
+        <section className="products-header">
+          <Typography.Title> Products </Typography.Title>
+
+          <Select
+            defaultValue="Last"
+            value={sortby}
+            onChange={handleSortbyChange}
+            options={[
+              { value: "Last", label: "Last added" },
+              { value: "PriceAsc", label: "Price: low to high" },
+              { value: "PriceDes", label: "Price: high to low" },
+            ]}
+          />
+          <CreateProductBtn />
+        </section>
+
+        <div className="products-main">
+          <ListProducts offset={offset} limit={limit} sortby={sortby} />
+        </div>
+
+        <section className="products-footer">
+          <Pagination
+            defaultCurrent={1}
+            current={page}
+            pageSize={page_size}
+            total={total}
+            showSizeChanger={false}
+            onChange={handlePageChange}
+          />
+        </section>
+      </Flex>
     </>
   );
 }

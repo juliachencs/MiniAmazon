@@ -1,12 +1,12 @@
-import type { Role } from "@/app/types";
+import type { Role, ResponseWithData } from "@/app/types";
 
 // roles
 export function isAdmin(role: Role | null) {
-  return role !== null && role === "ADMIN";
+  return role !== null && role === "Admin";
 }
 
 export function isRegular(role: Role | null) {
-  return role !== null && role === "REGULAR";
+  return role !== null && role === "Regular";
 }
 
 export function isGuest(role: Role | null) {
@@ -16,6 +16,19 @@ export function isGuest(role: Role | null) {
 export const MakeProductLink = (id: string): string => {
   return `/products/item/${id}`;
 };
+
+// Type guards
+// A user-defined type guard function
+export function isResponseWithData(obj: unknown): obj is ResponseWithData {
+  // Manually check for the existence and type of required properties
+  return (
+    !!obj &&
+    typeof obj === "object" &&
+    Object.hasOwn(obj, "success") && // has success field
+    obj.success === true && // Explicitly check for true
+    Object.hasOwn(obj, "data") // has data field
+  );
+}
 
 export const getErrorProps = (error: any) => {
   const status = error?.status;

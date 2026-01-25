@@ -25,9 +25,10 @@ body {
   
   background-color: var(--primary-bg-color);
   color: var(--primary-color);
+  
   /* Path relative to the public folder */
-    background-image: url('background.jpg');
-    background-size: cover;
+  background-image: url('background.jpg');
+  background-size: cover;
 }
 
 header {
@@ -71,3 +72,28 @@ footer {
 .ant-result-body{
   text-align: center;
 }
+
+.product-details-main {
+  width: 95vw;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgb(212, 210, 210);
+  box-shadow: 0 8px 6px -6px rgb(70, 70, 70);
+
+}
+
+.products-container{
+  width: 95vw;
+  margin: auto;
+  border: 1px solid rgb(212, 210, 210);
+}
+
+.product-cards{
+  display: grid;
+  /* Repeats columns as many times as can fit, with a min of 200px and a max of 1fr*/
+  grid-template-columns: repeat(auto-fit, 256px);
+  place-content: center;
+  gap: 1rem;
+  /* Adds space between grid items */
+  width: 95vw;
+}
+

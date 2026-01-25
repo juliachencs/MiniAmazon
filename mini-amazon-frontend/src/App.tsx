@@ -21,17 +21,18 @@ import CreateProduct from "./features/products/CreateProduct";
 import UpdateProduct from "./features/products/UpdateProduct";
 import Product from "./features/products/Product";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { GoHomeButton } from "@/components/GoHome";
+import { GoHomeButton } from "@/components/HomeBtn";
 
 import { useRole } from "@/app/hooks";
 import { Button, Progress, Result } from "antd";
 import { useEffect } from "react";
-import { isAdmin } from "@/app/utils";
+import { isAdmin, isGuest } from "@/app/utils";
 import DelayedRedirect from "@/components/DelayedRedirectRoute";
+import LinkButton from "@/components/LinkButton";
 
 function GuestOnly() {
   const { role } = useRole();
-  if (role === null) {
+  if (isGuest(role)) {
     return <Outlet />;
   }
   return <DelayedRedirect title="You have logged in!"></DelayedRedirect>;
@@ -66,6 +67,8 @@ function PageNotFound() {
 
 //https://nicepage.com/landing-page/preview/text-with-two-buttons-726103
 function Home() {
+  const { role } = useRole();
+
   return (
     <Result
       icon={<></>}
@@ -74,10 +77,12 @@ function Home() {
       className="welcome"
       extra={
         <>
-          <Button type="primary" href="/products">
-            Brower products
-          </Button>
-          <Button href="/login"> Sign in </Button>{" "}
+          <LinkButton to="/products" type="primary">
+            {" "}
+            Brower products{" "}
+          </LinkButton>
+
+          {isGuest(role) && <LinkButton to="/login">Sign in</LinkButton>}
         </>
       }
     ></Result>

@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import type { UserInfo } from "@/app/types";
 import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
+import LinkButton from "@/components/LinkButton";
+import LinkText from "@/components/LinkText";
 
 export default function Signup() {
   const [signup, { isLoading }] = useSignupMutation();
@@ -18,7 +20,7 @@ export default function Signup() {
           "You have successfully created an account and logged in",
           2,
         );
-        navigate("/");
+        navigate("/products");
       })
       .catch((error) => {
         const status = error?.status;
@@ -37,11 +39,11 @@ export default function Signup() {
               issue={issue}
               suggestion={suggestion}
             >
-              <Button type="primary" href="/login">
+              <LinkButton type="primary" to="/login">
                 Sign up again
-              </Button>
-              <Button href="/"> Go Homepage</Button>
-              <Button href="/products">Browser Products</Button>
+              </LinkButton>
+              <LinkButton to="/"> Go Homepage</LinkButton>
+              <LinkButton to="/products">Browser Products</LinkButton>
             </ErrorMessage>
           ),
           footer: null,
@@ -58,7 +60,7 @@ export default function Signup() {
 
         <div>
           <Typography.Text>Already have an account?</Typography.Text>
-          <Typography.Link href="/login">Sign in</Typography.Link>
+          <LinkText to="/login">Sign in</LinkText>
         </div>
       </Flex>
     </div>

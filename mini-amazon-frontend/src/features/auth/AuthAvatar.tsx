@@ -5,12 +5,14 @@ import { useRole } from "@/app/hooks";
 import { useSignoutMutation } from "@/app/api";
 import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
+import LinkButton from "@/components/LinkButton";
 
 export default function AuthAvatar() {
   const [signout] = useSignoutMutation();
   const { role } = useRole();
 
   const onSignout = () => {
+    console.log("I am gonna sign out");
     signout({})
       .unwrap()
       .then(() => {
@@ -25,8 +27,10 @@ export default function AuthAvatar() {
               issue={issue}
               suggestion={suggestion}
             >
-              <Button href="/"> Go Homepage</Button>
-              <Button href="/products">Browser Products</Button>
+              <LinkButton to="/"> Go Homepage</LinkButton>
+              <LinkButton type="primary" to="/products">
+                Browser Products
+              </LinkButton>
             </ErrorMessage>
           ),
           footer: null,
@@ -35,7 +39,7 @@ export default function AuthAvatar() {
   };
 
   switch (role) {
-    case "ADMIN":
+    case "Admin":
       return (
         <Button
           icon={<UserOutlined style={{ color: "var(-primary-hl-bg-color)" }} />}
@@ -46,18 +50,18 @@ export default function AuthAvatar() {
         </Button>
       );
 
-    case "REGULAR":
+    case "Regular":
       return (
-        <Button icon={<UserOutlined />} type="text" onClick={onSignout}>
+        <Button icon={<UserOutlined />} type="text" onClick={() => onSignout()}>
           Sign out
         </Button>
       );
 
     default:
       return (
-        <Button icon={<UserOutlined />} type="text" href="/login">
+        <LinkButton icon={<UserOutlined />} type="text" to="/login">
           Sign in
-        </Button>
+        </LinkButton>
       );
   }
 }

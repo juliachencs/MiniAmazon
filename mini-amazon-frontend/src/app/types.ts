@@ -1,5 +1,5 @@
 // User auth
-export type Role = "ADMIN" | "REGULAR";
+export type Role = "Admin" | "Regular";
 
 export interface UserAuth {
   role: Role | null;
@@ -12,11 +12,23 @@ export interface UserInfo {
 }
 
 // Product
-export const allCategories = ["mobile", "computer", "desktop"] as const;
+export const allCategories = [
+  "Lighting",
+  "Plants & planters",
+  "Home electronics",
+  "Storage & organization",
+  "Beds & mattresses",
+  "Smart home",
+  "Tables & chairs",
+  "Home decor & accessories",
+  "Kitchen, appliances & supplies",
+  "Sofas & armchairs",
+] as const;
+
 export type SortType = "Last" | "PriceAsc" | "PriceDes";
 
 export interface Product {
-  id: string;
+  _id: string;
   name: string;
   description: string;
   category: string;
@@ -27,13 +39,22 @@ export interface Product {
   updateAt: Date;
 }
 
-export type ProductCreated = Omit<Product, "id" | "createAt" | "updateAt">;
-export type ProductUpdated = Omit<Product, "id"> | { _id: string };
+export type ProductCreated = Omit<Product, "_id" | "createAt" | "updateAt">;
 
 export interface ListProductsQuery {
   offset: number;
   limit: number;
   sortby: SortType;
+}
+
+//Standard success response from the server
+export interface BasicResponse {
+  success: boolean;
+}
+//Standard success response from the server
+export interface ResponseWithData {
+  success: boolean;
+  data: unknown;
 }
 
 // ERROR

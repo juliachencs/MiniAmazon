@@ -2,7 +2,7 @@ import React from "react";
 import type { ErrorInfo, ReactNode } from "react";
 import ErrorMessage from "./ErrorMessage";
 import { getErrorProps } from "@/app/utils";
-import { GoHomeButton } from "@/components/GoHome";
+import { GoHomeButton } from "@/components/HomeBtn";
 
 interface Props {
   children: ReactNode;

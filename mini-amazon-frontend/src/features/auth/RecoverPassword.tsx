@@ -2,6 +2,7 @@ import { Flex, Modal, Typography } from "antd";
 import UserForm from "@/features/auth/UserForm";
 import { useNavigate } from "react-router-dom";
 import type { UserInfo } from "@/app/types";
+import LinkText from "@/components/LinkText";
 
 export default function RecoverPassword() {
   const navigate = useNavigate();
@@ -32,11 +33,11 @@ export default function RecoverPassword() {
       <Flex justify="center" align="center" vertical>
         <Typography.Title level={3}> Recover your password</Typography.Title>
         <Typography.Paragraph>
-          Enter your email to recover your password{" "}
+          Enter your email to recover your password.
         </Typography.Paragraph>
         <UserForm type="recover" handler={onRecoverPassowrd} />
-        <Typography.Text>Remember your password?</Typography.Text>{" "}
-        <Typography.Link href="/login">Sign in</Typography.Link>{" "}
+        <Typography.Text>Remember your password?</Typography.Text>
+        <LinkText to="login">Sign in </LinkText>
       </Flex>
     </div>
   );

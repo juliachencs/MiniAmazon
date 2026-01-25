@@ -1,13 +1,20 @@
 import { useRole } from "@/app/hooks";
 import { isAdmin } from "@/app/utils";
-import { Button } from "antd";
+import LinkButton from "@/components/LinkButton";
 
-export default function EidtProductButton() {
+export interface EidtProductBtnProps {
+  productId: string;
+}
+export default function EidtProductButton({ productId }: EidtProductBtnProps) {
   const { role } = useRole();
 
   return (
-    <Button type="primary" disabled={!isAdmin(role)}>
+    <LinkButton
+      type="primary"
+      disabled={!isAdmin(role)}
+      to={`/products/update/${productId}`}
+    >
       Edit
-    </Button>
+    </LinkButton>
   );
 }

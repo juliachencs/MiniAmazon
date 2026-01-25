@@ -1,4 +1,4 @@
-import { Modal, message, Flex, Typography, Button, Space } from "antd";
+import { Modal, message, Flex, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 import { useLoginMutation } from "@/app/api";
@@ -6,6 +6,8 @@ import { type UserInfo } from "@/app/types";
 import UserForm from "@/features/auth/UserForm";
 import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
+import LinkButton from "@/components/LinkButton";
+import LinkText from "@/components/LinkText";
 
 export default function Login() {
   const [login, { isLoading }] = useLoginMutation();
@@ -16,7 +18,7 @@ export default function Login() {
       .unwrap()
       .then(() => {
         message.success("You have successfully logged in!", 3);
-        navigate("/");
+        navigate("/products");
       })
       .catch((error) => {
         const status = error?.status;
@@ -35,11 +37,11 @@ export default function Login() {
               issue={issue}
               suggestion={suggestion}
             >
-              <Button type="primary" href="/login">
+              <LinkButton type="primary" to="/login">
                 Sign in again
-              </Button>
-              <Button href="/"> Go Homepage</Button>
-              <Button href="/products">Browser Products</Button>
+              </LinkButton>
+              <LinkButton to="/"> Go Homepage</LinkButton>
+              <LinkButton to="/products">Browser Products</LinkButton>
             </ErrorMessage>
           ),
           footer: null,
@@ -61,11 +63,11 @@ export default function Login() {
 
         <div>
           <Typography.Text>Don’t have an account?</Typography.Text>
-          <Typography.Link href="/signup">Sign up</Typography.Link>
+          <LinkText to="/signup">Sign up</LinkText>
         </div>
 
         <div>
-          <Typography.Link href="/recover">Forgot password?</Typography.Link>
+          <LinkText to="/recover">Forgot password?</LinkText>
         </div>
       </Flex>
     </div>

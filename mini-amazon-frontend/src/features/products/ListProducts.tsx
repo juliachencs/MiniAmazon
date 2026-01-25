@@ -64,9 +64,8 @@ export default function ListProducts({
   const isDataStale = data && !currentData;
 
   return (
-    <Flex
-      wrap
-      gap="small"
+    <div
+      className="product-cards"
       style={{
         opacity: isFetching ? 0.5 : 1,
         transition: "opacity 0.2s",
@@ -76,8 +75,8 @@ export default function ListProducts({
       {isFetching && <Spin size="small" />}
       {!currentData && isFetching}
       {data?.map((x) => (
-        <ProductCard key={`card-${x.id}`} {...x}></ProductCard>
+        <ProductCard key={`card-${x._id}`} {...x}></ProductCard>
       ))}
-    </Flex>
+    </div>
   );
 }

@@ -48,6 +48,59 @@ The system provides a seamless experience across varying environment configurati
 
 
 
+## Product Dataset
+
+### make our dataset
+``` 
+Lighting
+Plants & planters
+Home electronics
+Storage & organization
+Beds & mattresses
+Smart home
+Tables & chairs
+Home decor & accessories
+Kitchen, appliances & supplies
+Sofas & armchairs
+```
+
+
+
+### statistics of the data
+```
+Lighting : 510
+Plants & planters : 375
+Home electronics : 108
+Storage & organization : 4124
+Beds & mattresses : 1154
+Smart home : 111
+Tables & chairs : 941
+Home decor & accessories : 693
+Kitchen, appliances & supplies : 12226
+Sofas & armchairs : 2052
+Bathroom: furniture, supplies & more : 1012
+Flooring, rugs & mats : 240
+Kitchenware & tableware : 1028
+Baby & kids : 1017
+Outdoor : 711
+Desk & desk chairs : 855
+Home textiles : 1877
+Home improvement : 139
+Laundry & cleaning : 135
+Storage containers, organizers & baskets : 490
+IKEA Food & Swedish restaurant : 93
+Pet accessories : 27
+```
+
+```bibtex
+@misc{ikea_us_products_2025,
+  title = {IKEA US Product Dataset (July 2025)},
+  author = {Jeffrey Zhou},
+  year = {2025},
+  url = {https://huggingface.co/datasets/jeffreyszhou/ikea-us-products-2025}
+}
+```
+
 
 ## FAQs
 
