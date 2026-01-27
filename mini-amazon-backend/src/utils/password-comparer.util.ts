@@ -1,6 +1,8 @@
-export function comparePassword(reqPassword: string, userPasswordHash: string): boolean {
+import bcrypt from 'bcrypt'
+
+export async function comparePassword(reqPassword: string, userPasswordHash: string): Promise<boolean> {
     // TODO
     // later we should not store actual password but password's hash
     // and comparation function will change accordingly
-    return reqPassword === userPasswordHash;
+    return bcrypt.compare(reqPassword, userPasswordHash);
 }

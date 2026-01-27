@@ -11,7 +11,7 @@ export async function signupController (
 
         const result = await registerService(email, password);
 
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             data: result
         });
