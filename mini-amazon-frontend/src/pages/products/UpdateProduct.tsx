@@ -5,9 +5,8 @@ import {
 } from "@/app/api";
 import { getErrorProps, MakeProductLink } from "@/app/utils";
 import ErrorMessageCard from "@/components/ErrorMessage";
-import LinkButton from "@/components/LinkButton";
-import ProductForm from "@/features/products/ProductForm";
-import { Skeleton, Spin, Typography, Flex, message, Modal, Result } from "antd";
+import ProductForm from "@/pages/products/ProductForm";
+import { Skeleton, Spin, Typography, Flex, message, Modal } from "antd";
 import { useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
@@ -16,6 +15,16 @@ export default function UpdateProduct() {
   const location = useLocation();
   const navigate = useNavigate();
   const { productId } = useParams();
+
+  if (!productId) {
+    return (
+      <ErrorMessageCard
+        issue="Missing Parameter"
+        suggestion="Please provide a valid product id in the url."
+        trouble="No product id is specified in the url!"
+      ></ErrorMessageCard>
+    );
+  }
 
   const { data, isLoading, isFetching, isError, error, currentData } =
     useGetProductQuery(productId as string);

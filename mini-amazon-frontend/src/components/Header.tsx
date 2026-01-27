@@ -12,7 +12,7 @@ import {
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import type { GetProps } from "antd";
 
-import AuthAvatar from "@/features/auth/AuthAvatar";
+import AuthAvatar from "@/components/AuthAvatar";
 import { MiniHomeLogo, LargeHomeLogo } from "@/components/HomeBtn";
 
 type SearchProps = GetProps<typeof Input.Search>;

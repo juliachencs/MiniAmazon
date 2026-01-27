@@ -1,5 +1,5 @@
 import { Alert, Flex, Modal, Skeleton, Spin } from "antd";
-import { ProductCard } from "@/features/products/ProductCard";
+import { ProductCard } from "@/pages/products/ProductCard";
 import type { SortType, Product } from "@/app/types";
 import { useListProductsQuery } from "@/app/api";
 import { getErrorProps } from "@/app/utils";

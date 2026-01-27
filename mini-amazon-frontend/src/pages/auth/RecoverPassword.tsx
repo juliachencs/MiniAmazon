@@ -1,5 +1,5 @@
 import { Flex, Modal, Typography } from "antd";
-import UserForm from "@/features/auth/UserForm";
+import UserForm from "@/pages/auth/UserForm";
 import { useNavigate } from "react-router-dom";
 import type { UserInfo } from "@/app/types";
 import LinkText from "@/components/LinkText";

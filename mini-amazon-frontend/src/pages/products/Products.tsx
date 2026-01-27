@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Typography, Select, Pagination, Flex } from "antd";
-import ListProducts from "./ListProducts";
-import CreateProductBtn from "./CreateProductBtn";
+
 import type { SortType } from "@/app/types";
 import { useRole } from "@/app/hooks";
 import { useCountProductsQuery } from "@/app/api";
+
+import ListProducts from "@/pages/products/ListProducts";
+import CreateProductBtn from "@/pages/products/CreateProductBtn";
 
 export default function Products() {
   const { role } = useRole();

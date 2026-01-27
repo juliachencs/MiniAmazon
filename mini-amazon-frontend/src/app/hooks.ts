@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "./store";
+import type { AppDispatch, RootState } from "@/app/store";
 import { useMemo } from "react";
 
 // Use throughout your app instead of plain useDispath and useSelector

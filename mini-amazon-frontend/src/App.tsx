@@ -1,34 +1,26 @@
-import {
-  BrowserRouter,
-  Outlet,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-// import "./App.css";
-import DefaultHeader from "./components/Header";
-import DefaultFooter from "./components/Footer";
+import DefaultHeader from "@/components/Header";
+import DefaultFooter from "@/components/Footer";
 
-import Login from "./features/auth/Login";
-import RecoverPassword from "./features/auth/RecoverPassword";
-import Signup from "./features/auth/Signup";
+import Login from "@/pages/auth/Login";
+import RecoverPassword from "@/pages/auth/RecoverPassword";
+import Signup from "@/pages/auth/Signup";
 
-import Products from "./features/products/Products";
-import CreateProduct from "./features/products/CreateProduct";
-import UpdateProduct from "./features/products/UpdateProduct";
-import Product from "./features/products/Product";
-import ErrorBoundary from "./components/ErrorBoundary";
+import Products from "@/pages/products/Products";
+import CreateProduct from "@/pages/products/CreateProduct";
+import UpdateProduct from "@/pages/products/UpdateProduct";
+import Product from "@/pages/products/Product";
+
 import { GoHomeButton } from "@/components/HomeBtn";
 
 import { useRole } from "@/app/hooks";
-import { Button, Progress, Result } from "antd";
-import { useEffect } from "react";
+import { Result } from "antd";
+
 import { isAdmin, isGuest } from "@/app/utils";
 import DelayedRedirect from "@/components/DelayedRedirectRoute";
 import LinkButton from "@/components/LinkButton";
+import Debug from "@/pages/debug";
 
 function GuestOnly() {
   const { role } = useRole();
@@ -93,35 +85,34 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ErrorBoundary>
-          <DefaultHeader />
-          <Routes>
-            {/*open to all*/}
-            <Route>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/products/item/:productId" element={<Product />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Route>
+        <DefaultHeader />
+        <Routes>
+          {/*open to all*/}
+          <Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/item/:productId" element={<Product />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
 
-            {/* only guest users can access these pages*/}
-            <Route element={<GuestOnly />}>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/recover" element={<RecoverPassword />} />
-            </Route>
+          {/* only guest users can access these pages*/}
+          <Route element={<GuestOnly />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/recover" element={<RecoverPassword />} />
+          </Route>
 
-            {/* only admin users can access these pages*/}
-            <Route element={<AdminOnly />}>
-              <Route path="/products/create" element={<CreateProduct />} />
-              <Route
-                path="/products/update/:productId"
-                element={<UpdateProduct />}
-              />
-            </Route>
-          </Routes>
-          <DefaultFooter />
-        </ErrorBoundary>
+          {/* only admin users can access these pages*/}
+          <Route element={<AdminOnly />}>
+            <Route path="/products/create" element={<CreateProduct />} />
+            <Route
+              path="/products/update/:productId"
+              element={<UpdateProduct />}
+            />
+          </Route>
+          <Route path="/debug" element={<Debug />}></Route>
+        </Routes>
+        <DefaultFooter />
       </BrowserRouter>
     </>
   );

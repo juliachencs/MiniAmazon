@@ -2,8 +2,8 @@ import { Card } from "antd";
 import { Link } from "react-router-dom";
 import type { Product } from "@/app/types";
 import { MakeProductLink } from "@/app/utils";
-import AddToCartBtn from "@/features/products/AddToCartBtn";
-import EditProductBtn from "@/features/products/EditProductBtn";
+import AddToCartBtn from "@/pages/products/AddToCartBtn";
+import EditProductBtn from "@/pages/products/EditProductBtn";
 
 const { Meta } = Card;
 

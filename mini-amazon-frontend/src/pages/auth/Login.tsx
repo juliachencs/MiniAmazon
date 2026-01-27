@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useLoginMutation } from "@/app/api";
 import { type UserInfo } from "@/app/types";
-import UserForm from "@/features/auth/UserForm";
+import UserForm from "@/pages/auth/UserForm";
 import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
 import LinkButton from "@/components/LinkButton";

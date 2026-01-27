@@ -2,12 +2,15 @@
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 
-import "./index.css";
-import App from "./App.tsx";
-import { store } from "./app/store.ts";
+import "@/index.css";
+import App from "@/App.tsx";
+import { store } from "@/app/store.ts";
+import ErrorBoundary from "@/components/ErrorBoundary.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </Provider>,
 );

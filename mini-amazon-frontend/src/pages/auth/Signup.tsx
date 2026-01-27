@@ -1,5 +1,5 @@
 import { Button, Flex, message, Modal, Typography } from "antd";
-import UserForm from "@/features/auth/UserForm";
+import UserForm from "@/pages/auth/UserForm";
 import { useSignupMutation } from "@/app/api";
 import { useNavigate } from "react-router-dom";
 import type { UserInfo } from "@/app/types";

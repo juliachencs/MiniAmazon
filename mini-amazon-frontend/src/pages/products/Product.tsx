@@ -1,9 +1,9 @@
-import { useGetProductQuery } from "../../app/api"; // adjust the import path as needed
+import { useGetProductQuery } from "@/app/api"; // adjust the import path as needed
 import { useParams } from "react-router-dom";
 
 import { Typography, Image, Flex, Spin } from "antd";
-import AddToCartBtn from "@/features/products/AddToCartBtn";
-import EidtProductButton from "@/features/products/EditProductBtn";
+import AddToCartBtn from "@/pages/products/AddToCartBtn";
+import EidtProductButton from "@/pages/products/EditProductBtn";
 
 export default function Product() {
   const { productId } = useParams();
