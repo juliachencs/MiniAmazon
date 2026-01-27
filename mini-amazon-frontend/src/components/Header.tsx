@@ -1,57 +1,98 @@
-import { Typography, Button, message } from "antd";
-import "./Header.css";
+import {
+  Input,
+  Button,
+  Tooltip,
+  Row,
+  Col,
+  Grid,
+  ConfigProvider,
+  theme,
+} from "antd";
 
-import { store } from "../store/store";
-import { useSignoutMutation } from "../store/api";
-import { useSelector } from "react-redux";
-function UserButton() {
-  const [signout] = useSignoutMutation();
-  // const [role, setRole] = useState(store.getState().auth.role);
-  // const unsubscribe = store.subscribe(() => {
-  //   setRole(store.getState().auth.role);
-  // });
+import { ShoppingCartOutlined } from "@ant-design/icons";
+import type { GetProps } from "antd";
 
-  const role = useSelector((state) => state.auth.role);
+import AuthAvatar from "@/features/auth/AuthAvatar";
+import { MiniHomeLogo, LargeHomeLogo } from "@/components/HomeBtn";
 
-  const onSignout = () => {
-    console.log("before signout: " + role);
-    signout()
-      .then(() => {
-        message.info("You have signed out!");
-        console.log("sign out: " + role);
-      })
-      .catch((e) => console.log(e));
-  };
-  const user = (
-    <Button type="text" style={{ color: "white" }} onClick={onSignout}>
-      Sign out{" "}
+type SearchProps = GetProps<typeof Input.Search>;
+const { Search } = Input;
+const { useBreakpoint } = Grid; // Destructure the hook
+
+function SearchBar() {
+  const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
+    console.log(info?.source, value);
+  return (
+    <Tooltip title="search">
+      <Search placeholder="input search text" onSearch={onSearch} />
+    </Tooltip>
+  );
+}
+
+function UserCart() {
+  return (
+    <Button type="text">
+      <ShoppingCartOutlined /> Cart
     </Button>
   );
-  const guest = <Typography.Link href="/login">Sign in </Typography.Link>;
-  return role ? user : guest;
 }
-export default function Header() {
+
+function HeaderOnSmallScreen() {
   return (
-    <header className="header flexrow">
-      <div className="logo">MiniAmazon</div>
+    <>
+      <Row align="middle" justify="space-around" wrap={false}>
+        <Col flex="none">
+          <MiniHomeLogo />
+        </Col>
 
-      <div className="searchbar">
-        <input type="search" />
-      </div>
+        <Col span={2}>
+          <AuthAvatar />
+        </Col>
 
-      <div className="statusbar">
-        <div className="minilog">mini</div>
+        <Col flex="auto" style={{ display: "flex", justifyContent: "right" }}>
+          <UserCart />
+        </Col>
+      </Row>
+      <Row wrap={false}>
+        <Col flex="auto">
+          <SearchBar />
+        </Col>
+      </Row>
+    </>
+  );
+}
 
-        <div className="status">
-          <span className="fa fa-user"> </span>
-          {/* <Button type="link" href="/login">
-            Sign in{" "}
-          </Button> */}
-          <UserButton></UserButton>
-          <span className="fa fa-shopping-cart"> </span>
-          <span> $0.00 </span>
-        </div>
-      </div>
-    </header>
+function HeaderOnLargeScreen() {
+  return (
+    <Row align="middle" justify="space-between">
+      <Col>
+        <LargeHomeLogo />
+      </Col>
+
+      <Col span="12">
+        <SearchBar />
+      </Col>
+
+      <Col style={{ display: "flex", justifyContent: "right" }}>
+        <AuthAvatar />
+        <UserCart />
+      </Col>
+    </Row>
+  );
+}
+
+export default function Header() {
+  const screens = useBreakpoint();
+
+  return (
+    <ConfigProvider
+      theme={{
+        algorithm: theme.darkAlgorithm,
+      }}
+    >
+      <header>
+        {screens.md ? <HeaderOnLargeScreen /> : <HeaderOnSmallScreen />}
+      </header>
+    </ConfigProvider>
   );
 }

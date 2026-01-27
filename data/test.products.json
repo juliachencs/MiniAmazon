@@ -1,0 +1,396 @@
+[{
+  "_id": {
+    "$oid": "696ee23baf7ca73cf00057cf"
+  },
+  "name": "Wireless Mouse",
+  "description": "Ergonomic wireless mouse with adjustable DPI.",
+  "category": "Electronics",
+  "price": 29.99,
+  "inStockQuant": 150,
+  "imageURI": "https://example.com/images/wireless-mouse.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:02:35.379Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:02:35.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee43abd3d216930dea23c"
+  },
+  "name": "Yoga Mat",
+  "description": "Non-slip yoga mat with extra cushioning.",
+  "category": "Fitness",
+  "price": 19.99,
+  "inStockQuant": 80,
+  "imageURI": "https://example.com/images/yoga-mat.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:11:06.964Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:11:06.964Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee443bd3d216930dea23e"
+  },
+  "name": "Coffee Mug",
+  "description": "Ceramic coffee mug with 350ml capacity.",
+  "category": "Kitchenware",
+  "price": 9.5,
+  "inStockQuant": 200,
+  "imageURI": "https://example.com/images/coffee-mug.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:11:15.550Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:11:15.550Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a21"
+  },
+  "name": "Bluetooth Speaker",
+  "description": "Portable speaker with 8 hours battery life.",
+  "category": "Electronics",
+  "price": 59.99,
+  "inStockQuant": 250,
+  "imageURI": "https://example.com/images/bluetooth-speaker.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:17:15.912Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a22"
+  },
+  "name": "Running Shoes",
+  "description": "Lightweight running shoes for men and women.",
+  "category": "Footwear",
+  "price": 75,
+  "inStockQuant": 60,
+  "imageURI": "https://example.com/images/running-shoes.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a25"
+  },
+  "name": "Wireless Earbuds",
+  "description": "Noise-cancelling true wireless earbuds.",
+  "category": "Electronics",
+  "price": 59.99,
+  "inStockQuant": 70,
+  "imageURI": "https://example.com/images/wireless-earbuds.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a26"
+  },
+  "name": "Backpack",
+  "description": "Durable backpack with multiple compartments.",
+  "category": "Accessories",
+  "price": 35,
+  "inStockQuant": 85,
+  "imageURI": "https://example.com/images/backpack.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a27"
+  },
+  "name": "Smartwatch",
+  "description": "Fitness tracking smartwatch with heart rate monitor.",
+  "category": "Electronics",
+  "price": 120,
+  "inStockQuant": 45,
+  "imageURI": "https://example.com/images/smartwatch.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a28"
+  },
+  "name": "Gaming Keyboard",
+  "description": "Mechanical RGB keyboard with customizable keys.",
+  "category": "Electronics",
+  "price": 89.99,
+  "inStockQuant": 40,
+  "imageURI": "https://example.com/images/gaming-keyboard.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a29"
+  },
+  "name": "Scented Candle",
+  "description": "Lavender scented candle for home relaxation.",
+  "category": "Home Decor",
+  "price": 12.5,
+  "inStockQuant": 130,
+  "imageURI": "https://example.com/images/scented-candle.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2a"
+  },
+  "name": "Wireless Charger",
+  "description": "Fast wireless charger compatible with all Qi devices.",
+  "category": "Electronics",
+  "price": 25,
+  "inStockQuant": 75,
+  "imageURI": "https://example.com/images/wireless-charger.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2b"
+  },
+  "name": "Cookware Set",
+  "description": "Non-stick cookware set with 5 pieces.",
+  "category": "Kitchenware",
+  "price": 99.99,
+  "inStockQuant": 30,
+  "imageURI": "https://example.com/images/cookware-set.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2c"
+  },
+  "name": "Desk Organizer",
+  "description": "Multi-functional desk organizer for office supplies.",
+  "category": "Office Supplies",
+  "price": 14,
+  "inStockQuant": 110,
+  "imageURI": "https://example.com/images/desk-organizer.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2d"
+  },
+  "name": "Sunglasses",
+  "description": "UV-protection polarized sunglasses.",
+  "category": "Accessories",
+  "price": 29.5,
+  "inStockQuant": 95,
+  "imageURI": "https://example.com/images/sunglasses.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2e"
+  },
+  "name": "Fitness Resistance Bands",
+  "description": "Set of 5 resistance bands for home workouts.",
+  "category": "Fitness",
+  "price": 20,
+  "inStockQuant": 140,
+  "imageURI": "https://example.com/images/resistance-bands.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a30"
+  },
+  "name": "Ceramic Vase",
+  "description": "Handmade ceramic vase for home decoration.",
+  "category": "Home Decor",
+  "price": 28,
+  "inStockQuant": 50,
+  "imageURI": "https://example.com/images/ceramic-vase.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a2f"
+  },
+  "name": "Laptop Stand",
+  "description": "Adjustable aluminum laptop stand for desk.",
+  "category": "Electronics",
+  "price": 32,
+  "inStockQuant": 60,
+  "imageURI": "https://example.com/images/laptop-stand.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a24"
+  },
+  "name": "Stainless Steel Water Bottle",
+  "description": "Vacuum insulated water bottle, keeps drinks cold or hot.",
+  "category": "Kitchenware",
+  "price": 18,
+  "inStockQuant": 150,
+  "imageURI": "https://example.com/images/water-bottle.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a23"
+  },
+  "name": "LED Desk Lamp",
+  "description": "Adjustable LED desk lamp with touch control.",
+  "category": "Home Decor",
+  "price": 22.5,
+  "inStockQuant": 90,
+  "imageURI": "https://example.com/images/led-desk-lamp.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a33"
+  },
+  "name": "Wall Clock",
+  "description": "Silent wall clock with modern design.",
+  "category": "Home Decor",
+  "price": 22,
+  "inStockQuant": 55,
+  "imageURI": "https://example.com/images/wall-clock.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a34"
+  },
+  "name": "Notebook Set",
+  "description": "Set of 3 notebooks for school or office.",
+  "category": "Office Supplies",
+  "price": 10,
+  "inStockQuant": 180,
+  "imageURI": "https://example.com/images/notebook-set.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696ee4dd9ff20a326cf54a31"
+  },
+  "name": "Electric Kettle",
+  "description": "1.7L electric kettle with auto shut-off feature.",
+  "category": "Kitchenware",
+  "price": 34.5,
+  "inStockQuant": 70,
+  "imageURI": "https://example.com/images/electric-kettle.jpg",
+  "createAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "updateAt": {
+    "$date": "2026-01-20T02:13:49.404Z"
+  },
+  "__v": 0
+}]
