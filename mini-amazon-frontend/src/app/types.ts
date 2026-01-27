@@ -1,3 +1,14 @@
+//Basic success response from the server
+export interface BasicResponse {
+  success: boolean;
+}
+
+//Standard success response with datafrom the server
+export interface ResponseWithData {
+  success: boolean;
+  data: unknown;
+}
+
 // User auth
 export type Role = "Admin" | "Regular";
 
@@ -47,14 +58,28 @@ export interface ListProductsQuery {
   sortby: SortType;
 }
 
-//Standard success response from the server
-export interface BasicResponse {
-  success: boolean;
+// Cart
+interface CartItem {
+  productId: string;
+  productName: string;
+  productImgURI: string;
+  quantity: number;
+  inStockQuant: number;
+  priceSnapshot: number;
+  recentChangedPrice: boolean;
+  recentChangedStock: boolean;
 }
-//Standard success response from the server
-export interface ResponseWithData {
-  success: boolean;
-  data: unknown;
+
+export interface CartQuery {
+  productId: string;
+  quantity: number;
+}
+
+export interface CartResponse {
+  products: CartItem[];
+  subtotal: number;
+  discount: number;
+  total: number;
 }
 
 // ERROR

@@ -8,9 +8,9 @@ import { store } from "@/app/store.ts";
 import ErrorBoundary from "@/components/ErrorBoundary.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <Provider store={store}>
-    <ErrorBoundary>
+  <ErrorBoundary>
+    <Provider store={store}>
       <App />
-    </ErrorBoundary>
-  </Provider>,
+    </Provider>
+  </ErrorBoundary>,
 );

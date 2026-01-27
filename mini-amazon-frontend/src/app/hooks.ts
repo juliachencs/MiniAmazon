@@ -15,3 +15,8 @@ export const useToken = () => {
   const token = useAppSelector((state: RootState) => state.auth.token);
   return useMemo(() => ({ token }), [token]);
 };
+
+export const useCart = () => {
+  const cart = useAppSelector((state: RootState) => state.cart);
+  return useMemo(() => ({ cart }), [cart]);
+};
