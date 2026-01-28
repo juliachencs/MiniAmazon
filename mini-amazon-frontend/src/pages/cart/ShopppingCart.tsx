@@ -15,10 +15,13 @@ import {
   Row,
   Col,
   Input,
+  Form,
+  Space,
 } from "antd";
 import AddToCartBtn from "@/pages/products/AddToCartBtn";
 import RemoveFromCartBtn from "@/pages/cart/RemoveFromCartBtn";
 import { Link } from "react-router";
+import { useDispatch } from "react-redux";
 
 const descStyles: DescriptionsProps["styles"] = {
   label: {
@@ -56,7 +59,10 @@ function ShoppintCartForm({
   subtotal,
   discount,
   total,
+  promoCode,
 }: CartResponse) {
+  const dispatch = useAppDispatch();
+
   if (products && products.length === 0) {
     return <Empty description="Your shopping cart is empty." />;
   }
@@ -65,37 +71,51 @@ function ShoppintCartForm({
     {
       key: "subtotal",
       label: "Subtotal",
-      children: `${subtotal}`,
+      children: `$${subtotal.toFixed(2)}`,
     },
     {
       key: "discount",
       label: "Discount",
-      children: `${discount}`,
+      children: discount > 0 ? `-$${discount.toFixed(2)}` : "$0.00",
     },
     {
       key: "total",
       label: "Total",
-      children: `${total}`,
+      children: `$${total.toFixed(2)}`,
     },
   ];
-
+  const onApplyCode = (values) => {
+    dispatch(cartThunks.applyPromotionCode(values.promoCode));
+  };
   return (
     <Flex vertical>
       {/*products */}
       {products?.map((x) => (
         <CartEntry {...x} />
       ))}
-      <Divider />
+      {/*promocode */}
 
-      <div> Apply Discount Code</div>
-      <div>
-        <Input />
-        <Button type="primary"> Apply Discount </Button>
-      </div>
-
+      {/*promocode */}
       <Divider />
+      <Form layout="vertical" style={{ width: "100%" }}>
+        <Form.Item label="Apply Discount Code">
+          <Space.Compact block={true}>
+            <Form.Item name="promoCode" style={{ width: "80%" }}>
+              <Input placeholder="MAGIC20OFF" />
+            </Form.Item>
+            <Button type="primary" style={{ width: "20%" }} htmlType="submit">
+              Apply
+            </Button>
+          </Space.Compact>
+        </Form.Item>
+      </Form>
+      {promoCode && <div>Applied: {promoCode}</div>}
+      {/*statics */}
+
       <Descriptions column={1} items={items} styles={descStyles} />
 
+      {/*checkout */}
+      <Divider />
       <Button type="primary">
         <Link to="/checkout">Continue to checkout </Link>
       </Button>

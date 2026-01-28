@@ -32,6 +32,7 @@ const cartSlice = createSlice({
     addCases(builder, cartThunks.addItemToCart);
     addCases(builder, cartThunks.updateItemQuantity);
     addCases(builder, cartThunks.removeItemFromCart);
+    addCases(builder, cartThunks.applyPromotionCode);
     builder.addMatcher(
       api.endpoints.signout.matchFulfilled,
       (state, action) => {

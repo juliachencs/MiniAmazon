@@ -59,7 +59,7 @@ export interface ListProductsQuery {
 }
 
 // Cart
-interface CartItem {
+export interface CartItem {
   productId: string;
   productName: string;
   productImgURI: string;
@@ -70,18 +70,18 @@ interface CartItem {
   recentChangedStock: boolean;
 }
 
-export interface CartQuery {
-  productId: string;
-  quantity: number;
-}
-
 export interface CartResponse {
   products: CartItem[];
+  promoCode: string;
   subtotal: number;
   discount: number;
   total: number;
 }
 
+export interface CartQuery {
+  productId: string;
+  quantity: number;
+}
 // ERROR
 export type ErrorCode =
   | "AUTH_FAILED"

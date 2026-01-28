@@ -52,12 +52,12 @@ function getCart({ getState }) {
   return fetchCartAPI({}, { getState });
 }
 
-function addItemToCart({ productId, quantity }: CartQuery, { getState }) {
+function addItemToCart(productId: string, { getState }) {
   return fetchCartAPI(
     {
       method: "POST",
-      endpoint: `/items/${productId}`,
-      body: { quantity },
+      endpoint: `/items`,
+      body: { productId },
     },
     { getState },
   );
@@ -84,9 +84,21 @@ function removeItemFromCart(productId: string, { getState }) {
   );
 }
 
+function applyPromotionCode(promoCode: string, { getState }) {
+  return fetchCartAPI(
+    {
+      method: "POST",
+      endpoint: `/promo`,
+      body: { promoCode },
+    },
+    { getState },
+  );
+}
+
 export const cartAPI = {
   getCart,
   addItemToCart,
   removeItemFromCart,
   updateItemQuantity,
+  applyPromotionCode,
 };

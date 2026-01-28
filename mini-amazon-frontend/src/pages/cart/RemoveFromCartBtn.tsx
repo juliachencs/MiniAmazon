@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, Tooltip } from "antd";
 import { useAppDispatch } from "@/app/hooks";
 import { cartThunks } from "@/features/cart/cartthunks";
 export interface RemoveFromCartBtnProps {
@@ -15,8 +15,10 @@ export default function RemoveFromCartBtn({
   };
 
   return (
-    <Button danger onClick={() => onClick()}>
-      Remove
-    </Button>
+    <Tooltip title="Take this out of your cart">
+      <Button danger onClick={() => onClick()}>
+        Remove
+      </Button>
+    </Tooltip>
   );
 }

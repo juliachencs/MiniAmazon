@@ -4,18 +4,17 @@ import { cartAPI } from "@/features/cart/cartAPI";
 
 // create the thunk actions
 
-const addItemToCart = createAsyncThunk(
-  "cart/add",
-  async (args: CartQuery, { getState }) => {
-    // logic to add item to cart
-    console.log("cartthunks addItemToCart:", args);
-    return await cartAPI.addItemToCart(args, { getState });
-  },
-);
-
 const getCart = createAsyncThunk("cart/get", async (_, { getState }) => {
   return await cartAPI.getCart({ getState });
 });
+
+const addItemToCart = createAsyncThunk(
+  "cart/add",
+  async (productId: string, { getState }) => {
+    console.log("cartthunks addItemToCart:", args);
+    return await cartAPI.addItemToCart(productId, { getState });
+  },
+);
 
 const updateItemQuantity = createAsyncThunk(
   "cart/update",
@@ -33,9 +32,17 @@ const removeItemFromCart = createAsyncThunk(
   },
 );
 
+const applyPromotionCode = createAsyncThunk(
+  "cart/promo",
+  async (promoCode: string, { getState }) => {
+    return await cartAPI.applyPromotionCode(promoCode, { getState });
+  },
+);
+
 export const cartThunks = {
   addItemToCart,
   getCart,
   updateItemQuantity,
   removeItemFromCart,
+  applyPromotionCode,
 };

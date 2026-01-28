@@ -12,7 +12,7 @@ export default function AddToCartBtn({ productId }: AddToCartBtnProps) {
   const dispatch = useAppDispatch();
 
   const onClick = () => {
-    dispatch(cartThunks.addItemToCart({ productId: productId, quantity: 1 }));
+    dispatch(cartThunks.addItemToCart(productId));
     console.log("add to cart: ", productId);
   };
 
