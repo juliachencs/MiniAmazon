@@ -1,3 +1,4 @@
+import { api } from "@/app/api";
 import type { CartResponse } from "@/app/types";
 import { cartThunks } from "@/features/cart/cartthunks";
 import { createSlice } from "@reduxjs/toolkit";
@@ -31,6 +32,12 @@ const cartSlice = createSlice({
     addCases(builder, cartThunks.addItemToCart);
     addCases(builder, cartThunks.updateItemQuantity);
     addCases(builder, cartThunks.removeItemFromCart);
+    builder.addMatcher(
+      api.endpoints.signout.matchFulfilled,
+      (state, action) => {
+        return { mode: "uninitialized" };
+      },
+    );
   },
 });
 

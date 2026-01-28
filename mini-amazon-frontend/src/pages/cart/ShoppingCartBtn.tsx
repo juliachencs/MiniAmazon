@@ -7,16 +7,19 @@ import {
   Button,
   Flex,
   Popover,
+  Tooltip,
   Typography,
   type PopoverProps,
 } from "antd";
-import { useCartItemCount } from "@/app/hooks";
+import { useAppDispatch, useCartItemCount, useRole } from "@/app/hooks";
 import { MemoryRouter, Route, Routes, useLocation } from "react-router-dom";
 import Checkout from "@/pages/cart/Checkout";
+import { isGuest } from "@/app/utils";
+import { cartThunks } from "@/features/cart/cartthunks";
 
 const popoverStyles: PopoverProps["styles"] = {
   container: {
-    maxWidth: "90vw",
+    maxWidth: "min(90vw, 512px)",
     margin: "0px",
     padding: "0px",
   },
@@ -31,11 +34,19 @@ const popoverStyles: PopoverProps["styles"] = {
   },
 };
 
-export default function ShoppingCartBtn() {
+function AuthShoppingCartBtn() {
   const [visible, setVisible] = useState(false);
   const { count, mode } = useCartItemCount();
   const location = useLocation(); // Hook to access current location
 
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    console.log("sAuthShoppingCartBtn UseEffect:", mode);
+    if (mode === "uninitialized") {
+      dispatch(cartThunks.getCart());
+    }
+  }, [mode]);
   // Function to hide the Popover
   const hidePopover = () => {
     setVisible(false);
@@ -64,6 +75,7 @@ export default function ShoppingCartBtn() {
     }
   }, [location.pathname]);
   const content = <ShoppingCart />;
+
   //success | processing | default | error | warning
   // "uninitialized" | "loading" | "success" | "error";
   const status =
@@ -92,4 +104,19 @@ export default function ShoppingCartBtn() {
       </Popover>
     </div>
   );
+}
+
+function GuestCartBtn() {
+  return (
+    <Tooltip title="please login to activate shoppint cart">
+      <Button type="text">
+        <ShoppingCartOutlined /> Cart
+      </Button>
+    </Tooltip>
+  );
+}
+export default function ShoppingCartBtn() {
+  const { role } = useRole();
+
+  return isGuest(role) ? <GuestCartBtn /> : <AuthShoppingCartBtn />;
 }

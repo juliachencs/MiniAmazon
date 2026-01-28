@@ -79,10 +79,6 @@ function ShoppintCartForm({
     },
   ];
 
-  const onCheckout = () => {
-    console.log("continue to checkout");
-  };
-
   return (
     <Flex vertical>
       {/*products */}
@@ -114,8 +110,11 @@ export default function ShoppingCart() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(cartThunks.getCart());
-  }, [dispatch]);
+    console.log("shoppint cart use effect:", mode);
+    if (mode === "uninitialized") {
+      dispatch(cartThunks.getCart());
+    }
+  }, [mode]);
 
   if (mode === "error") {
     return <div>Error loading cart. Please try again.</div>;
