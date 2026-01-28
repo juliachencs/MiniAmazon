@@ -5,9 +5,9 @@ export interface ProductI {
     name: string;
     description: string;
     category: string;
-    price: number,
-    inStockQuant: number,
-    imageURI: string
-    createAt?: Date
-    updateAt?: Date
+    price: number;
+    inStockQuant: number;
+    imageURI: string;
+    createAt?: Date;
+    updateAt?: Date;
 }
