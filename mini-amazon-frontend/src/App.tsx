@@ -1,4 +1,10 @@
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  MemoryRouter,
+  Outlet,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 import DefaultHeader from "@/components/Header";
 import DefaultFooter from "@/components/Footer";
@@ -22,6 +28,7 @@ import DelayedRedirect from "@/components/DelayedRedirectRoute";
 import LinkButton from "@/components/LinkButton";
 import Debug from "@/pages/Debug";
 import ShoppingCart from "@/pages/cart/ShopppingCart";
+import Checkout from "@/pages/cart/Checkout";
 
 function GuestOnly() {
   const { role } = useRole();
@@ -40,6 +47,19 @@ function AdminOnly() {
     <DelayedRedirect
       title="Sorry, you don't have the permission to access that page"
       redirect="/"
+    ></DelayedRedirect>
+  );
+}
+function AuthOnly() {
+  const { role } = useRole();
+
+  if (!isGuest(role)) {
+    return <Outlet />;
+  }
+  return (
+    <DelayedRedirect
+      title="Sorry, you need to log in to access that page"
+      redirect="/login"
     ></DelayedRedirect>
   );
 }
@@ -111,9 +131,14 @@ function App() {
               element={<UpdateProduct />}
             />
           </Route>
+
+          <Route element={<AuthOnly />}>
+            <Route path="/checkout" element={<Checkout />} />
+          </Route>
+
           <Route path="/debug" element={<Debug />}></Route>
-          <Route path="/cart" element={<ShoppingCart />}></Route>
         </Routes>
+
         <DefaultFooter />
       </BrowserRouter>
     </>

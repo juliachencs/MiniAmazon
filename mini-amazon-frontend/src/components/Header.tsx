@@ -14,6 +14,7 @@ import type { GetProps } from "antd";
 
 import AuthAvatar from "@/components/AuthAvatar";
 import { MiniHomeLogo, LargeHomeLogo } from "@/components/HomeBtn";
+import ShoppingCartBtn from "@/pages/cart/ShoppingCartBtn";
 
 type SearchProps = GetProps<typeof Input.Search>;
 const { Search } = Input;
@@ -29,13 +30,13 @@ function SearchBar() {
   );
 }
 
-function UserCart() {
-  return (
-    <Button type="text">
-      <ShoppingCartOutlined /> Cart
-    </Button>
-  );
-}
+// function UserCart() {
+//   return (
+//     <Button type="text">
+//       <ShoppingCartOutlined /> Cart
+//     </Button>
+//   );
+// }
 
 function HeaderOnSmallScreen() {
   return (
@@ -50,7 +51,7 @@ function HeaderOnSmallScreen() {
         </Col>
 
         <Col flex="auto" style={{ display: "flex", justifyContent: "right" }}>
-          <UserCart />
+          <ShoppingCartBtn />
         </Col>
       </Row>
       <Row wrap={false}>
@@ -75,7 +76,7 @@ function HeaderOnLargeScreen() {
 
       <Col style={{ display: "flex", justifyContent: "right" }}>
         <AuthAvatar />
-        <UserCart />
+        <ShoppingCartBtn />
       </Col>
     </Row>
   );
