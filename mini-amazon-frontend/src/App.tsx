@@ -20,7 +20,8 @@ import { Result } from "antd";
 import { isAdmin, isGuest } from "@/app/utils";
 import DelayedRedirect from "@/components/DelayedRedirectRoute";
 import LinkButton from "@/components/LinkButton";
-import Debug from "@/pages/debug";
+import Debug from "@/pages/Debug";
+import ShoppingCart from "@/pages/cart/ShopppingCart";
 
 function GuestOnly() {
   const { role } = useRole();
@@ -111,6 +112,7 @@ function App() {
             />
           </Route>
           <Route path="/debug" element={<Debug />}></Route>
+          <Route path="/cart" element={<ShoppingCart />}></Route>
         </Routes>
         <DefaultFooter />
       </BrowserRouter>

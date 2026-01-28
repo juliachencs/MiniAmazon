@@ -8,6 +8,7 @@ const addItemToCart = createAsyncThunk(
   "cart/add",
   async (args: CartQuery, { getState }) => {
     // logic to add item to cart
+    console.log("cartthunks addItemToCart:", args);
     return await cartAPI.addItemToCart(args, { getState });
   },
 );
@@ -19,6 +20,8 @@ const getCart = createAsyncThunk("cart/get", async (_, { getState }) => {
 const updateItemQuantity = createAsyncThunk(
   "cart/update",
   async (args: CartQuery, { getState }) => {
+    console.log("cartthunks updateItemQuantity:", args);
+
     return await cartAPI.updateItemQuantity(args, { getState });
   },
 );
