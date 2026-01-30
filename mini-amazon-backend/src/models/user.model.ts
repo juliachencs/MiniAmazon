@@ -3,13 +3,13 @@ import { Role } from "../types/role.enum.js";
 import { model, Schema } from "mongoose";
 import bcrypt from 'bcrypt'
 
-const userSchema = new Schema<UserI>({
+const UserSchema = new Schema<UserI>({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     role: { type: String, enum: Object.values(Role), default: Role.User }
 });
 
-userSchema.pre('save', async function () {
+UserSchema.pre('save', async function () {
     if (!this.isModified('password')) {
         return;
     }
@@ -17,4 +17,4 @@ userSchema.pre('save', async function () {
     this.password = await bcrypt.hash(this.password, salt);
 });
 
-export const User = model<UserI>('User', userSchema);
+export const User = model<UserI>('User', UserSchema);
