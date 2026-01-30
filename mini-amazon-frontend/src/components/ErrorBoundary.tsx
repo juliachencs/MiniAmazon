@@ -1,6 +1,5 @@
 import React from "react";
 import type { ErrorInfo, ReactNode } from "react";
-import { Result, Button } from "antd";
 
 interface Props {
   children: ReactNode;
