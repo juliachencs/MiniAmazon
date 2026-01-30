@@ -12,10 +12,11 @@ export async function getProducts(
         // paginated product list request
         // TODO: edge conditions?
         if (req.query.offset && req.query.limit && req.query.sortby) {
+            const { offset, limit, sortby } = req.query;
             const result: ProductI[] = await productsService.getProductsPaginatedService(
-                parseInt(req.query.offset as string),
-                parseInt(req.query.limit as string),
-                req.query.sortby as string
+                parseInt(offset as string),
+                parseInt(limit as string),
+                sortby as string
             )
             res.status(200).json({
                 success: true,
@@ -41,7 +42,9 @@ export async function getProductById(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.params.id || !isValidObjectId(req.params.id)) throw new HttpBadRequestError('invalid id');
+        if (!req.params.id || !isValidObjectId(req.params.id)) {
+            throw new HttpBadRequestError('invalid id')
+        };
 
         const result: ProductI | null = await productsService.getProductByIdService(req.params.id);
 
@@ -63,6 +66,7 @@ export async function getProductCounts(
     next: NextFunction): Promise<void> {
     try {
         const result: number = await productsService.getProductCountService();
+
         res.status(200).json({
             success: true,
             data: result
@@ -95,7 +99,9 @@ export async function updateProduct(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.params.id || !isValidObjectId(req.params.id)) throw new HttpBadRequestError('invalid id');
+        if (!req.params.id || !isValidObjectId(req.params.id)) {
+            throw new HttpBadRequestError('invalid id')
+        };
 
         const result: ProductI | null = await productsService.updateProductByIdService(req.params.id, req.body);
 
@@ -118,7 +124,9 @@ export async function deleteProduct(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.params.id || !isValidObjectId(req.params.id)) throw new HttpBadRequestError('invalid id');
+        if (!req.params.id || !isValidObjectId(req.params.id)){
+            throw new HttpBadRequestError('invalid id')
+        };
 
         const result: void | null = await productsService.deleteProductByIdService(req.params.id);
 

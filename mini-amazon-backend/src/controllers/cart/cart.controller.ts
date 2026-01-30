@@ -10,7 +10,7 @@ export async function getCart(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         const result: CartDTO = await cartService.getCartService(req.user.email);
@@ -29,7 +29,7 @@ export async function clearCart(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         const result: CartDTO = await cartService.clearCartService(req.user.email);
@@ -48,7 +48,7 @@ export async function addCartItem(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         if (!req.body || !req.body.productId) {
@@ -71,7 +71,7 @@ export async function updateCartItem(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         if (!req.body || !req.body.quantity) {
@@ -97,7 +97,7 @@ export async function deleteCartItem(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         if (!req.params.productId || !isValidObjectId(req.params.productId)) {
@@ -120,7 +120,7 @@ export async function applyPromoCode(
     res: Response,
     next: NextFunction): Promise<void> {
     try {
-        if (!req.user) {
+        if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
         if (!req.body || !req.body.promoCode) {
