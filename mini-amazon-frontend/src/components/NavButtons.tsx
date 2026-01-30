@@ -28,3 +28,11 @@ export function BrowerProductsButton({ ...props }) {
     </NavButton>
   );
 }
+
+export function LoginButton({ ...props }) {
+  return (
+    <NavButton to="/Login" {...props}>
+      Sign in
+    </NavButton>
+  );
+}
