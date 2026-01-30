@@ -25,14 +25,16 @@ export const auth = async (
     try {
         const jwt_secret = process.env.JWT_SECRET || 'somethingsupersecret';
 
-        // Verify token
-        const decoded: JwtPayload = await jwt.verify(token, jwt_secret) as JwtPayload;
+        const decoded: JwtPayload | string = await jwt.verify(token, jwt_secret);
 
-        // Add user from payload
+        if (typeof decoded === 'string') {
+            throw new HttpUnauthorizedError('Token format invalid');
+        }
+
         req.user = decoded;
 
         next();
     } catch (err) {
-        throw new HttpUnauthorizedError('Token not valid');
+        throw new HttpUnauthorizedError('Token is invalid');
     }
 }

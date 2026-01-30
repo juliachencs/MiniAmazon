@@ -13,9 +13,7 @@ export const authorizeRole = (...allowedRoles: Role[]) => {
             throw new HttpUnauthorizedError('Invalid authorization header');
         }
 
-        const { role } = req.user;
-
-        if (!allowedRoles.includes(role)) {
+        if (!allowedRoles.includes(req.user.role)) {
             throw new HttpForbiddenError('No permission in current role group');
         }
 

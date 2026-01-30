@@ -23,7 +23,7 @@ export async function login(
     } catch (error) {
         next(error);
     }
-};
+}
 
 export async function signup(
     req: Request,
@@ -45,7 +45,7 @@ export async function signup(
     } catch (error) {
         next(error);
     }
-};
+}
 
 export async function signout(
     req: Request,
@@ -53,6 +53,7 @@ export async function signout(
     next: NextFunction
 ): Promise<void> {
     try {
+        // TODO? add refresh token related logic here
         res.status(204).json({
             success: true,
             data: 'signout successfull'
@@ -60,7 +61,7 @@ export async function signout(
     } catch (error) {
         next(error);
     }
-};
+}
 
 export async function recoverPassword(
     req: Request,
@@ -79,4 +80,4 @@ export async function recoverPassword(
     } catch (error) {
         next(error);
     }
-};
+}
