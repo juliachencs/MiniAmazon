@@ -1,3 +1,4 @@
+import { Button, Result } from "antd";
 import React from "react";
 import type { ErrorInfo, ReactNode } from "react";
 
