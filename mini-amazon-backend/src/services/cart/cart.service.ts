@@ -6,6 +6,8 @@ import type { ProductI, ProductView } from "../../types/product.interface.js";
 import { HttpBadRequestError } from "../../errors/bad-request-error.js";
 import type { Types } from "mongoose";
 import { HttpConfilctError } from "../../errors/conflict-error.js";
+import { HttpError } from "../../errors/http-error.js";
+import { HttpNotFoundError } from "../../errors/not-found-error.js";
 
 export async function getCartService(userId: string): Promise<CartDTO> {
     const cart: CartI<CartItemPop> | null = await Cart.findOne({ userId })
@@ -69,6 +71,61 @@ export async function addCartItemService(userId: string, itemId: string): Promis
         productId: item._id,
         quantity: 1,
         priceSnapshot: item.price
+    });
+
+    // wait until update complete
+    await Cart.findOneAndUpdate({ userId }, cart);
+
+    return getCartService(userId);
+}
+
+export async function updateCartItemService(userId: string, itemId: string, quantityIn: number) {
+    const cart: CartI | null = await Cart.findOne({ userId });
+
+    // if we do throttle, change this
+    if (!cart) {
+        throw new HttpNotFoundError('Cart not found');
+    }
+
+    // let mongoose handle the subdocument change
+    const item = cart.products.find((item) => {
+        return item.productId.toString() === itemId;
+    });
+
+    // TODO validations for price and stock
+    if (item) {
+        item.quantity = quantityIn;
+    } else {
+        throw new HttpNotFoundError('Product not found');
+    }
+
+    // wait until update complete
+    await Cart.findOneAndUpdate({ userId }, cart);
+
+    return getCartService(userId);
+}
+
+export async function deleteCartItemService(userId: string, itemId: string) {
+    const cart: CartI | null = await Cart.findOne({ userId });
+
+    if (!cart) {
+        throw new HttpNotFoundError('Cart not found');
+    }
+
+    // let mongoose handle the subdocument change
+    const item = cart.products.find((item) => {
+        return item.productId.toString() === itemId;
+    });
+
+    // TODO price change
+    if (item) {
+
+    } else {
+        throw new HttpNotFoundError('Product not found');
+    }
+
+    cart.products = cart.products.filter((p) => {
+        return p.productId.toString() !== itemId
     });
 
     // wait until update complete

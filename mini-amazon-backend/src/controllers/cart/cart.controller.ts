@@ -4,6 +4,7 @@ import * as cartService from '../../services/cart/cart.service.js'
 import type { AuthRequest } from '../../middlewares/auth.middleware.js';
 import { HttpUnauthorizedError } from '../../errors/unauthorized-error.js';
 import { HttpBadRequestError } from '../../errors/bad-request-error.js';
+import { isValidObjectId } from 'mongoose';
 
 export async function getCart(
     req: AuthRequest,
@@ -46,7 +47,48 @@ export async function addCartItem(
         throw new HttpBadRequestError('Request item id to proceed');
     }
 
-    const result: CartDTO | null = await cartService.addCartItemService(req.user.email, req.body.productId);
+    const result: CartDTO = await cartService.addCartItemService(req.user.email, req.body.productId);
+
+    res.status(200).json({
+        success: true,
+        data: result
+    });
+}
+
+export async function updateCartItem(
+    req: AuthRequest,
+    res: Response,
+    next: NextFunction): Promise<void> {
+    if (!req.user) {
+        throw new HttpUnauthorizedError('Missing required auth data');
+    }
+    if (!req.body) {
+        throw new HttpBadRequestError('Quantity of item not provided');
+    }
+    if (!req.params.productId || !isValidObjectId(req.params.productId)) {
+        throw new HttpBadRequestError('Id is invalid');
+    }
+
+    const result: CartDTO = await cartService.updateCartItemService(req.user.email, req.params.productId, req.body.quantity);
+
+    res.status(200).json({
+        success: true,
+        data: result
+    });
+}
+
+export async function deleteCartItem(
+    req: AuthRequest,
+    res: Response,
+    next: NextFunction): Promise<void> {
+    if (!req.user) {
+        throw new HttpUnauthorizedError('Missing required auth data');
+    }
+        if (!req.params.productId || !isValidObjectId(req.params.productId)) {
+        throw new HttpBadRequestError('Id is invalid');
+    }
+
+    const result: CartDTO = await cartService.deleteCartItemService(req.user.email, req.params.productId);
 
     res.status(200).json({
         success: true,
