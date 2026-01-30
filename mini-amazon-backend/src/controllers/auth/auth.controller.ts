@@ -1,6 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import type { authRespond } from '../../types/authRespond.interface.js';
 import { loginService, registerService } from '../../services/auth/auth.service.js';
+import { HttpBadRequestError } from '../../errors/http.error.js';
 
 export async function login(
     req: Request,
@@ -8,6 +9,9 @@ export async function login(
     next: NextFunction
 ): Promise<void> {
     try {
+        if (!req.body) {
+            throw new HttpBadRequestError('Request body invalid');
+        }
         const { email, password } = req.body;
 
         const result: authRespond = await loginService(email, password);
@@ -27,6 +31,10 @@ export async function signup(
     next: NextFunction
 ): Promise<void> {
     try {
+        if (!req.body) {
+            throw new HttpBadRequestError('Request body invalid');
+        }
+        
         const { email, password } = req.body;
 
         const result: authRespond = await registerService(email, password);

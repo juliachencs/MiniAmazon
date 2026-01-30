@@ -27,7 +27,7 @@ export function calculateDiscount(promoCode: string, subtotal: number): number {
     });
 
     if (!promo) {
-        throw new HttpError('code is already expired', 500);
+        throw new HttpError('Promocode is expired but not updated', 500);
     }
 
     switch(promo.type){
