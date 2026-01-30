@@ -34,7 +34,6 @@ export async function signup(
         if (!req.body) {
             throw new HttpBadRequestError('Request body invalid');
         }
-        
         const { email, password } = req.body;
 
         const result: authRespond = await registerService(email, password);
