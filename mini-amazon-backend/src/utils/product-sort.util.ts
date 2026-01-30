@@ -1,6 +1,6 @@
 import type { SortOrder } from "mongoose";
-import { HttpBadRequestError } from "../errors/bad-request-error.js";
 import { SortType } from "../types/sortType.enum.js";
+import { HttpBadRequestError } from "../errors/http.error.js";
 
 export function sortTypeManager(sortByQuery: string): Record<string, SortOrder> {
     const sortBy: SortType =

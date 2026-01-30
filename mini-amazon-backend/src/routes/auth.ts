@@ -1,13 +1,10 @@
 import { Router } from "express";
-import { loginController } from "../controllers/auth/login.controller.js";
-import { signupController } from "../controllers/auth/signup.controller.js";
-import { recoverPasswordController } from "../controllers/auth/recover-password.contoller.js";
-import { signoutController } from "../controllers/auth/signout.contoller.js";
+import * as authController from "../controllers/auth/auth.controller.js"
 
 
 export const authRouter = Router();
 
-authRouter.post('/login', loginController);
-authRouter.post('/signup', signupController);
-authRouter.post('/recover', recoverPasswordController);
-authRouter.post('/signout', signoutController);
+authRouter.post('/login', authController.login);
+authRouter.post('/signup', authController.signup);
+authRouter.post('/recover', authController.recoverPassword);
+authRouter.post('/signout', authController.signout);

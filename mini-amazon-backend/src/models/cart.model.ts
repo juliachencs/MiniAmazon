@@ -3,7 +3,7 @@ import type { CartItemI } from "../types/cartItem.interface.js";
 import type { CartI } from "../types/cart.interface.js";
 import { Types } from "mongoose";
 
-const cartItemSchema = new Schema<CartItemI>({
+const CartItemSchema = new Schema<CartItemI>({
     productId: { type: Types.ObjectId, ref: 'Product', required: true, unique: true },
     quantity: { type: Number, required: true },
     priceSnapshot: { type: Number, required: true },
@@ -11,9 +11,9 @@ const cartItemSchema = new Schema<CartItemI>({
     recentChangedStock: { type: Boolean, required: true, default: false }
 });
 
-const cartSchema = new Schema<CartI>({
+const CartSchema = new Schema<CartI>({
     userId: { type: String, required: true, unique: true },
-    products: { type: [cartItemSchema], required: true, default: [] },
+    products: { type: [CartItemSchema], required: true, default: [] },
     promoCode: { type: String, required: false, default: '' },
     subTotal: { type: Number, required: true, default: 0 },
     discount: { type: Number, required: true, default: 0 },
@@ -21,4 +21,4 @@ const cartSchema = new Schema<CartI>({
     updateAt: { type: Date, required: false }
 });
 
-export const Cart = model<CartI>('Cart', cartSchema);
+export const Cart = model<CartI>('Cart', CartSchema);

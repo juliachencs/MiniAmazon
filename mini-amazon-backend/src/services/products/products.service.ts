@@ -1,7 +1,7 @@
 import type { SortOrder } from "mongoose";
 import { Product } from "../../models/product.model.js";
-import type { ProductI } from "../../types/product.interface.js";
-import { sortTypeManager } from "../../utils/product-sort-manager.util.js";
+import type { ProductI, ProductView } from "../../types/product.interface.js";
+import { sortTypeManager } from "../../utils/product-sort.util.js";
 
 
 export async function getProductsService(): Promise<ProductI[]> {
@@ -22,13 +22,12 @@ export async function getProductCountService(): Promise<number> {
 }
 
 export async function addProductService(body: ProductI): Promise<ProductI> {
-    const product: ProductI = {...body, createAt: new Date(), updateAt: new Date()}
+    const product: ProductI = { ...body, createAt: new Date(), updateAt: new Date() }
     return Product.create(product);
 }
 
-export async function updateProductByIdService(id: string, body: ProductI): Promise<ProductI | null> {
-    //TODO: unsafe, may change _id
-    const product: ProductI = {...body, updateAt: new Date()}
+export async function updateProductByIdService(id: string, body: ProductView): Promise<ProductI | null> {
+    const product: ProductI = { ...mapProduct(body), updateAt: new Date() }
     return Product.findByIdAndUpdate(id, product);
 }
 
@@ -36,6 +35,12 @@ export async function deleteProductByIdService(id: string): Promise<void | null>
     return Product.findByIdAndDelete(id);
 }
 
+// In case given data include _id information
+function mapProduct(productUnsafe: ProductView): ProductI {
+    // force exclude _id from given data (if exist!)
+    const { _id, ...data } = productUnsafe;
+    return data;
+}
 
 
 // export async function addProductBulkService(input: ProductI[]): Promise<ProductI[]> {
