@@ -1,6 +1,6 @@
 import jwt, { type JwtPayload } from 'jsonwebtoken'
 import type { Request, Response, NextFunction } from 'express';
-import { HttpUnauthorizedError } from '../errors/unauthorized-error.js';
+import { HttpUnauthorizedError } from '../errors/http.error.js';
 
 export interface AuthRequest extends Request {
   user?: JwtPayload;

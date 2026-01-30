@@ -1,8 +1,7 @@
-import type { Request, Response, NextFunction } from 'express';
-import { HttpUnauthorizedError } from '../errors/unauthorized-error.js';
+import type { Response, NextFunction } from 'express';
 import type { AuthRequest } from './auth.middleware.js';
 import type { Role } from '../types/role.enum.js';
-import { HttpForbiddenError } from '../errors/forbidden-error.js';
+import { HttpForbiddenError, HttpUnauthorizedError } from '../errors/http.error.js';
 
 export const authorizeRole = (...allowedRoles: Role[]) => {
     return (

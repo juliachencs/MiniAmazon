@@ -1,10 +1,9 @@
-import type { Request, Response, NextFunction } from 'express';
-import type { CartDTO, CartI } from '../../types/cart.interface.js';
+import type { Response, NextFunction } from 'express';
+import type { CartDTO } from '../../types/cart.interface.js';
 import * as cartService from '../../services/cart/cart.service.js'
 import type { AuthRequest } from '../../middlewares/auth.middleware.js';
-import { HttpUnauthorizedError } from '../../errors/unauthorized-error.js';
-import { HttpBadRequestError } from '../../errors/bad-request-error.js';
 import { isValidObjectId } from 'mongoose';
+import { HttpBadRequestError, HttpUnauthorizedError } from '../../errors/http.error.js';
 
 export async function getCart(
     req: AuthRequest,

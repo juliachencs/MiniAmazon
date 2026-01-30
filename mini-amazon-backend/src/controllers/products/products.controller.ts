@@ -1,9 +1,8 @@
 import type { ProductI } from "../../types/product.interface.js";
 import type { Request, Response, NextFunction } from 'express';
 import * as productsService from '../../services/products/products.service.js'
-import { HttpBadRequestError } from "../../errors/bad-request-error.js";
-import { HttpNotFoundError } from "../../errors/not-found-error.js";
 import { isValidObjectId } from "mongoose";
+import { HttpBadRequestError, HttpNotFoundError } from "../../errors/http.error.js";
 
 export async function getProducts(
     req: Request,

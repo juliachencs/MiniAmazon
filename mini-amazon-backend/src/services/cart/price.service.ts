@@ -1,6 +1,6 @@
 import type { CartI } from "../../types/cart.interface.js";
 import { promoCodes, type PromoCode } from "../../config/promo_code.js";
-import { HttpError } from "../../errors/http-error.js";
+import { HttpError } from "../../errors/http.error.js";
 
 export function calculateSubTotal(cart: CartI): number {
     return cart.products.reduce((previous, current) => {
