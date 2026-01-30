@@ -1,12 +1,10 @@
 import type { CartDTO, CartI } from "../../types/cart.interface.js";
 import { Cart } from "../../models/cart.model.js";
-import type { CartItemI, CartItemPop } from "../../types/cartItem.interface.js";
+import type { CartItemPop } from "../../types/cartItem.interface.js";
 import { Product } from "../../models/product.model.js";
-import type { ProductI, ProductView } from "../../types/product.interface.js";
+import type { ProductView } from "../../types/product.interface.js";
 import { HttpBadRequestError } from "../../errors/bad-request-error.js";
-import type { Types } from "mongoose";
 import { HttpConfilctError } from "../../errors/conflict-error.js";
-import { HttpError } from "../../errors/http-error.js";
 import { HttpNotFoundError } from "../../errors/not-found-error.js";
 import * as priceService from './price.service.js'
 
@@ -93,14 +91,37 @@ export async function updateCartItemService(userId: string, itemId: string, quan
         throw new HttpNotFoundError('Cart not found');
     }
 
-    // let mongoose handle the subdocument change
-    const item = cart.products.find((item) => {
+    // Mongoose will handle the subdocument change
+    const productInCart = cart.products.find((item) => {
         return item.productId.toString() === itemId;
     });
 
-    // TODO validations for price and stock
-    if (item) {
-        item.quantity = quantityIn;
+    if (productInCart) {
+        const productInDB: ProductView | null = await Product.findById(itemId);
+        if (!productInDB) {
+            // maybe?
+            // deleteCartItemService(userId, itemId);
+            throw new HttpNotFoundError('Product now unavaliable')
+        }
+        // check for inStock quantity is enough
+        if (quantityIn > productInDB.inStockQuant) {
+            productInCart.recentChangedStock = true;
+            productInCart.quantity = productInDB.inStockQuant;
+        }
+        else {
+            productInCart.quantity = quantityIn;
+            // maybe?
+            // productInCart.recentChangedStock = false;
+        }
+        // check for price change
+        if (productInCart.priceSnapshot != productInDB.price) {
+            productInCart.recentChangedPrice = true;
+            productInCart.priceSnapshot = productInDB.price;
+        }
+        else {
+            // Probably too quick
+            // productInCart.recentChangedPrice = false;
+        }
     } else {
         throw new HttpNotFoundError('Product not found');
     }
@@ -149,12 +170,15 @@ export async function applyPromoCodeService(userId: string, promoCodeIn: string)
         throw new HttpBadRequestError('promoCode invalid or expired');
     }
 
-    const cart: CartI<CartItemPop> | null = await Cart.findOneAndUpdate({ userId }, { promoCode: promoCodeIn });
+    const cart: CartI | null = await Cart.findOneAndUpdate({ userId }, { promoCode: promoCodeIn });
 
     if (!cart) {
         throw new HttpNotFoundError('Cart not found');
     }
     else {
+        cart.discount = priceService.calculateDiscount(promoCodeIn, cart.subTotal);
+        cart.total = priceService.calculateTotal(cart);
+        await Cart.findOneAndUpdate({ userId }, cart);
         return getCartService(userId);
     }
 }
