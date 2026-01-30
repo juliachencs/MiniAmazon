@@ -3,7 +3,7 @@ export interface BasicResponse {
   success: boolean;
 }
 
-//Standard success response with datafrom the server
+//Standard success response with data from the server
 export interface ResponseWithData {
   success: boolean;
   data: unknown;
@@ -82,10 +82,3 @@ export interface CartQuery {
   productId: string;
   quantity: number;
 }
-// ERROR
-export type ErrorCode =
-  | "AUTH_FAILED"
-  | "NETWORK_ERROR"
-  | "NO_PRODUCT"
-  | "UNKOWN"
-  | "NO_PERMISSION";

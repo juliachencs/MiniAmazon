@@ -15,29 +15,3 @@ export const useToken = () => {
   const token = useAppSelector((state: RootState) => state.auth.token);
   return useMemo(() => ({ token }), [token]);
 };
-
-export const useCart = () => {
-  const cart = useAppSelector((state: RootState) => state.cart);
-  return useMemo(() => ({ cart }), [cart]);
-};
-
-export const useCartItemCount = () => {
-  const cartItems = useAppSelector(
-    (state: RootState) => state.cart.products || [],
-  );
-  const mode = useAppSelector((state: RootState) => state.cart.mode);
-  const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-  return {
-    count,
-    mode,
-  };
-};
-
-export const useSelectCountById = (productId: string) => {
-  const foundItem = useAppSelector((state: RootState) =>
-    state.cart.products?.find((item) => item.productId === productId),
-  );
-  const count = foundItem ? foundItem.quantity : 0;
-  const inStockQuant = foundItem ? foundItem.inStockQuant : 0;
-  return { count, maxCount: inStockQuant };
-};

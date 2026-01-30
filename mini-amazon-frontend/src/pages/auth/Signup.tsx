@@ -7,6 +7,8 @@ import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
 import LinkButton from "@/components/LinkButton";
 import LinkText from "@/components/LinkText";
+import { handleQueryError } from "@/errors/handlers";
+import { AuthQueryError } from "@/errors/AuthQueryError";
 
 export default function Signup() {
   const [signup, { isLoading }] = useSignupMutation();
@@ -23,31 +25,11 @@ export default function Signup() {
         navigate("/products");
       })
       .catch((error) => {
-        const status = error?.status;
-        console.log(error);
-        if (status && status === 409) {
-          message.error(
-            "This email address is not available. Choose a different address.",
-          );
-          return;
-        }
-        const { issue, suggestion } = getErrorProps(error);
-        Modal.error({
-          content: (
-            <ErrorMessage
-              trouble="Fail to sign up"
-              issue={issue}
-              suggestion={suggestion}
-            >
-              <LinkButton type="primary" to="/login">
-                Sign up again
-              </LinkButton>
-              <LinkButton to="/"> Go Homepage</LinkButton>
-              <LinkButton to="/products">Browser Products</LinkButton>
-            </ErrorMessage>
-          ),
-          footer: null,
-        });
+        const query_error = new AuthQueryError(
+          "SIGNUP",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       });
   };
 

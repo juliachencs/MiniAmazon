@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  MemoryRouter,
-  Outlet,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 import DefaultHeader from "@/components/Header";
 import DefaultFooter from "@/components/Footer";
@@ -18,17 +12,14 @@ import CreateProduct from "@/pages/products/CreateProduct";
 import UpdateProduct from "@/pages/products/UpdateProduct";
 import Product from "@/pages/products/Product";
 
-import { GoHomeButton } from "@/components/HomeBtn";
-
 import { useRole } from "@/app/hooks";
 import { Result } from "antd";
-
 import { isAdmin, isGuest } from "@/app/utils";
-import DelayedRedirect from "@/components/DelayedRedirectRoute";
+import DelayedRedirect from "@/pages/DelayedRedirect";
 import LinkButton from "@/components/LinkButton";
 import Debug from "@/pages/Debug";
-import ShoppingCart from "@/pages/cart/ShopppingCart";
 import Checkout from "@/pages/cart/Checkout";
+import PageNotFound from "@/pages/results/PageNotFound";
 
 function GuestOnly() {
   const { role } = useRole();
@@ -61,20 +52,6 @@ function AuthOnly() {
       title="Sorry, you need to log in to access that page"
       redirect="/login"
     ></DelayedRedirect>
-  );
-}
-
-function PageNotFound() {
-  const subtitle =
-    "Sorry, the page you are looking for might have been removed or moved to another URL.";
-
-  return (
-    <Result
-      status={404}
-      title="Oops! Page Not Found"
-      subTitle={subtitle}
-      extra={<GoHomeButton />}
-    />
   );
 }
 
@@ -132,10 +109,12 @@ function App() {
             />
           </Route>
 
+          {/* regular and admin users can access these pages*/}
           <Route element={<AuthOnly />}>
             <Route path="/checkout" element={<Checkout />} />
           </Route>
 
+          {/* regular and admin users can access these pages */}
           <Route path="/debug" element={<Debug />}></Route>
         </Routes>
 

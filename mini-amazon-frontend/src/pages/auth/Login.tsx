@@ -1,13 +1,13 @@
-import { Modal, message, Flex, Typography } from "antd";
+import { message, Flex, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 import { useLoginMutation } from "@/app/api";
 import { type UserInfo } from "@/app/types";
 import UserForm from "@/pages/auth/UserForm";
-import { getErrorProps } from "@/app/utils";
-import ErrorMessage from "@/components/ErrorMessage";
-import LinkButton from "@/components/LinkButton";
+
 import LinkText from "@/components/LinkText";
+import { AuthQueryError } from "@/errors/AuthQueryError";
+import { handleQueryError } from "@/errors/handlers";
 
 export default function Login() {
   const [login, { isLoading }] = useLoginMutation();
@@ -21,31 +21,11 @@ export default function Login() {
         navigate("/products");
       })
       .catch((error) => {
-        const status = error?.status;
-        console.log(error);
-        if (status && (status === 400 || status === 404)) {
-          message.error(
-            "Incorrect username or password! Please check your input",
-          );
-          return;
-        }
-        const { issue, suggestion } = getErrorProps(error);
-        Modal.error({
-          content: (
-            <ErrorMessage
-              trouble="Fail to sign in"
-              issue={issue}
-              suggestion={suggestion}
-            >
-              <LinkButton type="primary" to="/login">
-                Sign in again
-              </LinkButton>
-              <LinkButton to="/"> Go Homepage</LinkButton>
-              <LinkButton to="/products">Browser Products</LinkButton>
-            </ErrorMessage>
-          ),
-          footer: null,
-        });
+        const query_error = new AuthQueryError(
+          "LOGIN",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       });
   };
 

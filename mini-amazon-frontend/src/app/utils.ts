@@ -18,7 +18,6 @@ export const MakeProductLink = (id: string): string => {
 };
 
 // Type guards
-// A user-defined type guard function
 export function isResponseWithData(obj: unknown): obj is ResponseWithData {
   // Manually check for the existence and type of required properties
   return (
@@ -64,8 +63,8 @@ export const getErrorProps = (error: any) => {
     },
 
     FETCH_ERROR: {
-      issue: "We're having trouble connecting to our servers.",
-      suggestion: "Please check your internet and try again.",
+      issue: "We can not connect to our servers.",
+      suggestion: "Please check your internet or try again later.",
     },
 
     UNKOWN_ISSUE: {

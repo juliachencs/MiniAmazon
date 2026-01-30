@@ -3,7 +3,7 @@ import { Progress, Result } from "antd";
 import { useNavigate } from "react-router-dom";
 
 // note: this can only be used in route element
-export default function DelayedRedirectRoute({
+export default function DelayedRedirect({
   title,
   timeout = 5,
   redirect = -1,
@@ -20,7 +20,13 @@ export default function DelayedRedirectRoute({
       : redirect === "/"
         ? "the home page"
         : redirect;
+
+  const percent = (timeLeft / timeout) * 100;
+  const progress = percent < 1 ? "success" : "active";
+
+  // Re-run effect if timeLeft changes
   useEffect(() => {
+    console.log("update");
     // Exit if the countdown is finished
     if (timeLeft < 1) {
       if (redirect === -1) {
@@ -30,30 +36,22 @@ export default function DelayedRedirectRoute({
       }
       return;
     }
+  }, [timeLeft, navigate, redirect]);
 
-    // Set up the interval
+  // Setup interval after mounted and clear it after un-mount
+  useEffect(() => {
+    // Set up the interval after mounted
+    console.log("setup");
     const intervalId = setInterval(() => {
       setTimeLeft((prevTime: number) => (prevTime > 1 ? prevTime - 1 : 0));
     }, 1000);
 
     // Cleanup function to clear the interval when the component unmounts
-    // or when timeLeft changes and the effect runs again.
     return () => {
+      console.log("clear");
       clearInterval(intervalId);
     };
-  }, [timeLeft, navigate, redirect]); // Re-run effect if timeLeft changes
-
-  const percent = (timeLeft / timeout) * 100;
-  const status = percent < 1 ? "success" : "active";
-
-  // essage.warning(info, 3);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate(-1);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  });
+  }, []);
 
   return (
     <Result
@@ -62,7 +60,7 @@ export default function DelayedRedirectRoute({
         <Progress
           type="circle"
           percent={percent}
-          status={status}
+          status={progress}
           format={() => `${timeLeft}s`}
         />
       }

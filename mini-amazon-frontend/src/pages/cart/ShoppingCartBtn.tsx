@@ -47,6 +47,7 @@ function AuthShoppingCartBtn() {
       dispatch(cartThunks.getCart());
     }
   }, [mode]);
+
   // Function to hide the Popover
   const hidePopover = () => {
     setVisible(false);

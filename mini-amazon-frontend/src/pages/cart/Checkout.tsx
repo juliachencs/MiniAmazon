@@ -1,4 +1,4 @@
-import DelayedRedirectRoute from "@/components/DelayedRedirectRoute";
+import DelayedRedirectRoute from "@/pages/DelayedRedirect";
 
 export default function Checkout() {
   return (

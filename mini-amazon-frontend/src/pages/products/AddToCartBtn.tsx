@@ -23,7 +23,7 @@ export default function AddToCartBtn({ productId }: AddToCartBtnProps) {
 
   return count === 0 ? (
     <Button type="primary" disabled={isGuest(role)} onClick={onClick}>
-      Add
+      {"  Add  "}
     </Button>
   ) : (
     <InputNumber

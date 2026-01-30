@@ -6,9 +6,11 @@ import { useSignoutMutation } from "@/app/api";
 import { getErrorProps } from "@/app/utils";
 import ErrorMessage from "@/components/ErrorMessage";
 import LinkButton from "@/components/LinkButton";
+import { AuthQueryError } from "@/errors/AuthQueryError";
+import { handleQueryError } from "@/errors/handlers";
 
 export default function AuthAvatar() {
-  const [signout] = useSignoutMutation();
+  const [signout, { isLoading }] = useSignoutMutation();
   const { role } = useRole();
 
   const onSignout = () => {
@@ -18,23 +20,12 @@ export default function AuthAvatar() {
       .then(() => {
         message.success("You have signed out", 5);
       })
-      .catch((error: Error) => {
-        const { issue, suggestion } = getErrorProps(error);
-        Modal.error({
-          content: (
-            <ErrorMessage
-              trouble="Fail to sign out"
-              issue={issue}
-              suggestion={suggestion}
-            >
-              <LinkButton to="/"> Go Homepage</LinkButton>
-              <LinkButton type="primary" to="/products">
-                Browser Products
-              </LinkButton>
-            </ErrorMessage>
-          ),
-          footer: null,
-        });
+      .catch((error) => {
+        const query_error = new AuthQueryError(
+          "SIGNOUT",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       });
   };
 
@@ -45,6 +36,7 @@ export default function AuthAvatar() {
           icon={<UserOutlined style={{ color: "var(-primary-hl-bg-color)" }} />}
           type="text"
           onClick={onSignout}
+          loading={isLoading}
         >
           Sign out
         </Button>
