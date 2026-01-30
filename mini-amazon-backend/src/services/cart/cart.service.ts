@@ -1,19 +1,107 @@
-import type { CartI } from "../../types/cart.interface.js";
+import type { CartDTO, CartI } from "../../types/cart.interface.js";
 import { Cart } from "../../models/cart.model.js";
+import type { CartItemI, CartItemPop } from "../../types/cartItem.interface.js";
+import { Product } from "../../models/product.model.js";
+import type { ProductI, ProductView } from "../../types/product.interface.js";
+import { HttpBadRequestError } from "../../errors/bad-request-error.js";
+import type { Types } from "mongoose";
+import { HttpConfilctError } from "../../errors/conflict-error.js";
 
-export async function getCartService(userId: string): Promise<CartI> {
-    const cart: CartI | null = await Cart.findOne({ userId });
+export async function getCartService(userId: string): Promise<CartDTO> {
+    const cart: CartI<CartItemPop> | null = await Cart.findOne({ userId })
+        .populate<{ products: CartItemPop[] }>('products.productId', 'name price inStockQuant imageURI');
     if (!cart) {
-        // when user don't have cart yet, create a fake empty cart for now
-        return {
+        // when user don't have cart yet, create a fake empty cart to return with
+        return createEmptyCart(userId);
+    }
+    else {
+        return mapCartInterfaceToDTO(cart);
+    }
+}
+
+export async function clearCartService(userId: string): Promise<CartDTO> {
+    // empty cart should be safe to parse as populated
+    const cart: CartI<CartItemPop> | null = await Cart.findOneAndUpdate({ userId }, {
+        products: [],
+        promoCode: '',
+        subTotal: 0,
+        discount: 0,
+        total: 0
+    }, { new: true });
+
+    if (!cart) {
+        // when user don't have cart yet, create a fake empty cart to return with
+        return createEmptyCart(userId);
+    }
+    else {
+        return mapCartInterfaceToDTO(cart);
+    }
+}
+
+export async function addCartItemService(userId: string, itemId: string): Promise<CartDTO> {
+    let cart: CartI | null = await Cart.findOne({ userId });
+
+    if (!cart) {
+        cart = await Cart.create({
+            userId: userId,
             products: [],
             promoCode: '',
             subTotal: 0,
             discount: 0,
             total: 0
-        }
+        })
     }
-    else {
-        return cart;
+
+    const item: ProductView | null = await Product.findById(itemId);
+
+    if (!item) {
+        throw new HttpBadRequestError('Product_id provided is invalid or product is removed');
+    }
+
+    const exist = cart.products.find((ele) => {
+        return ele.productId.equals(item._id);
+    })
+    if (exist) {
+        throw new HttpConfilctError('Product already added');
+    }
+
+    cart.products.push({
+        productId: item._id,
+        quantity: 1,
+        priceSnapshot: item.price
+    });
+
+    // wait until update complete
+    await Cart.findOneAndUpdate({ userId }, cart);
+
+    return getCartService(userId);
+}
+
+function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
+    return {
+        userId: cart.userId,
+        products: cart.products.map((item) => ({
+            productId: item.productId._id,
+            quantity: item.quantity,
+            priceSnapshot: item.priceSnapshot,
+            productImgURI: item.productId.imageURI,
+            productName: item.productId.name,
+            inStockQuant: item.productId.inStockQuant
+        })),
+        promoCode: cart.promoCode,
+        subTotal: cart.subTotal,
+        discount: cart.discount,
+        total: cart.total
+    }
+}
+
+function createEmptyCart(userId: string): CartDTO {
+    return {
+        userId: userId,
+        products: [],
+        promoCode: '',
+        subTotal: 0,
+        discount: 0,
+        total: 0
     }
 }

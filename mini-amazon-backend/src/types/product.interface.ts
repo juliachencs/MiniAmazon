@@ -1,7 +1,6 @@
 import type { Types } from "mongoose";
 
 export interface ProductI {
-    _id?: Types.ObjectId;
     name: string;
     description: string;
     category: string;
@@ -10,4 +9,8 @@ export interface ProductI {
     imageURI: string;
     createAt?: Date;
     updateAt?: Date;
+}
+
+export interface ProductView extends ProductI {
+    _id: Types.ObjectId;
 }

@@ -1,15 +1,32 @@
 import type { Types } from "mongoose";
 
+
+interface productIdPop {
+    _id: Types.ObjectId,
+    name: string,
+    price: number,
+    inStockQuant: number,
+    imageURI: string
+}
+
+export interface CartItemPop {
+    productId: productIdPop;
+
+    quantity: number;
+    priceSnapshot: number;
+}
 export interface CartItemI {
     productId: Types.ObjectId;
 
-    productName?: string;
-    productImgURI?: string;
-
     quantity: number;
-    inStockQuant?: number;
-
     priceSnapshot: number;
+}
+
+export interface CartItemDTO extends CartItemI {
+    productName: string;
+    productImgURI: string;
+
+    inStockQuant: number;
 
     recentChangedPrice?: boolean;
     recentChangedStock?: boolean;

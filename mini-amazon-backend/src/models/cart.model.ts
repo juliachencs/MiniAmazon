@@ -4,15 +4,15 @@ import type { CartI } from "../types/cart.interface.js";
 import { Types } from "mongoose";
 
 const cartItemSchema = new Schema<CartItemI>({
-    productId: { type: Types.ObjectId, required: true, unique: true },
+    productId: { type: Types.ObjectId, ref: 'Product', required: true, unique: true },
     quantity: { type: Number, required: true },
-    priceSnapshot: { type: Number, required: true }
+    priceSnapshot: { type: Number, required: true },
 });
 
 const cartSchema = new Schema<CartI>({
-    userId: { type: Types.ObjectId, required: true, unique: true },
+    userId: { type: String, required: true, unique: true },
     products: { type: [cartItemSchema], required: true, default: [] },
-    promoCode: { type: String, required: true, default: '' },
+    promoCode: { type: String, required: false, default: '' },
     subTotal: { type: Number, required: true, default: 0 },
     discount: { type: Number, required: true, default: 0 },
     total: { type: Number, required: true, default: 0 },

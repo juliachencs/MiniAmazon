@@ -1,10 +1,9 @@
-import type { Types } from "mongoose";
-import type { CartItemI } from "./cartItem.interface.js";
+import type { CartItemDTO, CartItemI } from "./cartItem.interface.js";
 
-export interface CartI {
-    userId?: Types.ObjectId;
+export interface CartI<T = CartItemI> {
+    userId: string;
 
-    products: CartItemI[];
+    products: T[];
 
     promoCode: string;
 
@@ -13,4 +12,7 @@ export interface CartI {
     total: number;
 
     updateAt?: Date;
+}
+
+export interface CartDTO extends CartI<CartItemDTO>{
 }

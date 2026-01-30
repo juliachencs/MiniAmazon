@@ -4,11 +4,13 @@ import { auth } from "../middlewares/auth.middleware.js";
 
 export const cartRouter = Router();
 
-cartRouter.get('/', auth, cartControllers.getCart);
-cartRouter.delete('/');
+cartRouter.use(auth);
 
-cartRouter.post('/items')
-cartRouter.put('/items/:productId');
-cartRouter.delete('/items/:productId');
+cartRouter.get('/', cartControllers.getCart);
+cartRouter.delete('/', cartControllers.clearCart);
 
-cartRouter.post('/promo');
+cartRouter.post('/items', cartControllers.addCartItem);
+// cartRouter.put('/items/:productId');
+// cartRouter.delete('/items/:productId');
+
+// cartRouter.post('/promo');
