@@ -43,7 +43,7 @@ export async function addCartItem(
     if (!req.user) {
         throw new HttpUnauthorizedError('Missing required auth data');
     }
-    if (!req.body) {
+    if (!req.body || !req.body.productId) {
         throw new HttpBadRequestError('Request item id to proceed');
     }
 
@@ -62,7 +62,7 @@ export async function updateCartItem(
     if (!req.user) {
         throw new HttpUnauthorizedError('Missing required auth data');
     }
-    if (!req.body) {
+    if (!req.body || !req.body.quantity) {
         throw new HttpBadRequestError('Quantity of item not provided');
     }
     if (!req.params.productId || !isValidObjectId(req.params.productId)) {
@@ -89,6 +89,25 @@ export async function deleteCartItem(
     }
 
     const result: CartDTO = await cartService.deleteCartItemService(req.user.email, req.params.productId);
+
+    res.status(200).json({
+        success: true,
+        data: result
+    });
+}
+
+export async function applyPromoCode(
+    req: AuthRequest,
+    res: Response,
+    next: NextFunction): Promise<void> {
+    if (!req.user) {
+        throw new HttpUnauthorizedError('Missing required auth data');
+    }
+    if (!req.body || !req.body.promoCode) {
+        throw new HttpBadRequestError('Promocode not provided');
+    }
+
+    const result: CartDTO = await cartService.applyPromoCodeService(req.user.email, req.body.promoCode);
 
     res.status(200).json({
         success: true,

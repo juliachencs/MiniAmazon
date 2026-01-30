@@ -14,12 +14,18 @@ export interface CartItemPop {
 
     quantity: number;
     priceSnapshot: number;
+    
+    recentChangedPrice: boolean;
+    recentChangedStock: boolean;
 }
 export interface CartItemI {
     productId: Types.ObjectId;
 
     quantity: number;
     priceSnapshot: number;
+    
+    recentChangedPrice: boolean;
+    recentChangedStock: boolean;
 }
 
 export interface CartItemDTO extends CartItemI {
@@ -28,6 +34,4 @@ export interface CartItemDTO extends CartItemI {
 
     inStockQuant: number;
 
-    recentChangedPrice?: boolean;
-    recentChangedStock?: boolean;
 }

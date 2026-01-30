@@ -7,6 +7,8 @@ const cartItemSchema = new Schema<CartItemI>({
     productId: { type: Types.ObjectId, ref: 'Product', required: true, unique: true },
     quantity: { type: Number, required: true },
     priceSnapshot: { type: Number, required: true },
+    recentChangedPrice: { type: Boolean, required: true, default: false },
+    recentChangedStock: { type: Boolean, required: true, default: false }
 });
 
 const cartSchema = new Schema<CartI>({

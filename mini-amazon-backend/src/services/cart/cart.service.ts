@@ -8,6 +8,7 @@ import type { Types } from "mongoose";
 import { HttpConfilctError } from "../../errors/conflict-error.js";
 import { HttpError } from "../../errors/http-error.js";
 import { HttpNotFoundError } from "../../errors/not-found-error.js";
+import * as priceService from './price.service.js'
 
 export async function getCartService(userId: string): Promise<CartDTO> {
     const cart: CartI<CartItemPop> | null = await Cart.findOne({ userId })
@@ -70,8 +71,13 @@ export async function addCartItemService(userId: string, itemId: string): Promis
     cart.products.push({
         productId: item._id,
         quantity: 1,
-        priceSnapshot: item.price
+        priceSnapshot: item.price,
+        recentChangedPrice: false,
+        recentChangedStock: false
     });
+
+    cart.subTotal = priceService.calculateSubTotal(cart);
+    cart.total = priceService.calculateTotal(cart);
 
     // wait until update complete
     await Cart.findOneAndUpdate({ userId }, cart);
@@ -99,6 +105,9 @@ export async function updateCartItemService(userId: string, itemId: string, quan
         throw new HttpNotFoundError('Product not found');
     }
 
+    cart.subTotal = priceService.calculateSubTotal(cart);
+    cart.total = priceService.calculateTotal(cart);
+
     // wait until update complete
     await Cart.findOneAndUpdate({ userId }, cart);
 
@@ -117,10 +126,7 @@ export async function deleteCartItemService(userId: string, itemId: string) {
         return item.productId.toString() === itemId;
     });
 
-    // TODO price change
-    if (item) {
-
-    } else {
+    if (!item) {
         throw new HttpNotFoundError('Product not found');
     }
 
@@ -128,10 +134,29 @@ export async function deleteCartItemService(userId: string, itemId: string) {
         return p.productId.toString() !== itemId
     });
 
+    cart.subTotal = priceService.calculateSubTotal(cart);
+    cart.total = priceService.calculateTotal(cart);
+
     // wait until update complete
     await Cart.findOneAndUpdate({ userId }, cart);
 
     return getCartService(userId);
+}
+
+export async function applyPromoCodeService(userId: string, promoCodeIn: string): Promise<CartDTO> {
+    const valid: boolean = await priceService.promoCodeValidator(promoCodeIn);
+    if (!valid) {
+        throw new HttpBadRequestError('promoCode invalid or expired');
+    }
+
+    const cart: CartI<CartItemPop> | null = await Cart.findOneAndUpdate({ userId }, { promoCode: promoCodeIn });
+
+    if (!cart) {
+        throw new HttpNotFoundError('Cart not found');
+    }
+    else {
+        return getCartService(userId);
+    }
 }
 
 function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
@@ -143,7 +168,9 @@ function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
             priceSnapshot: item.priceSnapshot,
             productImgURI: item.productId.imageURI,
             productName: item.productId.name,
-            inStockQuant: item.productId.inStockQuant
+            inStockQuant: item.productId.inStockQuant,
+            recentChangedPrice: item.recentChangedPrice,
+            recentChangedStock: item.recentChangedStock
         })),
         promoCode: cart.promoCode,
         subTotal: cart.subTotal,
