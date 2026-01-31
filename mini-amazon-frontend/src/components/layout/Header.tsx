@@ -1,5 +1,5 @@
 import AuthAvatar from "@/components/auth/AuthAvatar";
-import ShoppingCartBtn from "@/components/cart/ShoppingCartBtn";
+import ShoppingCartBtn from "@/components/cart/ShoppingCartButton";
 import LinkButton from "@/components/NavButtons";
 import { Input, Tooltip, Row, Col, Grid, ConfigProvider, theme } from "antd";
 import type { GetProps } from "antd";
