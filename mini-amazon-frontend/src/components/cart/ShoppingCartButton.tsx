@@ -5,6 +5,7 @@ import {
   CloseOutlined,
   ExclamationCircleFilled,
   ShoppingCartOutlined,
+  SyncOutlined,
 } from "@ant-design/icons";
 import {
   Badge,
@@ -35,9 +36,9 @@ const popoverStyles: PopoverProps["styles"] = {
 };
 
 function AuthShoppingCartBtn() {
-  const [visible, setVisible] = useState(false); // Visibility of the shoppoing cart
+  const [visible, setVisible] = useState(false); // the visibility of the popover shoppoing cart
   const [count, setCount] = useState(0); // the total count of items in the cart
-  const [status, setStatus] = useState("success"); // { count, mode } = useCartItemCount();
+  const [status, setStatus] = useState("idle"); // { loading count, mode } = useCartItemCount();
 
   // Function to hide the Popover
   const hidePopover = () => {
@@ -68,8 +69,23 @@ function AuthShoppingCartBtn() {
         return <ClockCircleFilled style={{ color: "orange" }} />;
       case "error":
         return <ExclamationCircleFilled style={{ color: "red" }} />;
+      case "loading":
+        return <SyncOutlined spin />;
       default:
         return count;
+    }
+  })();
+
+  const tooltip = (() => {
+    switch (status) {
+      case "idle":
+        return "Opps, the shopping cart has not been synced";
+      case "error":
+        return "Sorry, we encounter some unknown issues to sync your shopping cart.";
+      case "loading":
+        return "We are synchronizing your shopping cart.";
+      default:
+        return "";
     }
   })();
 
@@ -85,7 +101,7 @@ function AuthShoppingCartBtn() {
         styles={popoverStyles}
       >
         <Badge count={styledCount} offset={[-5, 5]} showZero color="blue">
-          <Button type="text">
+          <Button type="text" title={tooltip}>
             <ShoppingCartOutlined /> Cart
           </Button>
         </Badge>
