@@ -20,4 +20,4 @@ export type AsyncThunkConfig = {
 export type ThunkAPI = GetThunkAPI<AsyncThunkConfig>;
 export const createAppAsyncThunk =
   createAsyncThunk.withTypes<AsyncThunkConfig>();
-export type ThunkType = ReturnType<typeof createAppAsyncThunk>;
+// export type ThunkType = ReturnType<typeof createAppAsyncThunk>;

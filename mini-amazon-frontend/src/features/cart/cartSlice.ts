@@ -1,13 +1,11 @@
 import type { BasicErrorResponse, CartResponse } from "@/app/types";
 import { authAPI } from "@/features/auth/authAPI";
-import { cartThunks } from "@/features/cart/cartthunks";
+import { cartThunks } from "@/features/cart/cartThunks";
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { act } from "react";
 
-export type CartMode = "uninitialized" | "loading" | "success" | "error";
+export type CartMode = "idle" | "loading" | "success" | "error";
 export type CartState = {
   data: CartResponse | null;
-  currentData: CartResponse | null;
   error: BasicErrorResponse | null;
   mode: CartMode;
 };
@@ -16,17 +14,14 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     data: null,
-    currentData: null,
     error: null,
-    mode: "uninitialized",
+    mode: "idle",
   } as CartState,
   reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
       isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.pending)),
       (state) => {
-        state.currentData = null;
-        state.error = null;
         state.mode = "loading";
       },
     );
@@ -35,7 +30,6 @@ const cartSlice = createSlice({
       isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.fulfilled)),
       (state, action) => {
         state.data = action.payload;
-        state.currentData = action.payload;
         state.error = null;
         state.mode = "success";
       },
@@ -45,7 +39,6 @@ const cartSlice = createSlice({
       isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.rejected)),
       (state, action) => {
         state.mode = "error";
-        state.currentData = null;
         if (action.payload) {
           state.error = action.payload;
         } else {
@@ -54,10 +47,11 @@ const cartSlice = createSlice({
       },
     );
 
+    // clear cart state when user logout
     builder.addMatcher(authAPI.endpoints.signout.matchFulfilled, (state) => {
-      state.mode = "uninitialized";
+      state.mode = "idle";
       state.data = null;
-      state.currentData = null;
+      state.error = null;
     });
   },
 });

@@ -1,8 +1,8 @@
 import type { CartQuery } from "@/app/types";
 import { cartAPI } from "@/features/cart/cartAPI";
-import { createAppAsyncThunk, type ThunkAPI } from "@/app/hooks";
+import { createAppAsyncThunk } from "@/app/hooks";
 
-const getCart = createAppAsyncThunk("cart/get", async (_, api: ThunkAPI) => {
+const getCart = createAppAsyncThunk("cart/get", async (_, api) => {
   return await cartAPI.getCart(api);
 });
 
@@ -16,8 +16,6 @@ const addItemToCart = createAppAsyncThunk(
 const updateItemQuantity = createAppAsyncThunk(
   "cart/update",
   async (args: CartQuery, api) => {
-    console.log("cartthunks updateItemQuantity:", args);
-
     return await cartAPI.updateItemQuantity(args, api);
   },
 );
