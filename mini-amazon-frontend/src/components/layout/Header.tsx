@@ -34,14 +34,6 @@ export function MiniHomeLogo() {
   );
 }
 
-// function UserCart() {
-//   return (
-//     <Button type="text">
-//       <ShoppingCartOutlined /> Cart
-//     </Button>
-//   );
-// }
-
 function HeaderOnSmallScreen() {
   return (
     <>
