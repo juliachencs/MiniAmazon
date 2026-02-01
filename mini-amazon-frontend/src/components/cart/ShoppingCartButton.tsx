@@ -1,7 +1,8 @@
-import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { isGuest } from "@/app/utils";
+import ShoppingCart from "@/components/cart/ShopppingCart";
 import { useRole } from "@/features/auth/authHooks";
-import { cartThunks } from "@/features/cart/cartThunks";
+import { useCartItemsCount } from "@/features/cart/cartHooks";
+
 import {
   ClockCircleFilled,
   CloseOutlined,
@@ -18,7 +19,8 @@ import {
   Typography,
   type PopoverProps,
 } from "antd";
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const popoverStyles: PopoverProps["styles"] = {
   container: {
@@ -37,21 +39,8 @@ const popoverStyles: PopoverProps["styles"] = {
   },
 };
 
-function useCartItemsCount() {
-  // retrieve data from store
-  const mode = useAppSelector((state) => state.cart.mode);
-  const data = useAppSelector((state) => state.cart.data);
-  const dispatch = useAppDispatch();
-
-  if (data === null) {
-    dispatch(cartThunks.getCart());
-  }
-  const count = data
-    ? data.products.reduce((prev, p) => prev + p.quantity, 0)
-    : 0;
-  return useMemo(() => ({ status: mode, count: count }), [mode, count]);
-}
 function AuthShoppingCartBtn() {
+  const location = useLocation(); // Hook to access current location
   const [visible, setVisible] = useState(false); // the visibility of the popover shoppoing cart
 
   // retrieve data from store
@@ -67,6 +56,11 @@ function AuthShoppingCartBtn() {
     setVisible(newVisible);
   };
 
+  //close when navigate to other page
+  useEffect(() => {
+    setVisible(false);
+  }, [location.pathname]);
+
   const title = (
     <Flex justify="space-between" align="center">
       <Typography.Text> Cart</Typography.Text>
@@ -78,7 +72,7 @@ function AuthShoppingCartBtn() {
     </Flex>
   );
 
-  const content = <> Popover content </>;
+  const content = <ShoppingCart />;
 
   const styledCount = (() => {
     switch (status) {

@@ -1,11 +1,14 @@
 import { useParams } from "react-router-dom";
-import { Typography, Image, Flex, Spin, Row, Col, Space } from "antd";
+import { Typography, Image, Spin, Row, Col, Space } from "antd";
 import { useGetProductQuery } from "@/features/product/productAPI";
 import AddToCartButton from "@/components/AddToCartButton";
-import EidtProductButton from "@/components/product/EditProductButton";
+
 import EditProductButton from "@/components/product/EditProductButton";
+import { isAdmin, isGuest } from "@/app/utils";
+import { useRole } from "@/features/auth/authHooks";
 
 export default function Product() {
+  const { role } = useRole();
   const { productId } = useParams();
   const {
     data: product,
@@ -50,8 +53,8 @@ export default function Product() {
             <Typography.Paragraph>{product?.description}</Typography.Paragraph>
             <Typography.Paragraph>{product?.price}</Typography.Paragraph>
             <Space>
-              <AddToCartButton productId={product._id} />
-              <EditProductButton productId={product._id} />
+              {!isGuest(role) && <AddToCartButton productId={product.id} />}
+              {isAdmin(role) && <EditProductButton productId={product._id} />}
             </Space>
           </div>
         </Col>

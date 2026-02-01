@@ -83,7 +83,7 @@ export interface CartItem {
 export interface CartResponse {
   products: CartItem[];
   promoCode: string;
-  subtotal: number;
+  subTotal: number;
   discount: number;
   total: number;
 }

@@ -10,6 +10,13 @@ export type CartState = {
   mode: CartMode;
 };
 
+const thunks = [
+  cartThunks.addItemToCart,
+  cartThunks.getCart,
+  cartThunks.updateItemQuantity,
+  cartThunks.removeItemFromCart,
+];
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
@@ -20,14 +27,17 @@ const cartSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
-      isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.pending)),
+      isAnyOf(...thunks.map((thunk) => thunk.pending)),
       (state) => {
         state.mode = "loading";
       },
     );
 
     builder.addMatcher(
-      isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.fulfilled)),
+      isAnyOf(
+        cartThunks.applyPromotionCode.fulfilled,
+        ...thunks.map((thunk) => thunk.fulfilled),
+      ),
       (state, action) => {
         state.data = action.payload;
         state.error = null;
@@ -36,7 +46,7 @@ const cartSlice = createSlice({
     );
 
     builder.addMatcher(
-      isAnyOf(...Object.values(cartThunks).map((thunk) => thunk.rejected)),
+      isAnyOf(...thunks.map((thunk) => thunk.rejected)),
       (state, action) => {
         state.mode = "error";
         if (action.payload) {

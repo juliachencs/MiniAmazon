@@ -1,5 +1,6 @@
+import router from "@/app/router";
 import { Button, type ButtonProps } from "antd";
-import { Link, type LinkProps } from "react-router-dom";
+import type { LinkProps } from "react-router-dom";
 
 interface LinkButtonProps extends ButtonProps {
   to: LinkProps["to"];
@@ -7,9 +8,9 @@ interface LinkButtonProps extends ButtonProps {
 
 export default function NavButton({ to, children, ...props }: LinkButtonProps) {
   return (
-    <Link to={to}>
-      <Button {...props}>{children}</Button>
-    </Link>
+    <Button {...props} onClick={() => router.navigate(to)}>
+      {children}
+    </Button>
   );
 }
 

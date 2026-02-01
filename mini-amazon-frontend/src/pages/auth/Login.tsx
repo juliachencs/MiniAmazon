@@ -1,6 +1,8 @@
 import type { UserInfo } from "@/app/types";
 import UserForm from "@/components/auth/UserForm";
 import NavButton from "@/components/NavButtons";
+import { AuthQueryError } from "@/errors/AuthQueryError";
+import { handleQueryError } from "@/errors/handlers";
 import { useLoginMutation } from "@/features/auth/authAPI";
 import { Flex, message, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -18,11 +20,11 @@ export default function Login() {
       })
       .catch((error) => {
         console.log(error);
-        // const query_error = new AuthQueryError(
-        //   "LOGIN",
-        //   error.status || "UNKOWN_ISSUE",
-        // );
-        // handleQueryError(query_error);
+        const query_error = new AuthQueryError(
+          "LOGIN",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       });
   };
 

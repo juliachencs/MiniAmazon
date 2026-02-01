@@ -42,7 +42,7 @@ async function fetchCartAPI(
 
     if (response.ok) {
       const data = await response.json();
-      return data as CartResponse;
+      return data.data as CartResponse;
     } else {
       return rejectWithValue({ status: response.status });
     }

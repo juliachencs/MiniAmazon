@@ -1,4 +1,6 @@
 import LinkButton from "@/components/NavButtons";
+import { AuthQueryError } from "@/errors/AuthQueryError";
+import { handleQueryError } from "@/errors/handlers";
 import { useSignoutMutation } from "@/features/auth/authAPI";
 import { useRole } from "@/features/auth/authHooks";
 import { UserOutlined } from "@ant-design/icons";
@@ -17,12 +19,11 @@ export default function AuthAvatar() {
       })
       .catch((error) => {
         console.log(error);
-
-        // const query_error = new AuthQueryError(
-        //   "SIGNOUT",
-        //   error.status || "UNKOWN_ISSUE",
-        // );
-        // handleQueryError(query_error);
+        const query_error = new AuthQueryError(
+          "SIGNOUT",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       });
   };
 

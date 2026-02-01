@@ -1,3 +1,9 @@
+import ProductForm from "@/components/product/ProductForm";
+
 export default function CreateProduct() {
-  return <>create product</>;
+  return (
+    <>
+      <ProductForm />
+    </>
+  );
 }
