@@ -1,6 +1,6 @@
 import type { CartI } from "../../types/cart.interface.js";
 import { promoCodes, type PromoCode } from "../../config/promo_code.js";
-import { HttpError } from "../../errors/http-error.js";
+import { HttpError } from "../../errors/http.error.js";
 
 export function calculateSubTotal(cart: CartI): number {
     return cart.products.reduce((previous, current) => {
@@ -27,7 +27,7 @@ export function calculateDiscount(promoCode: string, subtotal: number): number {
     });
 
     if (!promo) {
-        throw new HttpError('code is already expired', 500);
+        throw new HttpError('Promocode is expired but not updated', 500);
     }
 
     switch(promo.type){
