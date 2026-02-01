@@ -1,5 +1,7 @@
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { isGuest } from "@/app/utils";
 import { useRole } from "@/features/auth/authHooks";
+import { cartThunks } from "@/features/cart/cartThunks";
 import {
   ClockCircleFilled,
   CloseOutlined,
@@ -16,7 +18,7 @@ import {
   Typography,
   type PopoverProps,
 } from "antd";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const popoverStyles: PopoverProps["styles"] = {
   container: {
@@ -35,10 +37,25 @@ const popoverStyles: PopoverProps["styles"] = {
   },
 };
 
+function useCartItemsCount() {
+  // retrieve data from store
+  const mode = useAppSelector((state) => state.cart.mode);
+  const data = useAppSelector((state) => state.cart.data);
+  const dispatch = useAppDispatch();
+
+  if (data === null) {
+    dispatch(cartThunks.getCart());
+  }
+  const count = data
+    ? data.products.reduce((prev, p) => prev + p.quantity, 0)
+    : 0;
+  return useMemo(() => ({ status: mode, count: count }), [mode, count]);
+}
 function AuthShoppingCartBtn() {
   const [visible, setVisible] = useState(false); // the visibility of the popover shoppoing cart
-  const [count, setCount] = useState(0); // the total count of items in the cart
-  const [status, setStatus] = useState("idle"); // { loading count, mode } = useCartItemCount();
+
+  // retrieve data from store
+  const { status, count } = useCartItemsCount();
 
   // Function to hide the Popover
   const hidePopover = () => {

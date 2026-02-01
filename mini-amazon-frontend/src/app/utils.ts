@@ -1,4 +1,4 @@
-import type { ResponseWithData, Role } from "@/app/types";
+import { type ResponseWithData, type Role } from "@/app/types";
 
 // Type guards
 export function isResponseWithData(obj: unknown): obj is ResponseWithData {
@@ -23,4 +23,17 @@ export function isRegular(role: Role | null) {
 
 export function isGuest(role: Role | null) {
   return role === null;
+}
+
+// configurations for different
+export function getScreenType() {
+  const width = window.innerWidth;
+  let screenType = "xs";
+  if (width > 576) {
+    screenType = "sm";
+  }
+  if (width > 768) {
+    screenType = "md";
+  }
+  return screenType;
 }

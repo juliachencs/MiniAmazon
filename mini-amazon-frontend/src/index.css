@@ -81,12 +81,22 @@ footer {
 
 }
 
-.products-container{
+.products-container {
   width: 95vw;
+  align-self: center;
+  margin: auto;
+}
+
+.products-main{
+  min-height: 50vh;
   margin: auto;
   border: 1px solid rgb(212, 210, 210);
 }
+.products-footer{
+  margin-top: 16px;
+  margin-bottom: 16px;
 
+}
 .product-cards{
   display: grid;
   /* Repeats columns as many times as can fit, with a min of 200px and a max of 1fr*/

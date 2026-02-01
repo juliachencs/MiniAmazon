@@ -27,7 +27,7 @@ export interface UserInfo {
 }
 
 // Product
-export const allCategories = [
+export const CATEGORIES = [
   "Lighting",
   "Plants & planters",
   "Home electronics",
@@ -40,7 +40,8 @@ export const allCategories = [
   "Sofas & armchairs",
 ] as const;
 
-export type SortType = "Last" | "PriceAsc" | "PriceDes";
+export const SORT_TYPES = ["Last", "PriceAsc", "PriceDes"] as const;
+export type SortType = (typeof SORT_TYPES)[number];
 
 export interface Product {
   _id: string;
