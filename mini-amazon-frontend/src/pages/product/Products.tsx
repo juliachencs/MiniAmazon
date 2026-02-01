@@ -1,10 +1,90 @@
-import { Typography, Select, Pagination, Row, Col } from "antd";
+import { Typography, Select, Pagination, Row, Col, Spin } from "antd";
 import { SORT_TYPES, type SortType } from "@/app/types";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import ListProducts from "@/components/product/ListProducts";
+import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { getScreenType } from "@/app/utils";
-import { useEffect } from "react";
+import { useCountProductsQuery } from "@/features/product/productAPI";
+import ProductCards from "@/components/product/ProductCards";
 
+export default function Products() {
+  const { data: total, isLoading, error } = useCountProductsQuery();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  if (isLoading) {
+    <Spin fullscreen spinning={true} tip="Loading..."></Spin>;
+  }
+
+  if (!total) {
+    console.log(error);
+    return <>We are having trouble to connect to the server!</>;
+  }
+
+  // validate the url
+  const { page, key, sortby, page_size, redirect } = parseURL(
+    searchParams,
+    total,
+  );
+
+  if (redirect) {
+    return (
+      <Navigate
+        to={`/products?page=${page}&sortby=${sortby}&key=${key}`}
+        replace
+      />
+    );
+  }
+
+  // everything is correct now
+  const handlePageChange = (p: number) => {
+    navigate(`/products?page=${p}&sortby=${sortby}&key=${key}`);
+  };
+
+  const handleSortbyChange = (value: SortType) => {
+    navigate(`/products?page=${1}&sortby=${value}&key=${key}`);
+  };
+
+  const offset = page_size * (page - 1);
+  const limit = page_size;
+
+  return (
+    <section className="products-container">
+      <Row justify="space-between" align="middle" className="products-header">
+        <Col>
+          <Typography.Title> Products </Typography.Title>
+        </Col>
+        <Col>
+          <Select<SortType>
+            defaultValue="Last"
+            value={sortby}
+            onChange={handleSortbyChange}
+            options={[
+              { value: "Last", label: "Last added" },
+              { value: "PriceAsc", label: "Price: low to high" },
+              { value: "PriceDes", label: "Price: high to low" },
+            ]}
+          />
+        </Col>
+      </Row>
+
+      <Row className="products-main">
+        <ProductCards offset={offset} limit={limit} sortby={sortby} />
+      </Row>
+
+      <Row justify="center" className="products-footer">
+        <Pagination
+          defaultCurrent={1}
+          current={page}
+          pageSize={page_size}
+          total={total}
+          showSizeChanger={false}
+          onChange={handlePageChange}
+        />
+      </Row>
+    </section>
+  );
+}
+
+// helper
 const CONFIGS = {
   "magic-v1-xs": { page_size: 6 },
   "magic-v1-sm": { page_size: 12 },
@@ -81,72 +161,4 @@ function parseURL(
     key: ds.key,
     page_size: ds.page_size,
   };
-}
-
-export default function Products() {
-  const navigate = useNavigate();
-  const total = 200; // the total number of items
-  const [searchParams] = useSearchParams();
-  const { page, key, sortby, page_size, redirect } = parseURL(
-    searchParams,
-    total,
-  );
-
-  useEffect(() => {
-    if (redirect) {
-      navigate(`/products?page=${page}&sortby=${sortby}&key=${key}`, {
-        replace: true,
-      });
-    }
-  }, [key, navigate, page, redirect, sortby]);
-
-  const handlePageChange = (p: number) => {
-    navigate(`/products?page=${p}&sortby=${sortby}&key=${key}`);
-  };
-
-  const handleSortbyChange = (value: SortType) => {
-    navigate(`/products?page=${1}&sortby=${value}&key=${key}`);
-  };
-
-  const offset = page_size * (page - 1);
-  const limit = page_size;
-
-  return (
-    <section className="products-container">
-      <Row justify="space-between" align="middle" className="products-header">
-        <Col>
-          <Typography.Title> Products </Typography.Title>
-        </Col>
-        <Col>
-          <Select<SortType>
-            defaultValue="Last"
-            value={sortby}
-            onChange={handleSortbyChange}
-            options={[
-              { value: "Last", label: "Last added" },
-              { value: "PriceAsc", label: "Price: low to high" },
-              { value: "PriceDes", label: "Price: high to low" },
-            ]}
-          />
-        </Col>
-
-        {/* <CreateProductBtn /> */}
-      </Row>
-
-      <Row className="products-main">
-        <ListProducts offset={offset} limit={limit} sortby={sortby} />
-      </Row>
-
-      <Row justify="center" className="products-footer">
-        <Pagination
-          defaultCurrent={1}
-          current={page}
-          pageSize={page_size}
-          total={total}
-          showSizeChanger={false}
-          onChange={handlePageChange}
-        />
-      </Row>
-    </section>
-  );
 }
