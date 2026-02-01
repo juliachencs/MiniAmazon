@@ -168,12 +168,13 @@ export async function applyPromoCodeService(userId: string, promoCodeIn: string)
         throw new HttpBadRequestError('promoCode invalid or expired');
     }
 
-    const cart: CartI | null = await Cart.findOneAndUpdate({ userId }, { promoCode: promoCodeIn });
+    const cart: CartI | null = await Cart.findOne({ userId });
 
     if (!cart) {
         throw new HttpNotFoundError('Cart not found');
     }
     else {
+        cart.promoCode = promoCodeIn;
         cart.discount = priceService.calculateDiscount(promoCodeIn, cart.subTotal);
         cart.total = priceService.calculateTotal(cart);
         await Cart.findOneAndUpdate({ userId }, cart);

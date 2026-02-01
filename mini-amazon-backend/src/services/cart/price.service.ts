@@ -2,6 +2,8 @@ import type { CartI } from "../../types/cart.interface.js";
 import { promoCodes, type PromoCode } from "../../config/promo_code.js";
 import { HttpError } from "../../errors/http.error.js";
 
+const MAX_DISCOUNT_RATE = 0.8;
+
 export function calculateSubTotal(cart: CartI): number {
     return cart.products.reduce((previous, current) => {
         return previous + current.priceSnapshot * current.quantity;
@@ -30,10 +32,22 @@ export function calculateDiscount(promoCode: string, subtotal: number): number {
         throw new HttpError('Promocode is expired but not updated', 500);
     }
 
+    let discount: number = 0;
+
     switch(promo.type){
         case "PERCENT":
-            return subtotal * promo.value;
+            discount = subtotal * (promo.value / 100);
+            break;
         case "MINUS":
-            return promo.value;
+            discount =  promo.value;
+            break;
+    }
+
+    // if we reach maximum discount rate
+    if (discount >= subtotal * MAX_DISCOUNT_RATE) {
+        return subtotal * MAX_DISCOUNT_RATE;
+    }
+    else {
+        return discount;
     }
 }
