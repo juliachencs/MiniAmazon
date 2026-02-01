@@ -1,7 +1,7 @@
 import type { ProductI } from "../types/product.interface.js";
 import { model, Schema } from "mongoose";
 
-const productSchema = new Schema<ProductI>({
+const ProductSchema = new Schema<ProductI>({
     name: { type: String, required: true },
     description: { type: String, required: true },
     category: { type: String, required: true },
@@ -12,4 +12,4 @@ const productSchema = new Schema<ProductI>({
     updateAt: { type: Date, required: false }
 })
 
-export const Product = model<ProductI>('Product', productSchema);
+export const Product = model<ProductI>('Product', ProductSchema);
