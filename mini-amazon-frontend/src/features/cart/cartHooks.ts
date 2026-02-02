@@ -25,7 +25,7 @@ export function useCartItemsCount() {
 
   const count = data
     ? data.products.reduce(
-        (prev, p) => prev + (p.avaliable ? p.quantity : 0),
+        (prev, p) => prev + (p.available ? p.quantity : 0),
         0,
       )
     : 0;
@@ -56,7 +56,7 @@ export const useSelectById = (productId: string) => {
     count = foundItem ? foundItem.quantity : 0;
     maxCount = foundItem ? foundItem.inStockQuant : 0;
     // BUG
-    _id = foundItem ? foundItem.productId : "undefined";
+    _id = foundItem ? foundItem._id : "undefined";
   }
 
   return useMemo(() => ({ count, maxCount, _id }), [count, maxCount, _id]);
