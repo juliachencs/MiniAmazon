@@ -3,18 +3,18 @@ import { cartThunks } from "@/features/cart/cartThunks";
 
 import { useEffect, useMemo } from "react";
 
-export function useCart(force: boolean = false) {
+export function useCart() {
   const mode = useAppSelector((state) => state.cart.mode);
   const data = useAppSelector((state) => state.cart.data);
   const error = useAppSelector((state) => state.cart.error);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (mode === "idle" || force) {
+    if (mode === "idle") {
       console.log("dispatch query cart");
       dispatch(cartThunks.getCart());
     }
-  }, [mode, dispatch, force]);
+  }, [mode, dispatch]);
 
   return useMemo(() => ({ mode, data, error }), [mode, data, error]);
 }
@@ -35,7 +35,6 @@ export function useCartItemsCount() {
 
 export const useIsInCart = (productId: string) => {
   const { data } = useCart();
-
   if (data) {
     return data.products.some((item) => item.productId === productId);
   }

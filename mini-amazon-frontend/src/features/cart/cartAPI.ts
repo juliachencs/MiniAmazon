@@ -53,9 +53,11 @@ async function fetchCartAPI(
   return rejectWithValue({ status: "UNKOWN_ISSUE" });
 }
 
-function getCart(api: ThunkAPI) {
+async function getCart(api: ThunkAPI) {
+  const result = await fetchCartAPI({}, api);
   console.log("Query Cart........");
-  return fetchCartAPI({}, api);
+  console.log(result);
+  return result;
 }
 
 function addItemToCart(productId: string, api: ThunkAPI) {

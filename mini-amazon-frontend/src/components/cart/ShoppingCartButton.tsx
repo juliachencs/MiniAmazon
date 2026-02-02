@@ -1,7 +1,9 @@
+import { useAppDispatch } from "@/app/hooks";
 import { isGuest } from "@/app/utils";
 import ShoppingCart from "@/components/cart/ShopppingCart";
 import { useRole } from "@/features/auth/authHooks";
 import { useCartItemsCount } from "@/features/cart/cartHooks";
+import { cartThunks } from "@/features/cart/cartThunks";
 
 import {
   ClockCircleFilled,
@@ -42,6 +44,7 @@ const popoverStyles: PopoverProps["styles"] = {
 function AuthShoppingCartBtn() {
   const location = useLocation(); // Hook to access current location
   const [visible, setVisible] = useState(false); // the visibility of the popover shoppoing cart
+  const dispatch = useAppDispatch();
 
   // retrieve data from store
   const { status, count } = useCartItemsCount();
@@ -54,6 +57,10 @@ function AuthShoppingCartBtn() {
   // Function to handle the visibility change (e.g., when clicking the trigger button)
   const handleVisibleChange = (newVisible: boolean) => {
     setVisible(newVisible);
+    if (newVisible) {
+      console.log("I am open");
+      dispatch(cartThunks.getCart());
+    }
   };
 
   //close when navigate to other page

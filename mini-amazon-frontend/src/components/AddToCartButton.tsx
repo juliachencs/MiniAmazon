@@ -59,7 +59,6 @@ export default function AddToCartButton({ productId }: AddToCartButtonProps) {
   }
 
   const incart = useIsInCart(productId);
-  console.log("do I in cart:", incart);
   if (incart) {
     return <UpdateItemButton productId={productId} />;
   }

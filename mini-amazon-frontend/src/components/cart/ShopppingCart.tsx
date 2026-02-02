@@ -2,6 +2,7 @@ import { useCart } from "@/features/cart/cartHooks";
 import ShoppingCartForm from "@/components/cart/ShoppingCartForm";
 
 export default function ShoppingCart() {
+  console.log("I am in ShoppingCart");
   const { mode, data: cart } = useCart();
 
   if (mode === "error") {
