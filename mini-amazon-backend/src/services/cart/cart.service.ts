@@ -58,7 +58,7 @@ export async function addCartItemService(userId: string, itemId: string): Promis
     }
 
     const exist = cart.products.find((ele) => {
-        return ele.productId.equals(item._id);
+        return ele.productId!.equals(item._id);
     })
     if (exist) {
         throw new HttpConfilctError('Product already added');
@@ -69,7 +69,8 @@ export async function addCartItemService(userId: string, itemId: string): Promis
         quantity: 1,
         priceSnapshot: item.price,
         recentChangedPrice: false,
-        recentChangedStock: false
+        recentChangedStock: false,
+        avaliable: false
     });
 
     cart.subTotal = priceService.calculateSubTotal(cart);
@@ -91,7 +92,7 @@ export async function updateCartItemService(userId: string, itemId: string, quan
 
     // Mongoose will handle the subdocument change
     const productInCart = cart.products.find((item) => {
-        return item.productId.toString() === itemId;
+        return item.productId!.toString() === itemId;
     });
 
     if (productInCart) {
@@ -142,7 +143,7 @@ export async function deleteCartItemService(userId: string, itemId: string) {
 
     // let mongoose handle the subdocument change
     const item = cart.products.find((item) => {
-        return item.productId.toString() === itemId;
+        return item.productId!.toString() === itemId;
     });
 
     if (!item) {
@@ -150,7 +151,7 @@ export async function deleteCartItemService(userId: string, itemId: string) {
     }
 
     cart.products = cart.products.filter((p) => {
-        return p.productId.toString() !== itemId
+        return p.productId!.toString() !== itemId
     });
 
     cart.subTotal = priceService.calculateSubTotal(cart);
@@ -168,12 +169,13 @@ export async function applyPromoCodeService(userId: string, promoCodeIn: string)
         throw new HttpBadRequestError('promoCode invalid or expired');
     }
 
-    const cart: CartI | null = await Cart.findOneAndUpdate({ userId }, { promoCode: promoCodeIn });
+    const cart: CartI | null = await Cart.findOne({ userId });
 
     if (!cart) {
         throw new HttpNotFoundError('Cart not found');
     }
     else {
+        cart.promoCode = promoCodeIn;
         cart.discount = priceService.calculateDiscount(promoCodeIn, cart.subTotal);
         cart.total = priceService.calculateTotal(cart);
         await Cart.findOneAndUpdate({ userId }, cart);
@@ -184,16 +186,36 @@ export async function applyPromoCodeService(userId: string, promoCodeIn: string)
 function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
     return {
         userId: cart.userId,
-        products: cart.products.map((item) => ({
-            productId: item.productId._id,
-            quantity: item.quantity,
-            priceSnapshot: item.priceSnapshot,
-            productImgURI: item.productId.imageURI,
-            productName: item.productId.name,
-            inStockQuant: item.productId.inStockQuant,
-            recentChangedPrice: item.recentChangedPrice,
-            recentChangedStock: item.recentChangedStock
-        })),
+        products: cart.products.map((item) => {
+            if (!item.productId) {
+                return {
+                    productId: null,
+                    quantity: item.quantity,
+                    priceSnapshot: item.priceSnapshot,
+                    productImgURI: '',
+                    productName: 'Item now unavaliable',
+                    inStockQuant: 0,
+                    recentChangedPrice: item.recentChangedPrice,
+                    recentChangedStock: item.recentChangedStock,
+                    avaliable: false,
+                    _id: item._id!
+                }
+            }
+            else {
+                return {
+                    productId: item.productId._id,
+                    quantity: item.quantity,
+                    priceSnapshot: item.priceSnapshot,
+                    productImgURI: item.productId.imageURI,
+                    productName: item.productId.name,
+                    inStockQuant: item.productId.inStockQuant,
+                    recentChangedPrice: item.recentChangedPrice,
+                    recentChangedStock: item.recentChangedStock,
+                    avaliable: item.avaliable,
+                    _id: item._id!
+                }
+            }
+        }),
         promoCode: cart.promoCode,
         subTotal: cart.subTotal,
         discount: cart.discount,
