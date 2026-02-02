@@ -63,12 +63,6 @@ export interface ListProductsQuery {
   sortby: SortType;
 }
 
-// Cart
-export interface CartQuery {
-  productId: string;
-  quantity: number;
-}
-
 export interface CartItem {
   productId: string;
   productName: string;

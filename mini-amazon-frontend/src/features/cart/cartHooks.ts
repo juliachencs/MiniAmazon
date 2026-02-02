@@ -24,7 +24,10 @@ export function useCartItemsCount() {
   const { mode, data } = useCart();
 
   const count = data
-    ? data.products.reduce((prev, p) => prev + p.quantity, 0)
+    ? data.products.reduce(
+        (prev, p) => prev + (p.avaliable ? p.quantity : 0),
+        0,
+      )
     : 0;
 
   return useMemo(() => ({ status: mode, count: count }), [mode, count]);
@@ -39,5 +42,6 @@ export const useSelectCountById = (productId: string) => {
 
   const count = foundItem ? foundItem.quantity : 0;
   const maxCount = foundItem ? foundItem.inStockQuant : 0;
-  return useMemo(() => ({ count, maxCount }), [count, maxCount]);
+  const _id = foundItem ? foundItem.inStockQuant : "undefined";
+  return useMemo(() => ({ count, maxCount, _id }), [count, maxCount, _id]);
 };

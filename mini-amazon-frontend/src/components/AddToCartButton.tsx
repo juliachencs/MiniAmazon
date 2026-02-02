@@ -18,25 +18,26 @@ export default function AddToCartButton({ productId }: AddToCartButtonProps) {
       {"  Add  "}
     </Button>;
   }
-  const { count, maxCount } = useSelectCountById(productId);
+  const { count, maxCount, _id } = useSelectCountById(productId);
   const dispatch = useAppDispatch();
 
   const onClick = () => {
     dispatch(cartThunks.addItemToCart(productId));
-    console.log("add to cart: ", productId);
   };
+  if (count === 0) {
+    return (
+      <Button type="primary" onClick={onClick}>
+        {"  Add  "}
+      </Button>
+    );
+  }
 
   const onChange = (quantity: number) => {
     quantity = Math.ceil(quantity);
-    dispatch(cartThunks.updateItemQuantity({ productId: productId, quantity }));
-    console.log("update cart: ", productId, quantity);
+    dispatch(cartThunks.updateItemQuantity({ _id, quantity }));
   };
 
-  return count === 0 ? (
-    <Button type="primary" onClick={onClick}>
-      {"  Add  "}
-    </Button>
-  ) : (
+  return (
     <InputNumber<number>
       mode="spinner"
       value={count}

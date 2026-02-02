@@ -68,22 +68,22 @@ function addItemToCart(productId: string, api: ThunkAPI) {
   );
 }
 
-function updateItemQuantity({ productId, quantity }: CartQuery, api: ThunkAPI) {
+function updateItemQuantity(_id: string, quantity: number, api: ThunkAPI) {
   return fetchCartAPI(
     {
       method: "PUT",
-      endpoint: `/items/${productId}`,
+      endpoint: `/items/${_id}`,
       body: { quantity },
     },
     api,
   );
 }
 
-function removeItemFromCart(productId: string, api: ThunkAPI) {
+function removeItemFromCart(_id: string, api: ThunkAPI) {
   return fetchCartAPI(
     {
       method: "DELETE",
-      endpoint: `/items/${productId}`,
+      endpoint: `/items/${_id}`,
     },
     api,
   );

@@ -2,16 +2,14 @@ import { Button, Tooltip } from "antd";
 import { useAppDispatch } from "@/app/hooks";
 import { cartThunks } from "@/features/cart/cartThunks";
 export interface RemoveFromCartBtnProps {
-  productId: string;
+  _id: string;
 }
-export default function RemoveFromCartButton({
-  productId,
-}: RemoveFromCartBtnProps) {
+export default function RemoveFromCartButton({ _id }: RemoveFromCartBtnProps) {
   const dispatch = useAppDispatch();
 
   const onClick = () => {
-    dispatch(cartThunks.removeItemFromCart(productId));
-    console.log("remove from cart: ", productId);
+    dispatch(cartThunks.removeItemFromCart(_id));
+    console.log("remove from cart: ", _id);
   };
 
   return (
