@@ -1,6 +1,6 @@
 import type { CartDTO, CartI } from "../../types/cart.interface.js";
 import { Cart } from "../../models/cart.model.js";
-import type { CartItemPop } from "../../types/cartItem.interface.js";
+import type { CartItemI, CartItemPop } from "../../types/cartItem.interface.js";
 import { Product } from "../../models/product.model.js";
 import type { ProductView } from "../../types/product.interface.js";
 import * as priceService from './price.service.js'
@@ -70,7 +70,7 @@ export async function addCartItemService(userId: string, itemId: string): Promis
         priceSnapshot: item.price,
         recentChangedPrice: false,
         recentChangedStock: false,
-        avaliable: false
+        available: true
     });
 
     cart.subTotal = priceService.calculateSubTotal(cart);
@@ -91,16 +91,16 @@ export async function updateCartItemService(userId: string, itemId: string, quan
     }
 
     // Mongoose will handle the subdocument change
-    const productInCart = cart.products.find((item) => {
-        return item.productId!.toString() === itemId;
+    const productInCart: CartItemI | undefined = cart.products.find((item) => {
+        return item._id!.toString() === itemId;
     });
 
     if (productInCart) {
-        const productInDB: ProductView | null = await Product.findById(itemId);
+        const productInDB: ProductView | null = await Product.findById(productInCart.productId);
         if (!productInDB) {
             // maybe?
             // deleteCartItemService(userId, itemId);
-            throw new HttpNotFoundError('Product now unavaliable')
+            throw new HttpNotFoundError('Product now unavailable')
         }
         // check for inStock quantity is enough
         if (quantityIn > productInDB.inStockQuant) {
@@ -143,7 +143,7 @@ export async function deleteCartItemService(userId: string, itemId: string) {
 
     // let mongoose handle the subdocument change
     const item = cart.products.find((item) => {
-        return item.productId!.toString() === itemId;
+        return item._id!.toString() === itemId;
     });
 
     if (!item) {
@@ -151,7 +151,7 @@ export async function deleteCartItemService(userId: string, itemId: string) {
     }
 
     cart.products = cart.products.filter((p) => {
-        return p.productId!.toString() !== itemId
+        return p._id!.toString() !== itemId
     });
 
     cart.subTotal = priceService.calculateSubTotal(cart);
@@ -193,11 +193,11 @@ function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
                     quantity: item.quantity,
                     priceSnapshot: item.priceSnapshot,
                     productImgURI: '',
-                    productName: 'Item now unavaliable',
+                    productName: 'Item now unavailable',
                     inStockQuant: 0,
                     recentChangedPrice: item.recentChangedPrice,
                     recentChangedStock: item.recentChangedStock,
-                    avaliable: false,
+                    available: false,
                     _id: item._id!
                 }
             }
@@ -211,7 +211,7 @@ function mapCartInterfaceToDTO(cart: CartI<CartItemPop>): CartDTO {
                     inStockQuant: item.productId.inStockQuant,
                     recentChangedPrice: item.recentChangedPrice,
                     recentChangedStock: item.recentChangedStock,
-                    avaliable: item.avaliable,
+                    available: item.available,
                     _id: item._id!
                 }
             }

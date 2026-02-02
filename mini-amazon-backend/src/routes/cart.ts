@@ -10,7 +10,7 @@ cartRouter.get('/', cartControllers.getCart);
 cartRouter.delete('/', cartControllers.clearCart);
 
 cartRouter.post('/items', cartControllers.addCartItem);
-cartRouter.put('/items/:productId', cartControllers.updateCartItem);
-cartRouter.delete('/items/:productId', cartControllers.deleteCartItem);
+cartRouter.put('/items/:id', cartControllers.updateCartItem);
+cartRouter.delete('/items/:id', cartControllers.deleteCartItem);
 
 cartRouter.post('/promo',cartControllers.applyPromoCode);

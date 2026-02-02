@@ -9,7 +9,7 @@ const CartItemSchema = new Schema<CartItemI>({
     priceSnapshot: { type: Number, required: true },
     recentChangedPrice: { type: Boolean, required: true, default: false },
     recentChangedStock: { type: Boolean, required: true, default: false },
-    avaliable: { type: Boolean, required: true, default: true }
+    available: { type: Boolean, required: true, default: true }
 });
 
 const CartSchema = new Schema<CartI>({

@@ -77,11 +77,11 @@ export async function updateCartItem(
         if (!req.body || !req.body.quantity) {
             throw new HttpBadRequestError('Quantity of item not provided');
         }
-        if (!req.params.productId || !isValidObjectId(req.params.productId)) {
+        if (!req.params.id || !isValidObjectId(req.params.id)) {
             throw new HttpBadRequestError('Id is invalid');
         }
 
-        const result: CartDTO = await cartService.updateCartItemService(req.user.email, req.params.productId, req.body.quantity);
+        const result: CartDTO = await cartService.updateCartItemService(req.user.email, req.params.id, req.body.quantity);
 
         res.status(200).json({
             success: true,
@@ -100,11 +100,11 @@ export async function deleteCartItem(
         if (!req.user || !req.user.email) {
             throw new HttpUnauthorizedError('Missing required auth data');
         }
-        if (!req.params.productId || !isValidObjectId(req.params.productId)) {
+        if (!req.params.id || !isValidObjectId(req.params.id)) {
             throw new HttpBadRequestError('Id is invalid');
         }
 
-        const result: CartDTO = await cartService.deleteCartItemService(req.user.email, req.params.productId);
+        const result: CartDTO = await cartService.deleteCartItemService(req.user.email, req.params.id);
 
         res.status(200).json({
             success: true,
