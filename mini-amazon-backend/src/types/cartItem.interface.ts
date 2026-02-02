@@ -17,7 +17,7 @@ export interface CartItemPop {
     
     recentChangedPrice: boolean;
     recentChangedStock: boolean;
-    avaliable: boolean;
+    available: boolean;
 
     _id?: Types.ObjectId;
 }
@@ -29,7 +29,7 @@ export interface CartItemI {
     
     recentChangedPrice: boolean;
     recentChangedStock: boolean;
-    avaliable: boolean;
+    available: boolean;
 
     _id?: Types.ObjectId;
 }
