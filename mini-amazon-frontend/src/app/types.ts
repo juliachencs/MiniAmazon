@@ -78,6 +78,8 @@ export interface CartItem {
   priceSnapshot: number;
   recentChangedPrice: boolean;
   recentChangedStock: boolean;
+  avaliable: boolean;
+  _id: boolean;
 }
 
 export interface CartResponse {

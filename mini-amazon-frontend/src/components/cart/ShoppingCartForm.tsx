@@ -31,6 +31,7 @@ function PromoCodeForm() {
   const dispatch = useAppDispatch();
   const [disable, setDisable] = useState(true);
   const [error, setError] = useState("");
+
   const onApplyCode = (values: { promoCode: string }) => {
     console.log(values);
     dispatch(cartThunks.applyPromotionCode(values.promoCode))
@@ -38,9 +39,11 @@ function PromoCodeForm() {
       .then(() => setError(""))
       .catch(() => setError("Invalid Promocode"));
   };
+
   const onChange = (value: string) => {
     setDisable(value.length < 6);
   };
+
   return (
     <Form<{ promoCode: string }>
       layout="vertical"
@@ -69,6 +72,7 @@ function PromoCodeForm() {
     </Form>
   );
 }
+
 export default function ShoppingCartForm({
   products,
   subTotal,

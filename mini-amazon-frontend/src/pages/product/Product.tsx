@@ -53,7 +53,7 @@ export default function Product() {
             <Typography.Paragraph>{product?.description}</Typography.Paragraph>
             <Typography.Paragraph>{product?.price}</Typography.Paragraph>
             <Space>
-              {!isGuest(role) && <AddToCartButton productId={product.id} />}
+              {!isGuest(role) && <AddToCartButton productId={product._id} />}
               {isAdmin(role) && <EditProductButton productId={product._id} />}
             </Space>
           </div>
