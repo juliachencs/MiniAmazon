@@ -1,12 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "./store";
 
-import type {
-  BaseQueryFn,
-  FetchArgs,
-  FetchBaseQueryError,
-} from "@reduxjs/toolkit/query";
+import type { BaseQueryFn, FetchArgs } from "@reduxjs/toolkit/query";
 import { isResponseWithData } from "@/app/utils";
+import type { BasicErrorResponse } from "@/app/types";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: "http://localhost:5200/api/",
@@ -23,8 +20,8 @@ const baseQuery = fetchBaseQuery({
 // unwrap the data field from success response
 const customBaseQuery: BaseQueryFn<
   string | FetchArgs, // type of args
-  unknown,
-  FetchBaseQueryError
+  unknown, // type of result
+  BasicErrorResponse //type of Error
 > = async (args, api, extraOptions) => {
   const result = await baseQuery(args, api, extraOptions);
 
@@ -32,8 +29,20 @@ const customBaseQuery: BaseQueryFn<
     result.data = result.data.data;
   }
 
-  if (Object.hasOwn(result, "error")) {
+  if ("error" in result) {
     console.log(result.error);
+    const error: BasicErrorResponse = { status: "UNKOWN_ISSUE" };
+    if (
+      typeof result.error === "object" &&
+      result.error != null &&
+      "status" in result.error &&
+      (result.error.status === "FETCH_ERROR" ||
+        typeof result.error.status === "number")
+    ) {
+      error.status = result.error.status;
+    }
+
+    return { error };
   }
   return result;
 };

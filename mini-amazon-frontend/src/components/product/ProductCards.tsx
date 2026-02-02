@@ -1,4 +1,5 @@
 import type { SortType } from "@/app/types";
+import ErrorMessage from "@/components/product/ErrorMessage";
 import { ProductCard } from "@/components/product/ProductCard";
 import { useListProductsQuery } from "@/features/product/productAPI";
 import { Flex, Skeleton, Spin } from "antd";
@@ -45,7 +46,9 @@ export default function ProductCards({
   // handle errors
   if (isError) {
     console.log("Fetch error:", error);
-    return <>Cannot fetch data</>;
+    const status = "status" in error ? error.status : "UNKOWN_ISSUE";
+    return <ErrorMessage task="GET_PRODUCTS" status={status}></ErrorMessage>;
+    // return <>Cannot fetch data</>;
   }
 
   // Data is "stale" because we are fetching a NEW page that isn't cached yet

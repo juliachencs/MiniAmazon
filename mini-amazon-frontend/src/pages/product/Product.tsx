@@ -6,6 +6,7 @@ import AddToCartButton from "@/components/AddToCartButton";
 import EditProductButton from "@/components/product/EditProductButton";
 import { isAdmin, isGuest } from "@/app/utils";
 import { useRole } from "@/features/auth/authHooks";
+import ErrorMessage from "@/components/product/ErrorMessage";
 
 export default function Product() {
   const { role } = useRole();
@@ -14,21 +15,30 @@ export default function Product() {
     data: product,
     currentData,
     isFetching,
+    isLoading,
     isError,
     error,
   } = useGetProductQuery(productId!);
 
-  if (isFetching) {
-    return <>Loading prdocut details</>;
-  }
-
   if (isError) {
-    console.log("Fetch error:", error);
-
-    return (
-      <div>Error: Could not connect to the server. Please try again later.</div>
-    );
+    // console.log("Fetch error:", error);
+    // return (
+    //   <div>Error: Could not connect to the server. Please try again later.</div>
+    // );
+    console.log(error);
+    const status = "status" in error ? error.status : "UNKOWN_ISSUE";
+    return <ErrorMessage task="GET_PRODUCT" status={status} />;
   }
+
+  if (isLoading) {
+    return <Spin fullscreen spinning={true} tip="Loading..."></Spin>;
+  }
+
+  // after loading the data has some data
+  if (!product) {
+    return <>Loading products</>;
+  }
+
   const isDataStale = !currentData && product;
 
   return (

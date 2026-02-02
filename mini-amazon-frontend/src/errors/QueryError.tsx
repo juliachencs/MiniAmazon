@@ -1,12 +1,14 @@
-import type { QueryErrorAction } from "@/errors/types";
+import type { QueryErrorAction, QueryErrorCode } from "@/errors/types";
 
 export class QueryError extends Error {
+  status: QueryErrorCode;
   issue: string;
   cause: string;
   message: string;
   actions: QueryErrorAction[];
 
   constructor(
+    status: QueryErrorCode,
     issue: string,
     cause: string,
     message: string,
@@ -17,6 +19,7 @@ export class QueryError extends Error {
 
     // Set the name property to the class name for better debugging and consistency
     this.name = "QueryError";
+    this.status = status;
     this.issue = issue;
     this.cause = cause;
     this.message = message;

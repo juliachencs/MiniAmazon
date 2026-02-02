@@ -10,7 +10,7 @@ export interface ResponseWithData {
 }
 
 export interface BasicErrorResponse {
-  status: number | "UNKONW_ISSUE";
+  status: number | "UNKOWN_ISSUE" | "FETCH_ERROR";
 }
 
 // User auth
@@ -72,8 +72,8 @@ export interface CartItem {
   priceSnapshot: number;
   recentChangedPrice: boolean;
   recentChangedStock: boolean;
-  avaliable: boolean;
-  _id: boolean;
+  available: boolean;
+  _id: string;
 }
 
 export interface CartResponse {

@@ -1,9 +1,7 @@
 import type { QueryError } from "@/errors/QueryError";
 import { Modal, Result, Space, Button } from "antd";
 import { ReloadOutlined } from "@ant-design/icons";
-import NavButton from "@/components/NavButtons";
-
-type ButtonType = "primary" | "link" | "text" | "default";
+import type { ButtonType } from "antd/es/button";
 
 export function handleQueryError(error: QueryError) {
   const instance = Modal.error({
@@ -36,18 +34,9 @@ export function handleQueryError(error: QueryError) {
               </Button>
             );
           case "LOGIN":
-            return (
-              <NavButton type={type} to="/login">
-                Login
-              </NavButton>
-            );
+            return <Button href="/login">Login</Button>;
           case "HOME":
-            return (
-              <NavButton type={type} to="/">
-                {" "}
-                Home{" "}
-              </NavButton>
-            );
+            return <Button href="/">Home</Button>;
           case "CANCEL":
             return (
               <Button type={type} onClick={() => closeModal()}>

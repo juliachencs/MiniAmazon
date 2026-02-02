@@ -1,4 +1,4 @@
-import type { CartQuery, CartResponse } from "@/app/types";
+import type { CartResponse } from "@/app/types";
 import type { ThunkAPI } from "@/app/hooks";
 
 type Method = "GET" | "POST" | "PUT" | "DELETE";
@@ -50,10 +50,11 @@ async function fetchCartAPI(
     console.log("fetch cart error::", error);
   }
 
-  return rejectWithValue({ status: "UNKONW_ISSUE" });
+  return rejectWithValue({ status: "UNKOWN_ISSUE" });
 }
 
 function getCart(api: ThunkAPI) {
+  console.log("Query Cart........");
   return fetchCartAPI({}, api);
 }
 

@@ -1,22 +1,35 @@
 import { Typography, Select, Pagination, Row, Col, Spin } from "antd";
 import { SORT_TYPES, type SortType } from "@/app/types";
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
-import { getScreenType } from "@/app/utils";
+import { getScreenType, isAdmin } from "@/app/utils";
 import { useCountProductsQuery } from "@/features/product/productAPI";
 import ProductCards from "@/components/product/ProductCards";
+import ErrorMessage from "@/components/product/ErrorMessage";
+import { useRole } from "@/features/auth/authHooks";
+import NavButton from "@/components/NavButtons";
 
 export default function Products() {
-  const { data: total, isLoading, error } = useCountProductsQuery();
+  const { role } = useRole();
+  const { data: total, isSuccess, isError, error } = useCountProductsQuery();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  if (isLoading) {
-    <Spin fullscreen spinning={true} tip="Loading..."></Spin>;
+  if (isError) {
+    console.log(error);
+    const status = "status" in error ? error.status : "UNKOWN_ISSUE";
+    //return <>We are having trouble to connect to the server!</>;
+    return (
+      <ErrorMessage task="GET_PRODUCT_COUNT" status={status}></ErrorMessage>
+    );
   }
 
-  if (!total) {
-    console.log(error);
-    return <>We are having trouble to connect to the server!</>;
+  if (!isSuccess) {
+    return <Spin fullscreen spinning={true} tip="Loading..."></Spin>;
+  }
+
+  //  the total is supposed to be ready now, so this should never be case
+  if (total === undefined) {
+    return <>We are having trouble to get the total number of products!</>;
   }
 
   // validate the url
@@ -63,6 +76,9 @@ export default function Products() {
               { value: "PriceDes", label: "Price: high to low" },
             ]}
           />
+          {isAdmin(role) && (
+            <NavButton to="/products/create"> Create Product</NavButton>
+          )}
         </Col>
       </Row>
 

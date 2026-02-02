@@ -1,4 +1,8 @@
-import type { AuthQueryTask, QueryErrorCode } from "@/errors/types";
+import type {
+  AuthQueryTask,
+  QueryErrorCode,
+  QueryErrorDetails,
+} from "@/errors/types";
 import { QueryError } from "@/errors/QueryError";
 import { getErrorDetail } from "@/errors/utils";
 
@@ -12,12 +16,13 @@ export class AuthQueryError extends QueryError {
     };
     const issue = issues[task];
 
-    const { cause, message, actions } = getErrorDetail(code, {
+    const details: Record<QueryErrorCode, QueryErrorDetails> = {
       400: {
         cause: "Email and password doesn't match!",
         message: "Please Check your input and try again.",
         actions: ["BACK"],
       },
+
       404: {
         cause: "The email address is not found!",
         message: "Please Check your input and try again.",
@@ -30,8 +35,10 @@ export class AuthQueryError extends QueryError {
           "You could try to login with that email. Or cancel to sign up with other email.",
         actions: ["LOGIN", "CANCEL"],
       },
-    });
+    };
 
-    super(issue, cause, message, actions);
+    const { cause, message, actions } = getErrorDetail(code, details);
+
+    super(code, issue, cause, message, actions);
   }
 }

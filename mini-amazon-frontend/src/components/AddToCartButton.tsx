@@ -2,35 +2,33 @@ import { useAppDispatch } from "@/app/hooks";
 import { isGuest } from "@/app/utils";
 
 import { useRole } from "@/features/auth/authHooks";
-import { useSelectCountById } from "@/features/cart/cartHooks";
+import { useIsInCart, useSelectById } from "@/features/cart/cartHooks";
 import { cartThunks } from "@/features/cart/cartThunks";
 import { Button, InputNumber } from "antd";
 
-export interface AddToCartButtonProps {
+interface AddToCartButtonProps {
   productId: string;
 }
-export default function AddToCartButton({ productId }: AddToCartButtonProps) {
-  const { role } = useRole();
 
-  // this should not happend
-  if (isGuest(role)) {
-    <Button type="primary" disabled={isGuest(role)}>
-      {"  Add  "}
-    </Button>;
-  }
-  const { count, maxCount, _id } = useSelectCountById(productId);
+function AddButton({ productId }: AddToCartButtonProps) {
+  const { role } = useRole();
   const dispatch = useAppDispatch();
 
   const onClick = () => {
     dispatch(cartThunks.addItemToCart(productId));
   };
-  if (count === 0) {
-    return (
-      <Button type="primary" onClick={onClick}>
-        {"  Add  "}
-      </Button>
-    );
-  }
+
+  return (
+    <Button type="primary" disabled={isGuest(role)} onClick={onClick}>
+      {"  Add  "}
+    </Button>
+  );
+}
+
+export function UpdateItemButton({ productId }: { productId: string }) {
+  const { role } = useRole();
+  const { count, maxCount, _id } = useSelectById(productId);
+  const dispatch = useAppDispatch();
 
   const onChange = (quantity: number) => {
     quantity = Math.ceil(quantity);
@@ -48,4 +46,22 @@ export default function AddToCartButton({ productId }: AddToCartButtonProps) {
       onChange={(value) => (value ? onChange(value) : value)}
     ></InputNumber>
   );
+}
+
+export default function AddToCartButton({ productId }: AddToCartButtonProps) {
+  const { role } = useRole();
+
+  // this should not happend
+  if (isGuest(role)) {
+    <Button type="primary" disabled={isGuest(role)}>
+      {"  Add  "}
+    </Button>;
+  }
+
+  const incart = useIsInCart(productId);
+  console.log("do I in cart:", incart);
+  if (incart) {
+    return <UpdateItemButton productId={productId} />;
+  }
+  return <AddButton productId={productId} />;
 }

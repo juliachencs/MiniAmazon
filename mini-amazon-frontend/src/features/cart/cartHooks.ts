@@ -3,18 +3,18 @@ import { cartThunks } from "@/features/cart/cartThunks";
 
 import { useEffect, useMemo } from "react";
 
-export function useCart() {
+export function useCart(force: boolean = false) {
   const mode = useAppSelector((state) => state.cart.mode);
   const data = useAppSelector((state) => state.cart.data);
   const error = useAppSelector((state) => state.cart.error);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (mode === "idle") {
+    if (mode === "idle" || force) {
       console.log("dispatch query cart");
       dispatch(cartThunks.getCart());
     }
-  }, [mode, dispatch]);
+  }, [mode, dispatch, force]);
 
   return useMemo(() => ({ mode, data, error }), [mode, data, error]);
 }
@@ -33,15 +33,31 @@ export function useCartItemsCount() {
   return useMemo(() => ({ status: mode, count: count }), [mode, count]);
 }
 
-export const useSelectCountById = (productId: string) => {
+export const useIsInCart = (productId: string) => {
   const { data } = useCart();
-  let foundItem = null;
+
   if (data) {
-    foundItem = data.products.find((item) => item.productId === productId);
+    return data.products.some((item) => item.productId === productId);
+  }
+  return false;
+};
+
+export const useSelectById = (productId: string) => {
+  let count = 0;
+  let maxCount = 0;
+  let _id = "";
+
+  const { data } = useCart();
+
+  if (data) {
+    const foundItem = data.products.find(
+      (item) => item.productId === productId,
+    );
+    count = foundItem ? foundItem.quantity : 0;
+    maxCount = foundItem ? foundItem.inStockQuant : 0;
+    // BUG
+    _id = foundItem ? foundItem.productId : "undefined";
   }
 
-  const count = foundItem ? foundItem.quantity : 0;
-  const maxCount = foundItem ? foundItem.inStockQuant : 0;
-  const _id = foundItem ? foundItem.inStockQuant : "undefined";
   return useMemo(() => ({ count, maxCount, _id }), [count, maxCount, _id]);
 };

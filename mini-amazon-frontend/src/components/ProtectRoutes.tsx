@@ -11,7 +11,7 @@ export function GuestOnly() {
   return (
     <DelayedRedirect
       title="You have logged in!"
-      redirect={-1}
+      redirect="/products"
     ></DelayedRedirect>
   );
 }
@@ -24,7 +24,7 @@ export function AdminOnly() {
   return (
     <DelayedRedirect
       title="Sorry, you don't have the permission to access that page"
-      redirect={-1}
+      redirect="/home"
     ></DelayedRedirect>
   );
 }

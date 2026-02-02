@@ -20,7 +20,7 @@ function SearchBar() {
 
 export function LargeHomeLogo() {
   return (
-    <LinkButton type="text" to="/">
+    <LinkButton type="text" to="/products">
       MiniAmazon
     </LinkButton>
   );
@@ -28,7 +28,7 @@ export function LargeHomeLogo() {
 
 export function MiniHomeLogo() {
   return (
-    <LinkButton type="text" to="/">
+    <LinkButton type="text" to="/products">
       MAz
     </LinkButton>
   );

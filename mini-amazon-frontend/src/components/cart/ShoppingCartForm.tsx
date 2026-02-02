@@ -12,6 +12,7 @@ import {
   Form,
   Input,
   Space,
+  Typography,
   type DescriptionsProps,
 } from "antd";
 import { useState } from "react";
@@ -37,7 +38,7 @@ function PromoCodeForm() {
     dispatch(cartThunks.applyPromotionCode(values.promoCode))
       .unwrap()
       .then(() => setError(""))
-      .catch(() => setError("Invalid Promocode"));
+      .catch(() => setError(`${values.promoCode} is invalid`));
   };
 
   const onChange = (value: string) => {
@@ -67,8 +68,8 @@ function PromoCodeForm() {
             Apply
           </Button>
         </Space.Compact>
+        {error && <Typography.Text type="danger">{error}</Typography.Text>}
       </Form.Item>
-      <div>{error}</div>
     </Form>
   );
 }
@@ -78,7 +79,6 @@ export default function ShoppingCartForm({
   subTotal,
   discount,
   total,
-  promoCode,
 }: CartResponse) {
   if (products && products.length === 0) {
     return <Empty description="Your shopping cart is empty." />;
@@ -110,13 +110,8 @@ export default function ShoppingCartForm({
       ))}
       {/*promocode */}
       <Divider />
-
       <PromoCodeForm />
-      {promoCode && <div>Applied: {promoCode}</div>}
-      {/*statics */}
-
       <Descriptions column={1} items={items} styles={descStyles} />
-
       {/*checkout */}
       <Divider />
       <NavButton type="primary" to="/checkout">

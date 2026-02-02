@@ -1,94 +1,80 @@
+import type { ProductCreated } from "@/app/types";
+import DelayedRedirect from "@/components/DelayedRedirect";
+import ErrorMessage from "@/components/product/ErrorMessage";
 import ProductForm from "@/components/product/ProductForm";
+import { handleQueryError } from "@/errors/handlers";
+import ProductEditQueryError from "@/errors/ProductEditQueryError";
 import {
   useDeleteProductMutation,
   useGetProductQuery,
   useUpdateProductMutation,
 } from "@/features/product/productAPI";
 
-import { Skeleton, Spin, Typography, Flex, message, Modal } from "antd";
+import { Skeleton, Spin, Typography, Flex, message } from "antd";
 import { useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function UpdateProduct() {
-  const [isBusy, setIsBusy] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
   const { productId } = useParams();
+  const navigate = useNavigate();
 
-  if (!productId) {
-    return (
-      <ErrorMessageCard
-        issue="Missing Parameter"
-        suggestion="Please provide a valid product id in the url."
-        trouble="No product id is specified in the url!"
-      ></ErrorMessageCard>
-    );
-  }
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { data, isLoading, isFetching, isError, error, currentData } =
-    useGetProductQuery(productId as string);
-
+  const { data, isSuccess, isError, error } = useGetProductQuery(
+    productId as string,
+  );
   const [updateProduct] = useUpdateProductMutation();
   const [deleteProduct] = useDeleteProductMutation();
 
-  const link = MakeProductLink(productId);
-  console.log(link);
-  if (isLoading) {
+  if (!productId) {
+    return <DelayedRedirect title="Invalid URL" redirect={"/products"} />;
+  }
+
+  if (isError) {
+    console.log(error);
+    const status = "status" in error ? error.status : "UNKOWN_ISSUE";
+    return <ErrorMessage task="GET_PRODUCT" status={status} />;
+  }
+
+  if (!isSuccess) {
     return (
-      <Spin tip="Loading" size="large">
+      <Spin tip="Loading" fullscreen>
         <Skeleton active={true} />
       </Spin>
     );
   }
 
-  if (isError) {
-    const { issue, suggestion } = getErrorProps(error);
-    return (
-      <ErrorMessageCard
-        issue={issue}
-        suggestion={suggestion}
-        trouble="Fail to get information for editting the product!"
-      ></ErrorMessageCard>
-    );
-  }
-
-  const handleUpdateError = (error, trouble) => {
-    const { issue, suggestion } = getErrorProps(error);
-    const result = (
-      <ErrorMessageCard
-        issue={issue}
-        suggestion={suggestion}
-        trouble={trouble}
-      ></ErrorMessageCard>
-    );
-    Modal.error({
-      content: result,
-    });
-  };
-
-  const onSave = (values) => {
+  const onSave = (values: ProductCreated) => {
     const product = { ...data, ...values };
-    setIsBusy(true);
+    setIsSubmitting(true);
     updateProduct(product)
       .unwrap()
       .then(() => {
         message.success("Product is updated!");
-        navigate(link);
+        navigate(`/products/item/${product._id}`);
       })
       .catch((error) => {
-        handleUpdateError(error, "The product information can not be updated!");
+        console.log(error);
+        // handleUpdateError(error, "The product information can not be updated!");
+        console.log(error);
+        const query_error = new ProductEditQueryError(
+          "UPDATE_PRODUCT",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       })
       .finally(() => {
-        setIsBusy(false);
+        setIsSubmitting(false);
       });
   };
 
   const onCancel = () => {
     message.info({ content: "No product information is upated!" });
+    navigate(`/products/item/${data._id}`);
   };
 
   const onDelete = () => {
-    setIsBusy(true);
+    setIsSubmitting(true);
     deleteProduct(productId)
       .unwrap()
       .then(() => {
@@ -96,19 +82,23 @@ export default function UpdateProduct() {
         navigate("/products");
       })
       .catch((error) => {
-        handleUpdateError(error, "We cann't delete the product right now!");
+        console.log(error);
+
+        const query_error = new ProductEditQueryError(
+          "DELETE_PRODUCT",
+          error.status || "UNKOWN_ISSUE",
+        );
+        handleQueryError(query_error);
       })
       .finally(() => {
-        setIsBusy(false);
+        setIsSubmitting(false);
       });
   };
 
-  const isDataStale = !currentData && data;
   return (
     <>
-      <Spin spinning={isBusy} fullscreen />
-      <Flex vertical style={{ opacity: isDataStale || isBusy ? 0.5 : 1 }}>
-        {isFetching && <Spin />}
+      <Spin spinning={isSubmitting} fullscreen />
+      <Flex vertical style={{ opacity: isSubmitting ? 0.5 : 1 }}>
         <section>
           <Typography.Title>Edit Product</Typography.Title>
         </section>
