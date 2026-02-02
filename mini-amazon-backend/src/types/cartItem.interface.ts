@@ -10,22 +10,28 @@ interface productIdPop {
 }
 
 export interface CartItemPop {
-    productId: productIdPop;
+    productId: productIdPop | null;
 
     quantity: number;
     priceSnapshot: number;
     
     recentChangedPrice: boolean;
     recentChangedStock: boolean;
+    avaliable: boolean;
+
+    _id?: Types.ObjectId;
 }
 export interface CartItemI {
-    productId: Types.ObjectId;
+    productId: Types.ObjectId | null;
 
     quantity: number;
     priceSnapshot: number;
     
     recentChangedPrice: boolean;
     recentChangedStock: boolean;
+    avaliable: boolean;
+
+    _id?: Types.ObjectId;
 }
 
 export interface CartItemDTO extends CartItemI {
