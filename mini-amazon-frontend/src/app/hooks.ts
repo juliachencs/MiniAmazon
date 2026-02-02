@@ -1,17 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "./store";
-import { useMemo } from "react";
+import type { AppDispatch, RootState } from "@/app/store";
+import { createAsyncThunk, type GetThunkAPI } from "@reduxjs/toolkit";
+import type { BasicErrorResponse } from "@/app/types";
 
-// Use throughout your app instead of plain useDispath and useSelector
+// Use throughout the app instead of plain useDispath and useSelector for typescript
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();
 
-export const useRole = () => {
-  const role = useAppSelector((state: RootState) => state.auth.role);
-  return useMemo(() => ({ role }), [role]);
+/**
+ * A pre-typed version of createAsyncThunk.
+ */
+
+export type AsyncThunkConfig = {
+  state: RootState;
+  dispatch: AppDispatch;
+  rejectValue: BasicErrorResponse;
 };
 
-export const useToken = () => {
-  const token = useAppSelector((state: RootState) => state.auth.token);
-  return useMemo(() => ({ token }), [token]);
-};
+export type ThunkAPI = GetThunkAPI<AsyncThunkConfig>;
+export const createAppAsyncThunk =
+  createAsyncThunk.withTypes<AsyncThunkConfig>();
+// export type ThunkType = ReturnType<typeof createAppAsyncThunk>;

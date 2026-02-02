@@ -1,1 +1,5 @@
 .gitignore
+mini-amazon-backend
+node_modules
+mini-amazon-frontend-backup
+.vscode

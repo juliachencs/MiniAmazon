@@ -41,91 +41,11 @@ src
     ├── products: Manages the product lists, details and edition.
     ├── cart: Manages shopping cart items, quantities, and totals 
 ├── components:  Generic, reusable UI components 
+├── pages
 
 ```
 ---
-### Router Desgin
 
-
-**Auth**
-|功能	  | URL路径 | 组件名	| 备注 |
-|-|-|-|-|
-|登录     | /auth/login  |Login         |提供账号/密码及登录
-|注册	  | /auth/signup |Signup        |提供账号/密码及注册
-|重置密码  | /auth/recover |RecoverPassword  |用于未登录时找回密码（邮件/验证码）|
-
-
-**Products**
-|功能	  | URL路径 | 参数| 组件名	| 备注 |
-|-|-|-|-|-|
-| 列表 | /products             |Products      |显示product pages的第一页（默认排序方式和page size）
-| 列表 | /products?page={}&sortby={}&key={}        |Products      | 显示product page
-| 详情 | /products/item/:id     |Product       |通过增加 item 层级避开冲突
-| 新增 | /products/create      |CreateProduct |
-| 编辑 | /products/update/:id  |UpdateProduct |
-
-**Issues & Resolves**
-
-Pagniation - Reponsive page size
-
-- For the mobile  (ss:small screen)  : 16|24
-- For the tablet  (ms: middle screen): 8 |12
-- For the desktop (ls: large screen) : 4 | 6
-
-用户体验 (UX)：自动调整 page size 确保了页面不会因为项目太少而留下大片空白，或者因为项目太多而在移动端加载缓慢。
-
-
-The routing design
-
-
-方案1. /products?offset={}&limit={}&sortby={} 
-
-方案2：/products?page={}&size={}&sortby={}
-
-方案3：/products?page={}&sortby={}&key={}
-
-
-
-选择上 
-- ?page is better than ?offset. 
-Reason: While offset is more "database-native," page is more "user-friendly" and standard for modern Web SEO.
-
-- page-key is bettern than page-size
-
-
-  - 用户share the url cross device
-    we are trying to provide a seamless experience across devices. 
-  
-    We are trying to avoid the "Jump" issue: if a user is on Page 3 on Desktop (items 49-72) and rotates their phone to Mobile (where Page 3 is items 13-18), the content will change drastically.
-
-    If I'm looking at the "25th item" on my PC, and I send the link to my phone, my phone will open the page that contains that "25th item," even if it's now Page 5 instead of Page 2 and the key is auto-corrected.
-    
-
-  - 用户直接输入url
-    We are trying to prevent users from manually tampering with internal layout logic. Users are less likely to try and "hack" the URL (e.g., setting size=9999 to crash your app) if they see an encoded key
-
-UX的考虑：
-
-By replacing a readable size=12 with an encoded key, we prevent users from manually tampering with internal layout logic while still preserving the magic "key" auto-correction.
-
-
-一致性 (Consistency)：URL 是 Web 状态的唯一事实来源。
-
-
-如果手机用户分享了一个链接给桌面用户，桌面用户打开时应看到适合桌面大小的列表，或者保持手机的 limit。这种设计允许 URL 优先，同时兼顾设备自适应。。
-
- 
-
-To provide a seamless experience across all devices, we are trying to avoid when user copy a url of certain page to other device the 
-
-autocorrect key 
-but make 
-
-key: An encoded string representing the environment configuration (e.g., v2 version of the logic, m for mobile, 6 for the limit).
-
-By replacing a readable size=12 with an encoded key, we prevent users from manually tampering with internal layout logic while still preserving the magic "key" auto-correction.
-
- It ensures that the Intent (the page) and the Context (the key) work together to provide a seamless experience across all devices.
 
 
 
