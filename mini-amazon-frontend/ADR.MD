@@ -1,5 +1,82 @@
 # Architecture Decision Record
 
+### Router Desgin
+
+
+**Auth**
+| 功能     | URL路径       | 组件名          | 备注                                |
+| -------- | ------------- | --------------- | ----------------------------------- |
+| 登录     | /auth/login   | Login           | 提供账号/密码及登录                 |
+| 注册     | /auth/signup  | Signup          | 提供账号/密码及注册                 |
+| 重置密码 | /auth/recover | RecoverPassword | 用于未登录时找回密码（邮件/验证码） |
+
+
+**Products**
+| 功能 | URL路径                             | 组件名                                               | 备注 |
+| ---- | ---------------------------------- |---------------------------------------------------- | ---- |
+| 列表 | /products                          | Products      | 显示product pages的第一页（默认排序方式和page size） |
+| 列表 | /products?page={}&sortby={}&key={} | Products      | 显示one page of products page                                     |
+| 详情 | /products/item/:id                 | Product       | 通过增加 item 层级避开冲突                           |
+| 新增 | /products/create                   | CreateProduct |
+| 编辑 | /products/update/:id               | UpdateProduct |
+
+### Email validation
+
+source: https://colinhacks.com/essays/reasonable-email-regex
+
+```javascript
+/^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i
+
+^(?!\.)(?!.*\.\.)([a-zA-Z0-9_'+\-\.]*)[a-zA-Z0-9_+-]@([a-zA-Z0-9][A-Za-z0-9\-]*\.)+[a-zA-Z]{2,}
+```
+
+Explanation:
+
+The username (AKA "local part")
+
+
+The domain
+- must consist of at least 2 dot-separated segments consisting of letters, numbers, and hyphens
+- can't have two dots in a row
+- must end with a "TLD" that's 2+ letters
+
+### Password validation
+
+source: https://www.geeksforgeeks.org/javascript/javascript-program-to-validate-password-using-regular-expressions/
+
+```Javascript
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+```
+
+Regula Expression Breakdown:
+
+- ^(?=.*[a-z]): Ensures at least one lowercase letter.
+- (?=.*[A-Z]): Ensures at least one uppercase letter.
+- (?=.*\d): Ensures at least one digit.
+- (?=.*[@$!%*?&]): Ensures at least one special character.
+- [A-Za-z\d@$!%*?&]{8,}$: Ensures the password is at least 8 characters long.
+  abc@ABC!123
+
+const email_title = 'Invalid email address. An valid email address with pattern username@domain.\r\n' +
+ ' The username part:\n' +
+ ' - consists of letters, numbers, and these special characters: _+-.\r\n' +
+ ' - without two dots in a row\n' +
+ ' - can\'t start or end with a dot\n' +
+ ' The domain part:\n' +
+ ' - consists of letters, numbers, hyphens, and dots' +
+ ' - can\'t start or end with a hyphen or dot\n' +
+ ' - contains at least one dot\n' +
+ ' - the last part (after the last dot) must be at least two letters long.\n';
+ console.log(email_title);
+
+const password_title = `A valid password consists of at least onenumber, letter and special character. It must contain 
+- at least one number, 
+- at least one uppercase letter,
+ - at least one lowercase letter
+ - at least one special character(+@#$!%*?&) 
+- at least 8 characters
+ - at most 24 characters.`;
+  
 ## Pagniation 
 
 ### Reponsive page size
@@ -103,11 +180,6 @@ Pet accessories : 27
 
 
 ## FAQs
-
-OnAppLoad:
- - initialize the store
-   - auth
-   - media (large_screen | middle_screen | small_screen) - readonly
 
 
 

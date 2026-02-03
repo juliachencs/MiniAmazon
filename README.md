@@ -1,7 +1,11 @@
 # MiniAmazon
 
-# Phase1-demo
-https://github.com/user-attachments/assets/43111e13-e021-425a-883f-52433ad70b81
+# Demo
+
+
+
+https://github.com/user-attachments/assets/32d069c9-c765-4ea1-9845-6e1ff987b476
+
 
 
 **MiniAmazon** is an online shopping platform available for both desktop and mobile devices. Modeled after the core features of Amazon, it allows **Buyers** to browse and purchase products, and provides **Sellers** with tools to list and manage their own items.

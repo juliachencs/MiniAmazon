@@ -1,0 +1,11 @@
+
+name:Wireless Gaming Mouse
+
+description:
+【Tri-Mode Connectivity】Switch easily between 2.4G wireless, Bluetooth, and wired connections to match your setup. This mouse wireless design adapts to your work, study, or gaming environment with stable and flexible performance. Enjoy ultra-fast response with the wired mode’s 1000Hz polling rate.
+【Adjustable DPI Settings】Fine-tune your aim with six DPI levels ranging from 800 to 8000, each with a unique color indicator for quick switching. Perfect for both casual use and professional gaming equipment setups.
+【Cross-Platform Compatibility】This wireless computer mouse works with Windows XP/7/8/10 and macOS 10.5+, making it an ideal choice for versatile computer accessories across multiple devices.
+
+url:https://image.made-in-china.com/2f0j00MZBQonlElscC/Wireless-Bluetooth-Mouse-2-0GHz-USB-Bluetooth-Mouse.jpg
+
+        

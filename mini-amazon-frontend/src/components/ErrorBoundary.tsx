@@ -1,8 +1,6 @@
+import { Button, Result } from "antd";
 import React from "react";
 import type { ErrorInfo, ReactNode } from "react";
-import ErrorMessage from "./ErrorMessage";
-import { getErrorProps } from "@/app/utils";
-import { GoHomeButton } from "@/components/HomeBtn";
 
 interface Props {
   children: ReactNode;
@@ -32,21 +30,21 @@ class ErrorBoundary extends React.Component<Props, State> {
   }
 
   render() {
-    const { issue, suggestion } = getErrorProps({ status: "UNKOWN_ISSUE" });
-
     if (this.state.hasError) {
-      // Custom fallback UI
-      return (
-        this.props.fallback || (
-          <ErrorMessage
-            trouble="Unknow system issue!"
-            issue={issue}
-            suggestion={suggestion}
-          >
-            <GoHomeButton />
-          </ErrorMessage>
-        )
+      const result = (
+        <Result
+          status="error"
+          title="Opps, something went wrong."
+          subTitle="We are running into some unknown system issues. Please try again later."
+          extra={
+            <Button type="primary" href="/">
+              Home
+            </Button>
+          }
+        />
       );
+      // Custom fallback UI
+      return this.props.fallback || result;
     }
 
     return this.props.children;

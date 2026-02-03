@@ -1,3 +1,18 @@
+//Basic success response from the server
+export interface BasicResponse {
+  success: boolean;
+}
+
+//Standard success response with data from the server
+export interface ResponseWithData {
+  success: true;
+  data: unknown;
+}
+
+export interface BasicErrorResponse {
+  status: number | "UNKOWN_ISSUE" | "FETCH_ERROR";
+}
+
 // User auth
 export type Role = "Admin" | "Regular";
 
@@ -12,7 +27,7 @@ export interface UserInfo {
 }
 
 // Product
-export const allCategories = [
+export const CATEGORIES = [
   "Lighting",
   "Plants & planters",
   "Home electronics",
@@ -25,7 +40,8 @@ export const allCategories = [
   "Sofas & armchairs",
 ] as const;
 
-export type SortType = "Last" | "PriceAsc" | "PriceDes";
+export const SORT_TYPES = ["Last", "PriceAsc", "PriceDes"] as const;
+export type SortType = (typeof SORT_TYPES)[number];
 
 export interface Product {
   _id: string;
@@ -47,20 +63,23 @@ export interface ListProductsQuery {
   sortby: SortType;
 }
 
-//Standard success response from the server
-export interface BasicResponse {
-  success: boolean;
-}
-//Standard success response from the server
-export interface ResponseWithData {
-  success: boolean;
-  data: unknown;
+export interface CartItem {
+  productId: string;
+  productName: string;
+  productImgURI: string;
+  quantity: number;
+  inStockQuant: number;
+  priceSnapshot: number;
+  recentChangedPrice: boolean;
+  recentChangedStock: boolean;
+  available: boolean;
+  _id: string;
 }
 
-// ERROR
-export type ErrorCode =
-  | "AUTH_FAILED"
-  | "NETWORK_ERROR"
-  | "NO_PRODUCT"
-  | "UNKOWN"
-  | "NO_PERMISSION";
+export interface CartResponse {
+  products: CartItem[];
+  promoCode: string;
+  subTotal: number;
+  discount: number;
+  total: number;
+}
