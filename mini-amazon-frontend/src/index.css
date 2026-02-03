@@ -29,6 +29,7 @@ body {
   /* Path relative to the public folder */
   background-image: url('background.jpg');
   background-size: cover;
+  min-width: fit-content;
 }
 
 header {
@@ -38,6 +39,7 @@ header {
   padding-left: 16px;
   padding-right: 16px;
 
+
 }
 
 footer {
@@ -46,6 +48,7 @@ footer {
     padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
+    
 
 }
 

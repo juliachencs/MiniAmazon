@@ -52,7 +52,7 @@ const cartSlice = createSlice({
         if (action.payload) {
           state.error = action.payload;
         } else {
-          state.error = { status: "UNKONW_ISSUE" };
+          state.error = { status: "UNKOWN_ISSUE" };
         }
       },
     );

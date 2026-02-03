@@ -32,7 +32,7 @@ export function getScreenType() {
   if (width > 576) {
     screenType = "sm";
   }
-  if (width > 768) {
+  if (width > 992) {
     screenType = "md";
   }
   return screenType;

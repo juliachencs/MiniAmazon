@@ -5,6 +5,7 @@ import EditProductButton from "@/components/product/EditProductButton";
 import AddToCartButton from "@/components/AddToCartButton";
 import { useRole } from "@/features/auth/authHooks";
 import { isAdmin, isGuest } from "@/app/utils";
+import Price from "@/components/Price";
 const { Meta } = Card;
 
 export function ProductCard({ _id, name, price, imageURI }: Product) {
@@ -16,7 +17,7 @@ export function ProductCard({ _id, name, price, imageURI }: Product) {
       cover=<img style={{ height: 256, width: 256 }} src={imageURI} />
     >
       <Link to={`/products/item/${_id}`}>
-        <Meta title={name} description={price} />
+        <Meta title={name} description={<Price price={price} />} />
       </Link>
       <Space>
         {!isGuest(role) && <AddToCartButton productId={_id} />}

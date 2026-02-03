@@ -7,6 +7,7 @@ import EditProductButton from "@/components/product/EditProductButton";
 import { isAdmin, isGuest } from "@/app/utils";
 import { useRole } from "@/features/auth/authHooks";
 import ErrorMessage from "@/components/product/ErrorMessage";
+import Price from "@/components/Price";
 
 export default function Product() {
   const { role } = useRole();
@@ -54,14 +55,14 @@ export default function Product() {
         style={{ opacity: isDataStale || isFetching ? 0.5 : 1 }}
       >
         <Col xs={{ flex: "100%" }} sm={{ flex: "none" }}>
-          <Image style={{ maxWidth: "512px" }} src={product?.imageURI} />
+          <Image style={{ maxWidth: "512px" }} src={product.imageURI} />
         </Col>
 
         <Col xs={{ flex: "100%" }} sm={{ flex: "auto" }}>
           <div style={{ maxWidth: "50vw" }} className="product-details-content">
-            <Typography.Title level={3}>{product?.name}</Typography.Title>
-            <Typography.Paragraph>{product?.description}</Typography.Paragraph>
-            <Typography.Paragraph>{product?.price}</Typography.Paragraph>
+            <Typography.Title level={3}>{product.name}</Typography.Title>
+            <Typography.Paragraph>{product.description}</Typography.Paragraph>
+            <Price price={product.price} />
             <Space>
               {!isGuest(role) && <AddToCartButton productId={product._id} />}
               {isAdmin(role) && <EditProductButton productId={product._id} />}
