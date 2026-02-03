@@ -1,0 +1,3002 @@
+[
+    {
+        "name": "ZEBRAS\u00c4V pendant lamp, white/plastic, 18\" - IKEA US",
+        "description": "ZEBRAS\u00c4V pendant lamp, white/plastic, 18\" ZEBRAS\u00c4V pendant lamp surprises \u2013 an asymmetrical shape that looks different from all angles, made from plastic, of which as least 50% is recycled, and just as decorative on or off. Love it for many years!",
+        "category": "Lighting",
+        "price": 9.99,
+        "inStockQuant": 9,
+        "imageURI": "https://www.ikea.com/us/en/images/products/zebrasaev-pendant-lamp-white-plastic__1286742_pe933703_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T18:37:46.101603"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T11:16:31.101603"
+        },
+        "__v": 1
+    },
+    {
+        "name": "ZEBRAS\u00c4V pendant lamp, brown/paper, 14\" - IKEA US",
+        "description": "ZEBRAS\u00c4V pendant lamp, brown/paper, 14\" ZEBRAS\u00c4V pendant lamp surprises with its playful asymmetrical shape that looks different based on where you stand. Made from paper pulp, of which as least 90% is recycled, and just as decorative on or off.",
+        "category": "Lighting",
+        "price": 11.99,
+        "inStockQuant": 26,
+        "imageURI": "https://www.ikea.com/us/en/images/products/zebrasaev-pendant-lamp-brown-paper__1286754_pe933710_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T02:29:26.101674"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T13:31:28.101674"
+        },
+        "__v": 1
+    },
+    {
+        "name": "ZAMIOCULCAS potted plant, Aroid palm, 6\" - IKEA US",
+        "description": "ZAMIOCULCAS potted plant, Aroid palm, 6\" Plants are perfect roommates \u2013 invite them into your home and create your own green oasis where you can wind down from the hustle and bustle of life. And they\u2019re also quiet when it\u2019s time to go to sleep!",
+        "category": "Plants & planters",
+        "price": 12.99,
+        "inStockQuant": 16,
+        "imageURI": "https://www.ikea.com/us/en/images/products/zamioculcas-potted-plant-aroid-palm__1474445_pe998085_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T00:31:09.101712"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T18:10:31.101712"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YUPPIENALLE holder for mobile phone, gray - IKEA US",
+        "description": "YUPPIENALLE holder for mobile phone, gray This small and foldable holder for mobile phones allow you to have your hands free when watching films or having virtual meetings. Perfect when travelling and easy to grab and bring with you in a flash.",
+        "category": "Home electronics",
+        "price": 0.99,
+        "inStockQuant": 72,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yuppienalle-holder-for-mobile-phone-gray__1020769_pe831987_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T22:34:50.101739"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T06:49:25.101739"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YUCCA ELEPHANTIPES potted plant, Spineless yucca/2-stem, 9 \u00bd\" - IKEA US",
+        "description": "YUCCA ELEPHANTIPES potted plant, Spineless yucca/2-stem, 9 \u00bd\" Plants are wonderful roommates that make your home more vibrant. This easy-to-care plant withstands dry environments \u2013 so it\u2019s also ideal when you want to enjoy greenery in the office.",
+        "category": "Plants & planters",
+        "price": 29.99,
+        "inStockQuant": 43,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yucca-elephantipes-potted-plant-spineless-yucca-2-stem__0413416_pe570661_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T07:04:32.101767"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T17:50:44.101767"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G nightstand, gray-brown, 181/2x161/8\" - IKEA US",
+        "description": "YTTERV\u00c5G nightstand, gray-brown, 181/2x161/8\" This bedside table in solid wood stands sturdy on metal legs and has lots of room for everything you want close at hand in the deep drawer and open shelf. Matches YTTERV\u00c5G four-poster bed perfectly. Plenty of room in the large drawer for your belongings.",
+        "category": "Storage & organization",
+        "price": 149.99,
+        "inStockQuant": 87,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-nightstand-gray-brown__1250458_pe923747_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T16:30:36.101795"
+        },
+        "updateAt": {
+            "$date": "2026-01-01T05:28:12.101795"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 549.0,
+        "inStockQuant": 95,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown__1430203_pe982039_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T07:22:36.101862"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T08:32:27.101862"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 689.0,
+        "inStockQuant": 53,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown__1430202_pe982041_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T15:18:41.101891"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T17:38:51.101891"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lyng\u00f6r white, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lyng\u00f6r white, Queen The timeless look of YTTERV\u00c5G four-poster bed frame fits a modern home, yet allows you to sleep like royalty \u2013 and LYNG\u00d6R mattress base gives extra height and helps your mattress keep its shape for longer.",
+        "category": "Beds & mattresses",
+        "price": 819.0,
+        "inStockQuant": 29,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-lyngoer-white__1355070_pe953035_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T07:28:48.101919"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T22:45:44.101919"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lyng\u00f6r white, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lyng\u00f6r white, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 989.0,
+        "inStockQuant": 15,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-lyngoer-white__1355070_pe953035_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T10:01:43.101945"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T13:33:03.101945"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lur\u00f6y, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lur\u00f6y, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 749.0,
+        "inStockQuant": 89,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-luroey__1430202_pe982041_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T21:02:49.101968"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T05:29:41.101968"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lur\u00f6y, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/Lur\u00f6y, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 599.0,
+        "inStockQuant": 27,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-luroey__1430203_pe982039_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T10:02:48.101992"
+        },
+        "updateAt": {
+            "$date": "2026-01-08T10:57:59.101992"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/L\u00f6nset, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/L\u00f6nset, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 829.0,
+        "inStockQuant": 25,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-loenset__1430202_pe982041_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T03:53:38.102058"
+        },
+        "updateAt": {
+            "$date": "2026-01-08T18:02:31.102058"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, gray-brown/L\u00f6nset, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, gray-brown/L\u00f6nset, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 669.0,
+        "inStockQuant": 88,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-gray-brown-loenset__1430203_pe982039_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T18:50:29.102088"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T19:25:41.102088"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 689.0,
+        "inStockQuant": 56,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black__1019387_pe831355_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T06:00:08.102112"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T19:36:51.102112"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 549.0,
+        "inStockQuant": 30,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black__1014360_pe829628_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T21:49:56.102135"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T07:08:14.102135"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/Lyng\u00f6r dark gray, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/Lyng\u00f6r dark gray, Queen The timeless look of YTTERV\u00c5G four-poster bed frame fits a modern home, yet allows you to sleep like royalty \u2013 and LYNG\u00d6R mattress base gives extra height and helps your mattress keep its shape for longer.",
+        "category": "Beds & mattresses",
+        "price": 819.0,
+        "inStockQuant": 97,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-lyngoer-dark-gray__1355081_pe953068_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T12:04:48.102158"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T02:55:28.102158"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/Lyng\u00f6r dark gray, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/Lyng\u00f6r dark gray, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 989.0,
+        "inStockQuant": 100,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-lyngoer-dark-gray__1355081_pe953068_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T23:41:47.102185"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T14:30:10.102185"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/Lur\u00f6y, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/Lur\u00f6y, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 599.0,
+        "inStockQuant": 50,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-luroey__1014360_pe829628_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T12:52:11.102244"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T15:56:16.102244"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/Lur\u00f6y, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/Lur\u00f6y, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 749.0,
+        "inStockQuant": 80,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-luroey__1019387_pe831355_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T19:03:14.102270"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T02:34:18.102270"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/L\u00f6nset, Queen - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/L\u00f6nset, Queen You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 669.0,
+        "inStockQuant": 100,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-loenset__1014360_pe829628_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T03:57:39.102293"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T00:53:17.102293"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTTERV\u00c5G four-poster bed frame, black/L\u00f6nset, King - IKEA US",
+        "description": "YTTERV\u00c5G four-poster bed frame, black/L\u00f6nset, King You don\u2019t need to live in a castle to sleep like royalty. The timeless and simple expression of this four-poster bed frame in a Scandinavian style fits just as well in a modern home.",
+        "category": "Beds & mattresses",
+        "price": 829.0,
+        "inStockQuant": 7,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yttervag-four-poster-bed-frame-black-loenset__1019387_pe831355_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T19:01:29.102489"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T00:05:07.102489"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTL\u00c4GE pendant lamp, white, 17\" - IKEA US",
+        "description": "YTL\u00c4GE pendant lamp, white, 17\" On YTL\u00c4GE pendant lamp, you can change the shade\u2019s shape from a closed cylinder that spreads a cozy glow to an open floral shape that gives a lot of light. A playful way to change the atmosphere in a room. At least 50% of the plastic in the lamp\u2019s shade is recycled.",
+        "category": "Lighting",
+        "price": 39.99,
+        "inStockQuant": 77,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytlaege-pendant-lamp-white__1248107_pe923610_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T08:21:12.102521"
+        },
+        "updateAt": {
+            "$date": "2026-01-05T11:33:52.102521"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG / TR\u00c5DFRI lighting kit, white - IKEA US",
+        "description": "YTBERG / TR\u00c5DFRI lighting kit, white You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Smart home",
+        "price": 121.99,
+        "inStockQuant": 45,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-tradfri-lighting-kit-white__1231670_pe916017_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T00:02:06.102567"
+        },
+        "updateAt": {
+            "$date": "2025-12-18T10:33:49.102567"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG / TR\u00c5DFRI lighting kit, white - IKEA US",
+        "description": "YTBERG / TR\u00c5DFRI lighting kit, white You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Smart home",
+        "price": 85.99,
+        "inStockQuant": 72,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-tradfri-lighting-kit-white__1267767_pe928481_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T06:05:53.102589"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T16:52:06.102589"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG / TR\u00c5DFRI lighting kit, black - IKEA US",
+        "description": "YTBERG / TR\u00c5DFRI lighting kit, black You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Smart home",
+        "price": 121.99,
+        "inStockQuant": 84,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-tradfri-lighting-kit-black__1303962_pe938532_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T15:30:05.102610"
+        },
+        "updateAt": {
+            "$date": "2025-12-20T21:30:33.102610"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG / TR\u00c5DFRI lighting kit, black - IKEA US",
+        "description": "YTBERG / TR\u00c5DFRI lighting kit, black You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Smart home",
+        "price": 85.99,
+        "inStockQuant": 53,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-tradfri-lighting-kit-black__1267766_pe928480_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-15T05:59:24.102630"
+        },
+        "updateAt": {
+            "$date": "2025-12-18T00:00:54.102630"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG cabinet lighting, white/dimmable - IKEA US",
+        "description": "YTBERG cabinet lighting, white/dimmable You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Lighting",
+        "price": 18.0,
+        "inStockQuant": 99,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-cabinet-lighting-white-dimmable__1051207_pe845082_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T03:30:18.102649"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T09:29:38.102649"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YTBERG cabinet lighting, black/dimmable - IKEA US",
+        "description": "YTBERG cabinet lighting, black/dimmable You can bend, angle and move this slim lamp sideways to direct the soft light precisely over your cabinet or wardrobe. A perfect choice if there is little space between the top and the ceiling. Spreads a soft light that creates a cosy atmosphere in the room.",
+        "category": "Lighting",
+        "price": 18.0,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ytberg-cabinet-lighting-black-dimmable__1051169_pe845048_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-24T03:32:29.102697"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T01:53:06.102697"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YNGVAR chair, anthracite - IKEA US",
+        "description": "YNGVAR chair, anthracite The soft and rounded back support feels like a nice embrace and makes the chair easy to hang on the table edge when you want to sweep the floor after dinner. You sit comfortably thanks to the generous size and the soft rounded shape of the seat and back support.",
+        "category": "Tables & chairs",
+        "price": 145.0,
+        "inStockQuant": 99,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yngvar-chair-anthracite__0714279_pe730013_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T06:19:11.102718"
+        },
+        "updateAt": {
+            "$date": "2025-12-21T03:22:13.102718"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YNGVAR bar stool, anthracite, 291/2\" - IKEA US",
+        "description": "YNGVAR bar stool, anthracite, 291/2\" The soft and rounded back support feels like a nice embrace and makes the bar stool easy to hang on the table edge when it\u2019s time to clean up. Durable and sturdy, meeting the requirements on furniture for public use.",
+        "category": "Tables & chairs",
+        "price": 165.0,
+        "inStockQuant": 60,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yngvar-bar-stool-anthracite__0714270_pe729999_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T05:51:13.102745"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T16:42:35.102745"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YLLEVAD frame, black, 5x7\" - IKEA US",
+        "description": "YLLEVAD frame, black, 5x7\" Together with ALFTA adhesive hook, you can hang this frame without nails or screws. The snap-on function allows you to easily and quickly replace your pictures whenever you like. The frame is made of plastic, which makes it strong, lightweight and easier to handle.",
+        "category": "Home decor & accessories",
+        "price": 1.49,
+        "inStockQuant": 17,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yllevad-frame-black__0800684_pe767985_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T06:47:14.102773"
+        },
+        "updateAt": {
+            "$date": "2026-01-07T04:59:36.102773"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YLLEVAD frame, black, 8 \u00bcx11 \u00be\" - IKEA US",
+        "description": "YLLEVAD frame, black, 8 \u00bcx11 \u00be\" This frame is ideal to use with ALFTA adhesive hook. With the hook you can easily hang the frame without nails or screws and decorate your walls with pictures. Can be used hanging or standing, both horizontally and vertically, to fit in the space available.",
+        "category": "Home decor & accessories",
+        "price": 4.99,
+        "inStockQuant": 29,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yllevad-frame-black__0790091_pe767443_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T16:57:50.102791"
+        },
+        "updateAt": {
+            "$date": "2026-01-14T10:45:07.102791"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YLLEVAD Collage frame for 4 photos, black - IKEA US",
+        "description": "YLLEVAD Collage frame for 4 photos, black. The smart snap-on function allows you to easily fix your pictures in place, and quickly replace them whenever you like. Holds 4 pictures so you can create your own personal collage.",
+        "category": "Home decor & accessories",
+        "price": 4.99,
+        "inStockQuant": 99,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yllevad-collage-frame-for-4-photos-black__0790065_pe767451_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-29T18:32:15.102808"
+        },
+        "updateAt": {
+            "$date": "2026-01-07T07:13:29.102808"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YLLEVAD art card, flowers-blooming, 4x6\" - IKEA US",
+        "description": "YLLEVAD art card, flowers-blooming, 4x6\" Artwork makes a difference and adds a personal touch to your home, even if you\u2019re not the artist. With YLLEVAD art cards you can create your own mini-gallery on a wall or shelf in a flash. Motif created by Irika Sandstr\u00f6m and Sophie Wiking Ekman.",
+        "category": "Home decor & accessories",
+        "price": 0.99,
+        "inStockQuant": 12,
+        "imageURI": "https://www.ikea.com/us/en/images/products/yllevad-art-card-flowers-blooming__1237312_pe917914_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T10:00:03.102826"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T20:36:39.102826"
+        },
+        "__v": 1
+    },
+    {
+        "name": "YGSBO over-the-range convection microwave, Stainless steel, 30\" - IKEA US",
+        "description": "YGSBO over-the-range convection microwave, Stainless steel, 30\" A microwave with convection function and range hood all in one efficient appliance \u2013 a perfect choice when you\u2019re tight for space. Best of all? The interior surface wipes clean effortlessly.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 499.0,
+        "inStockQuant": 69,
+        "imageURI": "https://www.ikea.com/us/en/images/products/ygsbo-over-the-range-convection-microwave-stainless-steel__1328609_pe944865_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T08:57:42.102880"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T15:05:24.102880"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VUKU wardrobe, white, 291/8x201/8x585/8\" - IKEA US",
+        "description": "VUKU wardrobe, white, 291/8x201/8x585/8\" Inspired by the ingenuity of tents, we worked with tent suppliers to develop this wardrobe. Great for seasonal clothes or when you need to bring your wardrobe with you. Roll it and bring it along. Easy to bring home since it is roll packed.",
+        "category": "Storage & organization",
+        "price": 12.99,
+        "inStockQuant": 62,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vuku-wardrobe-white__0498088_pe629449_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T19:56:54.102904"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T16:57:21.102904"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRIGSTAD mirror, sedge, 24 \u00be\" - IKEA US",
+        "description": "VRIGSTAD mirror, sedge, 24 \u00be\" Embrace nature! This mirror in hand-woven rattan gives your room a depth that makes it feel extra vibrant. Whether you hang up one, several or combine them with paintings, they make a strong impression. Provided with safety film - reduces damage if glass is broken.",
+        "category": "Home decor & accessories",
+        "price": 59.99,
+        "inStockQuant": 7,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vrigstad-mirror-sedge__1113889_pe871579_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T15:51:27.102925"
+        },
+        "updateAt": {
+            "$date": "2026-01-06T03:01:56.102925"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP sleeper sofa, Kilanda light beige - IKEA US",
+        "description": "VRETSTORP sleeper sofa, Kilanda light beige This sleeper sofa makes it easy to have a good night's sleep. Effortless to convert and with practical storage for bedding and pajamas. But most importantly \u2013 the comfort makes it hard to keep your eyes open.",
+        "category": "Sofas & armchairs",
+        "price": 1049.0,
+        "inStockQuant": 55,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-sleeper-sofa-kilanda-light-beige__1155342_pe886569_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T00:58:22.102945"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T16:10:17.102945"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP sleeper sofa, Kilanda dark blue - IKEA US",
+        "description": "VRETSTORP sleeper sofa, Kilanda dark blue This sleeper sofa makes it easy to have a good night's sleep. Effortless to convert and with practical storage for bedding and pajamas. But most importantly \u2013 the comfort makes it hard to keep your eyes open.",
+        "category": "Sofas & armchairs",
+        "price": 1049.0,
+        "inStockQuant": 44,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-sleeper-sofa-kilanda-dark-blue__1155335_pe886565_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T18:00:42.102970"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T07:22:12.102970"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP sleeper sofa, Karlshov gray-beige - IKEA US",
+        "description": "VRETSTORP sleeper sofa, Karlshov gray-beige This sleeper sofa makes it easy to have a good night's sleep. Effortless to convert and with practical storage for bedding and pajamas. But most importantly \u2013 the comfort makes it hard to keep your eyes open.",
+        "category": "Sofas & armchairs",
+        "price": 1099.0,
+        "inStockQuant": 59,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-sleeper-sofa-karlshov-gray-beige__1194903_pe902152_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-24T07:41:56.103027"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T13:23:00.103027"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP sleeper sofa, Hakebo gray-green - IKEA US",
+        "description": "VRETSTORP sleeper sofa, Hakebo gray-green This sleeper sofa makes it easy to have a good night's sleep. Effortless to convert and with practical storage for bedding and pajamas. But most importantly \u2013 the comfort makes it hard to keep your eyes open.",
+        "category": "Sofas & armchairs",
+        "price": 999.0,
+        "inStockQuant": 99,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-sleeper-sofa-hakebo-gray-green__1155349_pe886576_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-24T05:14:46.103050"
+        },
+        "updateAt": {
+            "$date": "2025-12-30T18:14:30.103050"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP sleeper sofa, Hakebo dark gray - IKEA US",
+        "description": "VRETSTORP sleeper sofa, Hakebo dark gray This sleeper sofa makes it easy to have a good night's sleep. Effortless to convert and with practical storage for bedding and pajamas. But most importantly \u2013 the comfort makes it hard to keep your eyes open.",
+        "category": "Sofas & armchairs",
+        "price": 999.0,
+        "inStockQuant": 12,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-sleeper-sofa-hakebo-dark-gray__1155328_pe886560_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T09:00:01.103070"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T07:45:06.103070"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP cover for sleeper sofa, Kilanda light beige - IKEA US",
+        "description": "VRETSTORP cover for sleeper sofa, Kilanda light beige This cover is made of the polyester fabric called Kilanda. The texture and m\u00e9lange effect give the fabric a vibrant surface that is soft and has a luxurious feel when you touch it!",
+        "category": "Sofas & armchairs",
+        "price": 149.0,
+        "inStockQuant": 72,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-cover-for-sleeper-sofa-kilanda-light-beige__1194798_pe902057_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T14:46:29.103088"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T12:31:44.103088"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP cover for sleeper sofa, Kilanda dark blue - IKEA US",
+        "description": "VRETSTORP cover for sleeper sofa, Kilanda dark blue This cover is made of the polyester fabric called Kilanda. The texture and m\u00e9lange effect give the fabric a vibrant surface that is soft and has a luxurious feel when you touch it!",
+        "category": "Sofas & armchairs",
+        "price": 149.0,
+        "inStockQuant": 55,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-cover-for-sleeper-sofa-kilanda-dark-blue__1194801_pe902058_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T08:12:47.103107"
+        },
+        "updateAt": {
+            "$date": "2026-01-07T12:19:21.103107"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP cover for sleeper sofa, Karlshov beige/multicolor - IKEA US",
+        "description": "VRETSTORP cover for sleeper sofa, Karlshov beige/multicolor Karlshov fabric with classic woven stripes and discreet colors adds a timeless look to this cover. Made from natural material that is pleasant to touch \u2013 the cover is also easy to remove and machine wash.",
+        "category": "Sofas & armchairs",
+        "price": 199.0,
+        "inStockQuant": 95,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-cover-for-sleeper-sofa-karlshov-beige-multicolor__1194799_pe902060_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T09:57:54.103188"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T04:30:06.103188"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP cover for sleeper sofa, Hakebo gray-green - IKEA US",
+        "description": "VRETSTORP cover for sleeper sofa, Hakebo gray-green This cover will make your sofa even more inviting. It is soft and smooth with a slight structure - and the cover is also easy to remove and machine wash if needed.",
+        "category": "Sofas & armchairs",
+        "price": 99.0,
+        "inStockQuant": 52,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-cover-for-sleeper-sofa-hakebo-gray-green__1194797_pe902056_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T11:32:12.103229"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T02:22:57.103229"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRETSTORP cover for sleeper sofa, Hakebo dark gray - IKEA US",
+        "description": "VRETSTORP cover for sleeper sofa, Hakebo dark gray This cover will make your sofa even more inviting. It is soft and smooth with a slight structure - and the cover is also easy to remove and machine wash if needed.",
+        "category": "Sofas & armchairs",
+        "price": 99.0,
+        "inStockQuant": 19,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vretstorp-cover-for-sleeper-sofa-hakebo-dark-gray__1194800_pe902059_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T15:35:02.103256"
+        },
+        "updateAt": {
+            "$date": "2025-12-30T18:20:24.103256"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRESJ\u00d6N sink, stainless steel, 283/4x173/8\" - IKEA US",
+        "description": "VRESJ\u00d6N sink, stainless steel, 283/4x173/8\" Sleek and slim adding an elegant touch to your kitchen. Small radius corners allow more space for pans and the durable stainless steel is heat and stain resistant making it easy to keep clean and fresh.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 345.0,
+        "inStockQuant": 8,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vresjoen-sink-stainless-steel__1054578_pe847751_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T22:08:39.103288"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T08:10:12.103288"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRESJ\u00d6N sink, stainless steel, 211/4x173/8\" - IKEA US",
+        "description": "VRESJ\u00d6N sink, stainless steel, 211/4x173/8\" Sleek and slim adding an elegant touch to your kitchen. Small radius corners allow more space for pans and the durable stainless steel is heat and stain resistant making it easy to keep clean and fresh.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 285.0,
+        "inStockQuant": 51,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vresjoen-sink-stainless-steel__1054574_pe847749_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T11:50:37.103318"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T13:57:49.103318"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRESJ\u00d6N sink, stainless steel, 145/8x173/8\" - IKEA US",
+        "description": "VRESJ\u00d6N sink, stainless steel, 145/8x173/8\" Sleek and slim adding an elegant touch to your kitchen. Small radius corners allow more space for pans and the durable stainless steel is heat and stain resistant making it easy to keep clean and fresh.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 235.0,
+        "inStockQuant": 67,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vresjoen-sink-stainless-steel__1054572_pe847747_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T08:13:29.103371"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T16:50:31.103371"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRENA countertop, oak/veneer, 74x11/8\" - IKEA US",
+        "description": "VRENA countertop, oak/veneer, 74x11/8\" This wood countertop combines the best of solid wood and veneer. With efficient use of natural resources, it offers a unique pattern and a durable surface that can be sanded. Available to take home today.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 169.0,
+        "inStockQuant": 51,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vrena-countertop-oak-veneer__1012022_pe828714_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T21:33:13.103397"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T21:55:24.103397"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VRENA countertop, oak/veneer, 98x11/8\" - IKEA US",
+        "description": "VRENA countertop, oak/veneer, 98x11/8\" This wood countertop combines the best of solid wood and veneer. With efficient use of natural resources, it offers a unique pattern and a durable surface that can be sanded. Available to take home today.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 199.0,
+        "inStockQuant": 96,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vrena-countertop-oak-veneer__1012022_pe828714_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T00:28:55.103418"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T14:39:46.103418"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP toekick, high gloss dark gray-brown, 84x41/2\" - IKEA US",
+        "description": "VOXTORP toekick, high gloss dark gray-brown, 84x41/2\" 25-year Limited Warranty. Read about the terms in the Limited Warranty brochure. You can complete the look of your kitchen, from top to bottom, by adding a toe kick to cover the gap between the floor and the base cabinets.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 39.0,
+        "inStockQuant": 79,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-toekick-high-gloss-dark-gray-brown__1346989_pe959596_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T16:38:58.103439"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T11:22:58.103439"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP rounded deco strip, high gloss dark gray-brown, 87\" - IKEA US",
+        "description": "VOXTORP rounded deco strip, high gloss dark gray-brown, 87\" Can be cut to desired length. Covered with high-gloss foil; gives an easy care finish. 25-year Limited Warranty. Read about the terms in the Limited Warranty brochure.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 77.0,
+        "inStockQuant": 69,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-rounded-deco-strip-high-gloss-dark-gray-brown__1346966_pe959573_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T23:45:57.103459"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T03:24:40.103459"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP drawer front, matte white, 30x15\" - IKEA US",
+        "description": "VOXTORP drawer front, matte white, 30x15\" VOXTORP fronts with matte white surface create a modern look and give the impression of light and space. Integrated handles blend perfectly into the design enhancing the minimalist expression. The depth of the handle makes it easy to open and close the door.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 153.0,
+        "inStockQuant": 44,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639226_pe699429_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T09:06:56.103502"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T02:56:34.103502"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP drawer front, matte white, 24x10\" - IKEA US",
+        "description": "VOXTORP drawer front, matte white, 24x10\" VOXTORP fronts with matte white surface create a modern look and give the impression of light and space. Integrated handles blend perfectly into the design enhancing the minimalist expression. The depth of the handle makes it easy to open and close the door.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 123.0,
+        "inStockQuant": 37,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639189_pe699407_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T12:53:41.103524"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T04:29:11.103524"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP drawer front, matte white, 15x15\" - IKEA US",
+        "description": "VOXTORP drawer front, matte white, 15x15\" VOXTORP fronts with matte white surface create a modern look and give the impression of light and space. Integrated handles blend perfectly into the design enhancing the minimalist expression. The depth of the handle makes it easy to open and close the door.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 105.0,
+        "inStockQuant": 15,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639188_pe699406_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T21:34:20.103546"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T16:17:51.103546"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP drawer front, matte white, 30x5\" - IKEA US",
+        "description": "VOXTORP drawer front, matte white, 30x5\" VOXTORP fronts with matte white surface create a modern look and give the impression of light and space. Integrated handles blend perfectly into the design enhancing the minimalist expression. The depth of the handle makes it easy to open and close the door.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 123.0,
+        "inStockQuant": 14,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639222_pe699425_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T16:07:47.103563"
+        },
+        "updateAt": {
+            "$date": "2025-12-30T18:17:27.103563"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 24x15\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 24x15\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 136.0,
+        "inStockQuant": 8,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639221_pe699424_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T16:21:51.103579"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T01:31:43.103579"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 15x5\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 15x5\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 79.0,
+        "inStockQuant": 85,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639184_pe699402_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T02:13:48.103594"
+        },
+        "updateAt": {
+            "$date": "2025-12-30T03:46:43.103594"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 36x10\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 36x10\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 168.0,
+        "inStockQuant": 14,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639217_pe699420_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T17:13:19.103610"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T05:11:06.103610"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 24x5\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 24x5\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 108.0,
+        "inStockQuant": 7,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639215_pe699418_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T13:45:00.103645"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T22:07:21.103645"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 18x10\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 18x10\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 96.0,
+        "inStockQuant": 34,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639180_pe699398_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T05:43:12.103662"
+        },
+        "updateAt": {
+            "$date": "2026-01-12T19:08:32.103662"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 36x15\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 36x15\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 195.0,
+        "inStockQuant": 70,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639212_pe699415_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T19:13:36.103682"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T22:17:43.103682"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 30x10\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 30x10\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 136.0,
+        "inStockQuant": 80,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639210_pe699413_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-24T23:53:21.103698"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T00:08:47.103698"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXTORP Drawer front, white matt white, 18x15\" - IKEA US",
+        "description": "VOXTORP Drawer front, white matt white, 18x15\". VOXTORP is a smooth, matt drawer front with integrated handles. It brings clean lines and an open, modern look to your kitchen.",
+        "category": "Kitchen, appliances & supplies",
+        "price": 117.0,
+        "inStockQuant": 86,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxtorp-drawer-front-matte-white__0639175_pe699393_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T10:06:54.103713"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T10:30:13.103713"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXL\u00d6V / VOXL\u00d6V table and 4 chairs, bamboo/bamboo, 707/8x353/8\" - IKEA US",
+        "description": "VOXL\u00d6V / VOXL\u00d6V table and 4 chairs, bamboo/bamboo, 707/8x353/8\" A gift from nature, shaped and bent for optimal beauty and comfort. The sturdy table and chair frames are made of hardwearing bamboo and the handwoven paper twine gives a strong seat with a resilient feel.",
+        "category": "Tables & chairs",
+        "price": 899.99,
+        "inStockQuant": 68,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxloev-voxloev-table-and-4-chairs-bamboo-bamboo__0926660_pe789444_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T12:38:19.104582"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T05:26:28.104582"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXL\u00d6V / ODGER table and 4 chairs, bamboo/anthracite, 707/8x353/8\" - IKEA US",
+        "description": "VOXL\u00d6V / ODGER table and 4 chairs, bamboo/anthracite, 707/8x353/8\" Comfortable to sit on thanks to the bowl-shaped seat and rounded shape of the backrest. No tools are required to assemble the chair, you just click it together with a simple mechanism under the seat.",
+        "category": "Tables & chairs",
+        "price": 899.99,
+        "inStockQuant": 28,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxloev-odger-table-and-4-chairs-bamboo-anthracite__0997402_pe822662_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T22:38:06.104612"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T19:21:19.104612"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXL\u00d6V dining table, light bamboo, 707/8x353/8\" - IKEA US",
+        "description": "VOXL\u00d6V dining table, light bamboo, 707/8x353/8\" The natural bamboo makes this table light and versatile, but the hardwearing material is also warm and inviting. The bent wood enhances the Scandinavian expression. The rounded corners are a safe choice when living with children in smaller spaces.",
+        "category": "Tables & chairs",
+        "price": 399.99,
+        "inStockQuant": 66,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxloev-dining-table-light-bamboo__0997396_pe822660_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T15:36:00.104651"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T23:26:19.104651"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXL\u00d6V chair, light bamboo - IKEA US",
+        "description": "VOXL\u00d6V chair, light bamboo A gift from nature, shaped and bent for optimal beauty and comfort. The sturdy frame is made of durable bamboo, and handwoven paper twine creates a strong seat with a resilient feel when you sit on it.",
+        "category": "Tables & chairs",
+        "price": 125.0,
+        "inStockQuant": 63,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxloev-chair-light-bamboo__0948161_pe798889_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T02:02:03.104670"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T02:11:51.104670"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VOXL\u00d6V / \u00c4LVSTA table and 4 chairs, light bamboo/rattan white, 707/8x353/8\" - IKEA US",
+        "description": "VOXL\u00d6V / \u00c4LVSTA table and 4 chairs, light bamboo/rattan white, 707/8x353/8\" The natural bamboo makes this table light and versatile, but the hardwearing material is also warm and inviting. The bent wood enhances the Scandinavian expression.",
+        "category": "Tables & chairs",
+        "price": 799.99,
+        "inStockQuant": 82,
+        "imageURI": "https://www.ikea.com/us/en/images/products/voxloev-aelvsta-table-and-4-chairs-light-bamboo-rattan-white__1121766_pe874359_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T11:26:40.104690"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T13:38:52.104690"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIVALLA tablet stand, bamboo, 101/4x63/4\" - IKEA US",
+        "description": "VIVALLA tablet stand, bamboo, 101/4x63/4\" This bamboo holder creates a warm expression in your kitchen. Place it on the countertop or hang it on KUNGSFORS or SUNNERSTA rail to free up space and put your tablet or cookbook at eye-height.",
+        "category": "Home electronics",
+        "price": 14.99,
+        "inStockQuant": 34,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vivalla-tablet-stand-bamboo__0713732_pe729730_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T08:30:50.104896"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T06:25:14.104896"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITVAL bunk bed frame, white/light gray, Twin - IKEA US",
+        "description": "VITVAL bunk bed frame, white/light gray, Twin Soft shapes and fabric guardrails. These are the details that make this bunk bed unique. Perfect when you need space for two, but have limited space. Accessorize with products from the M\u00d6JLIGHET series.",
+        "category": "Beds & mattresses",
+        "price": 329.0,
+        "inStockQuant": 62,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitval-bunk-bed-frame-white-light-gray__0687345_pe722121_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T03:36:26.104962"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T21:47:59.104962"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSK\u00c4R sofa with chaise, armrests outdoor/plastic rattan dark gray - IKEA US",
+        "description": "VITTSK\u00c4R sofa with chaise, armrests outdoor/plastic rattan dark gray Combine the parts any way you like and create your own favorite setup \u2013 sit back and enjoy time with family and friends in this comfortable and easy-care lounge set. Plastic rattan is a durable material that is weather-resistant.",
+        "category": "Sofas & armchairs",
+        "price": 975.0,
+        "inStockQuant": 9,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittskaer-sofa-with-chaise-armrests-outdoor-plastic-rattan-dark-gray__1468771_pe996268_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T09:44:17.105006"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T18:35:00.105006"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSK\u00c4R sofa with chaise, armrests outdoor/plastic rattan dark gray Fr\u00f6s\u00f6n/Duvholmen beige - IKEA US",
+        "description": "VITTSK\u00c4R sofa with chaise, armrests outdoor/plastic rattan dark gray Fr\u00f6s\u00f6n/Duvholmen beige Combine the parts any way you like and create your own favorite setup \u2013 sit back and enjoy time with family and friends in this comfortable and easy-care lounge set with thick, inviting cushions.",
+        "category": "Sofas & armchairs",
+        "price": 1410.0,
+        "inStockQuant": 8,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittskaer-sofa-with-chaise-armrests-outdoor-plastic-rattan-dark-gray-froesoen-duvholmen-beige__1469314_pe996481_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T21:21:21.105101"
+        },
+        "updateAt": {
+            "$date": "2026-01-06T08:03:22.105101"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 1181/8x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 1181/8x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out revealing the true you. The white metal frame feels light and airy and won\u2019t make your space feel cluttered.",
+        "category": "Storage & organization",
+        "price": 217.0,
+        "inStockQuant": 52,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754494_pe747943_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T00:06:20.105747"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T07:46:29.105747"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 591/2x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 591/2x141/8x687/8\" The straightforward design and glass shelves make the objects you put in VITTSJ\u00d6 stand out. A perfect place for the things you like the most, need every day or that you want your guests to notice.",
+        "category": "Storage & organization",
+        "price": 138.0,
+        "inStockQuant": 73,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754456_pe747920_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T14:30:04.105771"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T07:26:49.105771"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 791/2x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 791/2x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out revealing the true you. The white metal frame feels light and airy and won\u2019t make your space feel cluttered.",
+        "category": "Storage & organization",
+        "price": 177.0,
+        "inStockQuant": 85,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754496_pe747945_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T04:36:54.105816"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T16:32:02.105816"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x365/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x365/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The white metal frame creates a light and airy expression that harmonizes with other products in the VITTSJ\u00d6 series.",
+        "category": "Storage & organization",
+        "price": 118.0,
+        "inStockQuant": 30,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754458_pe747921_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T16:37:43.105838"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T01:27:48.105838"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The white metal frame creates a light and airy expression that harmonizes with other products in the VITTSJ\u00d6 series.",
+        "category": "Storage & organization",
+        "price": 158.0,
+        "inStockQuant": 36,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754461_pe747924_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T17:00:07.105857"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T00:42:56.105857"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, white/glass, 783/4x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out revealing the true you. The white metal frame feels light and airy and won\u2019t make your space feel cluttered.",
+        "category": "Storage & organization",
+        "price": 138.0,
+        "inStockQuant": 65,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-white-glass__0754479_pe747935_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T05:58:51.105876"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T16:15:01.105876"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The dark metal creates a vintagy, industrial feel and is a perfect match with other products in the VITTSJ\u00d6 series.",
+        "category": "Storage & organization",
+        "price": 158.0,
+        "inStockQuant": 18,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0754460_pe747925_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T19:20:57.105897"
+        },
+        "updateAt": {
+            "$date": "2025-12-30T16:35:19.105897"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The top/bottom panels are black-brown on one side and black on the other so you can pick the expression that suits you.",
+        "category": "Storage & organization",
+        "price": 138.0,
+        "inStockQuant": 22,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0754478_pe747936_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T13:45:30.105916"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T06:49:03.105916"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 591/2x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 591/2x141/8x687/8\" Here you can store a lot and still enjoy an open and airy feel. The top and bottom panels are black-brown on one side and black on the other, so you can choose the expression that suits you best.",
+        "category": "Storage & organization",
+        "price": 138.0,
+        "inStockQuant": 6,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0141579_pe301500_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T16:47:52.105933"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T22:14:33.105933"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 1181/8x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 1181/8x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The top/bottom panels are black-brown on one side and black on the other so you can pick the expression that suits you.",
+        "category": "Storage & organization",
+        "price": 217.0,
+        "inStockQuant": 52,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0754493_pe747944_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T08:00:01.105974"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T15:27:47.105974"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 791/2x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 791/2x141/8x687/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The top/bottom panels are black-brown on one side and black on the other so you can pick the expression that suits you.",
+        "category": "Storage & organization",
+        "price": 177.0,
+        "inStockQuant": 77,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0754495_pe747946_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T21:16:35.105996"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T21:53:53.105996"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x365/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 storage combination, black-brown/glass, 783/4x141/8x365/8\" The straightforward design and glass shelves allow your beloved objects to stand out. The top/bottom panels are black-brown on one side and black on the other so you can pick the expression that suits you.",
+        "category": "Storage & organization",
+        "price": 118.0,
+        "inStockQuant": 24,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-storage-combination-black-brown-glass__0754457_pe747922_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T02:13:50.106013"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T05:03:36.106013"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 shelving unit with laptop table, white/glass, 791/2x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 shelving unit with laptop table, white/glass, 791/2x141/8x687/8\" Light and airy storage for both work and your hobby things. This combination with a work surface and laptop storage can transform any small area into a highly functional workspace.",
+        "category": "Storage & organization",
+        "price": 187.99,
+        "inStockQuant": 43,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelving-unit-with-laptop-table-white-glass__0754455_pe747919_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T14:53:56.106030"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T17:18:08.106030"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 shelving unit with laptop table, white/glass, 783/4x141/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 shelving unit with laptop table, white/glass, 783/4x141/8x687/8\" Light and airy storage for both work and your hobby things. This combination with a work surface and laptop storage can transform any small area into a highly functional workspace.",
+        "category": "Storage & organization",
+        "price": 148.99,
+        "inStockQuant": 53,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelving-unit-with-laptop-table-white-glass__0754454_pe747912_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T00:13:50.106048"
+        },
+        "updateAt": {
+            "$date": "2026-01-12T05:31:50.106048"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 shelf unit, yellow/glass, 201/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 shelf unit, yellow/glass, 201/8x687/8\" The straightforward colorful design make the objects you put in VITTSJ\u00d6 stand out. The glass shelves are the perfect place for the things you like the most, and that you want your guests to notice. Adjustable feet for stability on uneven floors.",
+        "category": "Storage & organization",
+        "price": 59.0,
+        "inStockQuant": 91,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelf-unit-yellow-glass__1356400_pe953363_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T02:14:43.106064"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T07:34:48.106064"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 shelf unit, white/glass, 201/8x687/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 shelf unit, white/glass, 201/8x687/8\" The straightforward design and glass shelves make the objects you put in VITTSJ\u00d6 stand out. A perfect place for the things you like the most, need every day or that you want your guests to notice. Adjustable feet for stability on uneven floors.",
+        "category": "Storage & organization",
+        "price": 59.0,
+        "inStockQuant": 30,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelf-unit-white-glass__0644375_pe702639_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T19:34:03.106109"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T07:09:18.106109"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 Shelf unit, white, glass, Width: 39 3/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 Shelf unit, white, glass, Width: 39 3/8\". Tempered glass and metal are durable materials that provide an open, airy feel. A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change.",
+        "category": "Storage & organization",
+        "price": 79.0,
+        "inStockQuant": 71,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelf-unit-white-glass__0625605_pe692391_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T00:30:08.106128"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T05:33:25.106128"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 Shelf unit, white, glass, 39 3/8x36 5/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 Shelf unit, white, glass, 39 3/8x36 5/8\". Tempered glass and metal are durable materials that provide an open, airy feel. A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change.",
+        "category": "Storage & organization",
+        "price": 59.0,
+        "inStockQuant": 6,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-shelf-unit-white-glass__0767559_pe754141_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T04:52:21.106144"
+        },
+        "updateAt": {
+            "$date": "2025-12-20T11:10:46.106144"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 nesting tables, set of 2, black-brown/glass, 353/8x195/8\" - IKEA US",
+        "description": "VITTSJ\u00d6 nesting tables, set of 2, black-brown/glass, 353/8x195/8\" The simple and honest design of VITTSJ\u00d6 nest tables creates an open and airy expression. You can always choose to use them individually, together or slide the lower one under the higher table. Can be pushed together to save space.",
+        "category": "Tables & chairs",
+        "price": 129.99,
+        "inStockQuant": 16,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-nesting-tables-set-of-2-black-brown-glass__0735687_pe740087_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T03:53:03.106207"
+        },
+        "updateAt": {
+            "$date": "2026-01-13T07:37:59.106207"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTSJ\u00d6 coffee table, black-brown/glass, 291/2\" - IKEA US",
+        "description": "VITTSJ\u00d6 coffee table, black-brown/glass, 291/2\" The simple design of this coffee table creates an open and airy expression. Durable and honest materials make it easy to live with too \u2013 and you will always have extra storage space on the shelf. Stands evenly on uneven floors with the adjustable feet.",
+        "category": "Tables & chairs",
+        "price": 89.99,
+        "inStockQuant": 62,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vittsjoe-coffee-table-black-brown-glass__0135348_pe292039_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T07:11:56.106249"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T21:43:54.106249"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITTERYD adjustable coffee table, white, 381/4\" - IKEA US",
+        "description": "VITTERYD adjustable coffee table, white, 381/4\" Make more activities possible in your living room. The adjustable VITTERYD coffee table can be set to two heights \u2013 and it has a hidden storage space and a shelf that can be customized with boxes.",
+        "category": "Tables & chairs",
+        "price": 149.99,
+        "inStockQuant": 50,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitteryd-adjustable-coffee-table-white__1213701_pe911224_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T01:29:46.106268"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T10:10:27.106268"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITL\u00d6K plant pot with holder, indoor/outdoor/turquoise, 6\" - IKEA US",
+        "description": "VITL\u00d6K plant pot with holder, indoor/outdoor/turquoise, 6\" The VITL\u00d6K family brings out the best in your plants. With steel pots and accessories, you can create a green haven, maximize the use of space and give the plants a lift by elevating them from the floor. Galvanized for rust resistance.",
+        "category": "Plants & planters",
+        "price": 6.99,
+        "inStockQuant": 6,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitloek-plant-pot-with-holder-indoor-outdoor-turquoise__1360080_pe954345_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T09:53:07.106320"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T09:36:49.106320"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITL\u00d6K plant pot, indoor/outdoor/turquoise, 9 \u00bd\" - IKEA US",
+        "description": "VITL\u00d6K plant pot, indoor/outdoor/turquoise, 9 \u00bd\" The VITL\u00d6K family brings out the best in your plants. With steel pots and accessories, you can create a green haven, maximize the use of space and give the plants a lift by elevating them from the floor. Galvanized for rust resistance.",
+        "category": "Plants & planters",
+        "price": 6.99,
+        "inStockQuant": 63,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitloek-plant-pot-indoor-outdoor-turquoise__1360046_pe954337_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T21:02:14.106341"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T17:10:56.106341"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITL\u00d6K plant pot, indoor/outdoor/turquoise, 12 \u00bd\" - IKEA US",
+        "description": "VITL\u00d6K plant pot, indoor/outdoor/turquoise, 12 \u00bd\" The VITL\u00d6K family brings out the best in your plants. With steel pots and accessories, you can create a green haven, maximize the use of space and give the plants a lift by elevating them from the floor. Galvanized for rust resistance.",
+        "category": "Plants & planters",
+        "price": 14.99,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitloek-plant-pot-indoor-outdoor-turquoise__1360071_pe954341_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T11:28:04.106360"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T23:38:43.106360"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITL\u00d6K flower box with holder, indoor/outdoor/turquoise, 22x7 \u00be\" - IKEA US",
+        "description": "VITL\u00d6K flower box with holder, indoor/outdoor/turquoise, 22x7 \u00be\" The VITL\u00d6K family brings out the best in your plants. With steel pots and accessories, you can create a green haven, maximize the use of space and give the plants a lift by elevating them from the floor.",
+        "category": "Plants & planters",
+        "price": 14.99,
+        "inStockQuant": 21,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitloek-flower-box-with-holder-indoor-outdoor-turquoise__1359950_pe954312_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T14:57:13.106377"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T02:05:40.106377"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis wood, Full - IKEA US",
+        "description": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis wood, Full With VITARNA four-poster bed, you can create a cozy space for both sleeping and resting. This combination with SK\u00c5DIS pegboards screens off and makes it easy to add more functions with accessories.",
+        "category": "Beds & mattresses",
+        "price": 214.98,
+        "inStockQuant": 92,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitarna-four-poster-bed-frame-white-luroey-skadis-wood__1339964_pe948475_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-14T18:18:36.106460"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T07:59:39.106460"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis white, Full - IKEA US",
+        "description": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis white, Full With VITARNA four-poster bed, you can create a cozy space for both sleeping and resting. This combination with SK\u00c5DIS pegboards screens off and makes it easy to add more functions with accessories.",
+        "category": "Beds & mattresses",
+        "price": 214.98,
+        "inStockQuant": 5,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitarna-four-poster-bed-frame-white-luroey-skadis-white__1339951_pe948468_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T07:14:00.106481"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T03:33:32.106481"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis black, Full - IKEA US",
+        "description": "VITARNA four-poster bed frame, white Lur\u00f6y/Sk\u00e5dis black, Full With VITARNA four-poster bed, you can create a cozy space for both sleeping and resting. This combination with SK\u00c5DIS pegboards screens off and makes it easy to add more functions with accessories.",
+        "category": "Beds & mattresses",
+        "price": 214.98,
+        "inStockQuant": 84,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vitarna-four-poster-bed-frame-white-luroey-skadis-black__1339959_pe948474_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T21:54:52.106501"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T09:07:21.106501"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde light beige/brown - IKEA US",
+        "description": "VISKAFORS sofa, Lejde light beige/brown VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 79,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-light-beige-brown__1088069_pe861044_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T02:09:18.106688"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T17:54:13.106688"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde light beige/birch - IKEA US",
+        "description": "VISKAFORS sofa, Lejde light beige/birch VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 85,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-light-beige-birch__1088064_pe861039_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T09:34:27.106709"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T10:10:19.106709"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde gray/green/brown - IKEA US",
+        "description": "VISKAFORS sofa, Lejde gray/green/brown VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 67,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-gray-green-brown__1088068_pe861043_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T23:13:16.106727"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T00:50:40.106727"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde/gray/green birch - IKEA US",
+        "description": "VISKAFORS sofa, Lejde/gray/green birch VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-gray-green-birch__1088059_pe861034_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T14:35:45.106744"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T16:00:34.106744"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde anthracite/brown - IKEA US",
+        "description": "VISKAFORS sofa, Lejde anthracite/brown VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 39,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-anthracite-brown__1088071_pe861032_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-14T15:56:27.106761"
+        },
+        "updateAt": {
+            "$date": "2025-12-15T12:02:09.106761"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, Lejde anthracite/birch - IKEA US",
+        "description": "VISKAFORS sofa, Lejde anthracite/birch VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel.",
+        "category": "Sofas & armchairs",
+        "price": 1249.0,
+        "inStockQuant": 51,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-lejde-anthracite-birch__1088063_pe861038_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T16:40:58.106801"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T01:00:10.106801"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, H\u00f6galid brown/brown - IKEA US",
+        "description": "VISKAFORS sofa, H\u00f6galid brown/brown VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel. You can choose from several different covers and legs in 2 colors.",
+        "category": "Sofas & armchairs",
+        "price": 1699.0,
+        "inStockQuant": 98,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-hoegalid-brown-brown__1088070_pe861045_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T07:14:50.106821"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T06:46:01.106821"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISKAFORS sofa, H\u00f6galid brown/birch - IKEA US",
+        "description": "VISKAFORS sofa, H\u00f6galid brown/birch VISKAFORS is a sofa that becomes a statement piece in the room. The classic design has generous, inviting shapes \u2013 and when you sink into the deep soft seat, the sofa gives you an embracing feel. You can choose from several different covers and legs in 2 colors.",
+        "category": "Sofas & armchairs",
+        "price": 1699.0,
+        "inStockQuant": 98,
+        "imageURI": "https://www.ikea.com/us/en/images/products/viskafors-sofa-hoegalid-brown-birch__1088056_pe861031_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T10:57:21.106839"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T15:28:21.106839"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISB\u00c4CK Poster hanger, bamboo, 24\" - IKEA US",
+        "description": "VISB\u00c4CK Poster hanger, bamboo, 24\". With the two included bars, you can choose to have one on the top and one on the bottom of your chosen poster, either you can have the poster hanger only on the top, and then you can have two different motifs.",
+        "category": "Home decor & accessories",
+        "price": 9.99,
+        "inStockQuant": 49,
+        "imageURI": "https://www.ikea.com/us/en/images/products/visbaeck-poster-hanger-bamboo__0661107_pe711338_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T08:33:11.107043"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T01:04:59.107043"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VISB\u00c4CK Poster hanger, bamboo, 15 3/4\" - IKEA US",
+        "description": "VISB\u00c4CK Poster hanger, bamboo, 15 3/4\". With the two included bars, you can choose to have one on the top and one on the bottom of your chosen poster, either you can have the poster hanger only on the top, and then you can have two different motifs.",
+        "category": "Home decor & accessories",
+        "price": 7.99,
+        "inStockQuant": 16,
+        "imageURI": "https://www.ikea.com/us/en/images/products/visbaeck-poster-hanger-bamboo__0661105_pe711340_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T02:30:24.107064"
+        },
+        "updateAt": {
+            "$date": "2026-01-11T11:00:49.107064"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIRRMO LED ceiling lamp, nickel plated, 14\"800 Lumen - IKEA US",
+        "description": "VIRRMO LED ceiling lamp, nickel plated, 14\"800 Lumen This ceiling lamp in brushed metal gives you good general lighting and goes just as well in a hallway as in the kitchen. Enjoy a uniform style by combining it with other stylish lamps in the VIRRMO series. Gives a good general light.",
+        "category": "Lighting",
+        "price": 49.99,
+        "inStockQuant": 11,
+        "imageURI": "https://www.ikea.com/us/en/images/products/virrmo-led-ceiling-lamp-nickel-plated__0950976_pe800848_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T08:25:17.107082"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T16:25:14.107082"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT wreath, gold, 10 \u00be\" - IKEA US",
+        "description": "VINTERFINT wreath, gold, 10 \u00be\"",
+        "category": "Plants & planters",
+        "price": 4.99,
+        "inStockQuant": 55,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-wreath-gold__1328219_pe944737_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T01:24:37.107219"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T12:05:55.107219"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT tree ornament, glass/candy cane red/white, 3 \u00bc\" - IKEA US",
+        "description": "VINTERFINT tree ornament, glass/candy cane red/white, 3 \u00bc\"",
+        "category": "Home decor & accessories",
+        "price": 6.99,
+        "inStockQuant": 45,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-tree-ornament-glass-candy-cane-red-white__1182325_pe897166_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T02:47:22.107238"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T18:26:00.107238"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT garland, silver color, 6 \u00bd yard - IKEA US",
+        "description": "VINTERFINT garland, silver color, 6 \u00bd yard",
+        "category": "Home decor & accessories",
+        "price": 1.99,
+        "inStockQuant": 99,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-garland-silver-color__0456916_pe604440_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T09:03:57.107259"
+        },
+        "updateAt": {
+            "$date": "2026-01-06T18:10:57.107259"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT artificial wreath, indoor/outdoor/pine cone green, 23 \u00bd\" - IKEA US",
+        "description": "VINTERFINT artificial wreath, indoor/outdoor/pine cone green, 23 \u00bd\" This lush green wreath is sure to be an eye-catcher. Decorate with your favorite ornaments and hang it on the front door or a wall indoors \u2013 and let it create that right Christmas vibe, year after year.",
+        "category": "Plants & planters",
+        "price": 14.99,
+        "inStockQuant": 50,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-artificial-wreath-indoor-outdoor-pine-cone-green__1346560_pe951043_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T18:05:22.107301"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T18:38:29.107301"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT artificial potted plant, indoor/outdoor Poinsettia/red, 4 \u00be\" - IKEA US",
+        "description": "VINTERFINT artificial potted plant, indoor/outdoor Poinsettia/red, 4 \u00be\" Let your home flourish! One or more poinsettias in red or white create a welcoming vibe and make your home feel extra inviting during all the festivities of the season. Adds to the Christmas feeling in your home.",
+        "category": "Plants & planters",
+        "price": 4.99,
+        "inStockQuant": 72,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-artificial-potted-plant-indoor-outdoor-poinsettia-red__1346527_pe951016_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T04:06:24.107322"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T07:00:13.107322"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERFINT artificial potted plant, indoor/outdoor/christmas tree green, 6 \u00be\" - IKEA US",
+        "description": "VINTERFINT artificial potted plant, indoor/outdoor/christmas tree green, 6 \u00be\" Small enough to fit by the entrance or next to the sofa, but big enough to hold your favorite decorations \u2013 without shedding needles. This little Christmas tree is also just as green and lovely each year.",
+        "category": "Plants & planters",
+        "price": 19.99,
+        "inStockQuant": 87,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterfint-artificial-potted-plant-indoor-outdoor-christmas-tree-green__1346571_pe951051_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T12:32:32.107342"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T17:04:31.107342"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINTERDR\u00c4KT vase, glass, 6\" - IKEA US",
+        "description": "VINTERDR\u00c4KT vase, glass, 6\" This simple glass vase with clean lines allows the beauty of the flowers to play the starring role without stealing the spotlight. The glass vase is mouth blown by a skilled craftsperson.",
+        "category": "Home decor & accessories",
+        "price": 3.99,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vinterdraekt-vase-glass__0801580_pe768223_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T21:40:23.107360"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T16:19:21.107360"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTYRKA air quality sensor, smart - IKEA US",
+        "description": "VINDSTYRKA air quality sensor, smart Want to know more about the air you breathe at home? This easy-to-use air quality sensor gives you all the information you need. You can also make it a part of your smart home for more great functions.",
+        "category": "Home electronics",
+        "price": 59.99,
+        "inStockQuant": 55,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstyrka-air-quality-sensor-smart__1137096_pe880020_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T23:14:50.107715"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T13:49:51.107715"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA tealight holder, yellow, 2 \u00be\" - IKEA US",
+        "description": "VINDSTILLA tealight holder, yellow, 2 \u00be\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 2.99,
+        "inStockQuant": 34,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-tealight-holder-yellow__1290103_pe934521_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T21:12:15.107737"
+        },
+        "updateAt": {
+            "$date": "2025-12-21T07:08:39.107737"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA tealight holder, yellow, 4 \u00bc\" - IKEA US",
+        "description": "VINDSTILLA tealight holder, yellow, 4 \u00bc\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 4.99,
+        "inStockQuant": 27,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-tealight-holder-yellow__1290123_pe934531_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T11:37:17.107754"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T02:55:07.107754"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA tealight holder, brown, 4 \u00bc\" - IKEA US",
+        "description": "VINDSTILLA tealight holder, brown, 4 \u00bc\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 4.99,
+        "inStockQuant": 20,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-tealight-holder-brown__1290120_pe934528_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T19:39:38.107773"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T12:57:19.107773"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA tealight holder, brown, 2 \u00be\" - IKEA US",
+        "description": "VINDSTILLA tealight holder, brown, 2 \u00be\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 2.99,
+        "inStockQuant": 51,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-tealight-holder-brown__1290112_pe934524_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T19:43:32.107789"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T10:58:16.107789"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA candle holder, yellow, 6\" - IKEA US",
+        "description": "VINDSTILLA candle holder, yellow, 6\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 8.99,
+        "inStockQuant": 70,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-candle-holder-yellow__1290133_pe934535_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T02:46:57.107805"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T00:06:22.107805"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA candle holder, white, 4 \u00bc\" - IKEA US",
+        "description": "VINDSTILLA candle holder, white, 4 \u00bc\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 6.99,
+        "inStockQuant": 39,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-candle-holder-white__1188180_pe899397_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T05:39:36.107821"
+        },
+        "updateAt": {
+            "$date": "2025-12-20T05:49:35.107821"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA candle holder, white, 6\" - IKEA US",
+        "description": "VINDSTILLA candle holder, white, 6\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 12.99,
+        "inStockQuant": 88,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-candle-holder-white__1188177_pe899393_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T14:31:53.107839"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T23:12:34.107839"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDSTILLA candle holder, brown, 6\" - IKEA US",
+        "description": "VINDSTILLA candle holder, brown, 6\" This mouth blown candle holder is carefully made by a skilled glassblower who has developed the art of creating unique, finished glass products over many years. From the melting pot \u2013 to your home!",
+        "category": "Home decor & accessories",
+        "price": 8.99,
+        "inStockQuant": 97,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindstilla-candle-holder-brown__1290141_pe934539_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T12:42:56.107879"
+        },
+        "updateAt": {
+            "$date": "2026-01-05T14:55:22.107879"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIND\u00d6GA pendant lamp, bamboo/handmade, 20\" - IKEA US",
+        "description": "VIND\u00d6GA pendant lamp, bamboo/handmade, 20\" Each lampshade is unique since it is made of bamboo with natural color variations and is hand-woven by skilled craftspeople. The material brings a piece of nature into your home and spreads a calm, warm feeling.",
+        "category": "Lighting",
+        "price": 99.99,
+        "inStockQuant": 91,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindoega-pendant-lamp-bamboo-handmade__1185965_pe898630_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T17:16:38.107903"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T21:48:43.107903"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIND\u00d6GA pendant lamp, bamboo/handmade, 14\" - IKEA US",
+        "description": "VIND\u00d6GA pendant lamp, bamboo/handmade, 14\" Each lampshade is unique since it is made of bamboo with natural color variations and is hand-woven by skilled craftspeople. The material brings a piece of nature into your home and spreads a calm, warm feeling.",
+        "category": "Lighting",
+        "price": 69.99,
+        "inStockQuant": 9,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindoega-pendant-lamp-bamboo-handmade__1185929_pe898627_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-15T00:32:40.107922"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T05:06:24.107922"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDKAST table lamp, white, 10\" - IKEA US",
+        "description": "VINDKAST table lamp, white, 10\" Like a white fluffy cloud of recycled polyester, the sewn shade of this table lamp creates a nice atmosphere with its soft glow. Small, neat and easy to place where you like. Gives a soft mood light.",
+        "category": "Lighting",
+        "price": 24.99,
+        "inStockQuant": 68,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindkast-table-lamp-white__1152534_pe885404_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T07:29:11.107939"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T05:29:03.107939"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDKAST pendant lamp, white, 20\" - IKEA US",
+        "description": "VINDKAST pendant lamp, white, 20\" Like a white fluffy cloud of recycled polyester, the sewn shade of this pendant lamp creates a nice atmosphere with its soft glow. Perfect for hanging in the bedroom or over the coffee table. Gives a soft mood light.",
+        "category": "Lighting",
+        "price": 49.99,
+        "inStockQuant": 56,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindkast-pendant-lamp-white__0805857_pe769703_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T20:05:15.107955"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T18:41:55.107955"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDKAST floor lamp, white - IKEA US",
+        "description": "VINDKAST floor lamp, white Like a white fluffy cloud of recycled polyester, the sewn shade of this floor lamp creates a nice atmosphere with its soft glow. Perfect to have in the bedroom or by the coffee table. Gives a soft mood light.",
+        "category": "Lighting",
+        "price": 49.99,
+        "inStockQuant": 56,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindkast-floor-lamp-white__1180020_pe896176_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T16:59:59.107971"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T01:18:04.107971"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDFL\u00c4KT vase, gold, 10\" - IKEA US",
+        "description": "VINDFL\u00c4KT vase, gold, 10\" Use the vases with flowers or alone, as beautiful objects in their own right.",
+        "category": "Home decor & accessories",
+        "price": 24.99,
+        "inStockQuant": 29,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindflaekt-vase-gold__0638800_pe699165_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T19:49:41.107987"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T14:43:53.107987"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDFL\u00c4KT vase, black, 10\" - IKEA US",
+        "description": "VINDFL\u00c4KT vase, black, 10\"",
+        "category": "Home decor & accessories",
+        "price": 19.99,
+        "inStockQuant": 26,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindflaekt-vase-black__1118666_pe873211_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T04:19:00.108026"
+        },
+        "updateAt": {
+            "$date": "2026-01-01T03:38:52.108026"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VINDFL\u00c4KT plant pot, silver color, 6\" - IKEA US",
+        "description": "VINDFL\u00c4KT plant pot, silver color, 6\" Give your plants and home a facelift by adding new pots to your plants. Enhance a style or season, or have fun with a new splash of color in the room. It\u2019s satisfying and doesn\u2019t have to cost a fortune.",
+        "category": "Plants & planters",
+        "price": 7.99,
+        "inStockQuant": 25,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vindflaekt-plant-pot-silver-color__0797036_pe766685_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T12:42:36.108056"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T12:12:19.108056"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white white/white Tibbleby beige-gray, 707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white white/white Tibbleby beige-gray, 707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 399.99,
+        "inStockQuant": 51,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-white-white-tibbleby-beige-gray__1388789_pe964959_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T07:54:37.108481"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T08:12:32.108481"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white white/white, 707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white white/white, 707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 309.99,
+        "inStockQuant": 66,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-white-white__1388775_pe964948_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T11:54:02.108507"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T12:07:03.108507"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white/white Tibbleby beige-gray, 471/4/707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white/white Tibbleby beige-gray, 471/4/707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 379.99,
+        "inStockQuant": 85,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-white-tibbleby-beige-gray__1388781_pe964951_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T02:01:09.108527"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T22:44:34.108527"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white/white, 471/4/707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white/white, 471/4/707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 289.99,
+        "inStockQuant": 27,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-white__1388788_pe964958_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T07:18:34.108545"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T18:18:56.108545"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white white/green Tibbleby gray-green, 707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white white/green Tibbleby gray-green, 707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 399.99,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-white-green-tibbleby-gray-green__1388782_pe964952_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T08:49:26.108563"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T06:58:41.108563"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 6 chairs, white/green Tibbleby gray-green, 471/4/707/8x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 6 chairs, white/green Tibbleby gray-green, 471/4/707/8x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 379.99,
+        "inStockQuant": 37,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-6-chairs-white-green-tibbleby-gray-green__1388773_pe964946_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-30T11:51:50.108602"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T05:02:36.108602"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 4 chairs, white white/white Tibbleby beige-gray, 421/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 4 chairs, white white/white Tibbleby beige-gray, 421/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 269.99,
+        "inStockQuant": 27,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-4-chairs-white-white-white-tibbleby-beige-gray__1388779_pe964949_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T21:47:49.108627"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T05:17:44.108627"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 4 chairs, white white/white Tibbleby beige-gray, 491/4x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 4 chairs, white white/white Tibbleby beige-gray, 491/4x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 259.99,
+        "inStockQuant": 63,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-4-chairs-white-white-white-tibbleby-beige-gray__1388785_pe964955_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T15:36:20.108647"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T22:55:07.108647"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 4 chairs, white white/white, 421/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 4 chairs, white white/white, 421/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 209.99,
+        "inStockQuant": 67,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-4-chairs-white-white-white__1388798_pe964971_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T15:00:58.108664"
+        },
+        "updateAt": {
+            "$date": "2025-12-17T07:39:52.108664"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIHALS / VIHALS table and 4 chairs, white white/white, 491/4x291/8\" - IKEA US",
+        "description": "VIHALS / VIHALS table and 4 chairs, white white/white, 491/4x291/8\" VIHALS dining furniture offers good value with style, versatility and lasting quality. The tables and chairs come in different shapes, sizes and colors to meet your specific taste and needs.",
+        "category": "Tables & chairs",
+        "price": 199.99,
+        "inStockQuant": 18,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vihals-vihals-table-and-4-chairs-white-white-white__1388770_pe964943_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T19:25:06.108682"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T17:24:27.108682"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VIDJA floor lamp, white, 54\" - IKEA US",
+        "description": "VIDJA floor lamp, white, 54\" Decorative floor lamp that spreads a soft and warm light in the room through the tube-shaped white textile shade. Just as nice in the living room as in the hallway or bedroom to create a cosy atmosphere. Fabric shade gives a diffused and decorative light.",
+        "category": "Lighting",
+        "price": 69.99,
+        "inStockQuant": 12,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vidja-floor-lamp-white__0606512_pe682388_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T13:35:22.109814"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T18:49:10.109814"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENSTEN LED light strip, white, 39\" - IKEA US",
+        "description": "VATTENSTEN LED light strip, white, 39\" With this LED lighting strip, you can unleash your creativity and decorate with light in all kinds of places in your home \u2013 above cabinets, by the TV or under the sofa. The possibilities are endless! Simple to turn on and off by using the button on the cable.",
+        "category": "Lighting",
+        "price": 7.99,
+        "inStockQuant": 24,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattensten-led-light-strip-white__1107921_pe869230_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T20:17:26.111571"
+        },
+        "updateAt": {
+            "$date": "2026-01-07T17:06:47.111571"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENSTEN LED light strip, multicolor, 118\" - IKEA US",
+        "description": "VATTENSTEN LED light strip, multicolor, 118\" With this LED lighting strip, you can unleash your creativity and decorate with light in all kinds of places in your home \u2013 above cabinets, by the TV or under the sofa. The possibilities are endless!",
+        "category": "Lighting",
+        "price": 27.99,
+        "inStockQuant": 97,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattensten-led-light-strip-multicolor__1107965_pe869239_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T22:07:09.111597"
+        },
+        "updateAt": {
+            "$date": "2026-01-06T16:29:02.111597"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENSTEN LED light strip, multicolor, 39\" - IKEA US",
+        "description": "VATTENSTEN LED light strip, multicolor, 39\" With this LED lighting strip, you can unleash your creativity and decorate with light in all kinds of places in your home \u2013 above cabinets, by the TV or under the sofa. The possibilities are endless!",
+        "category": "Lighting",
+        "price": 12.99,
+        "inStockQuant": 7,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattensten-led-light-strip-multicolor__1107914_pe869229_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T04:19:05.111616"
+        },
+        "updateAt": {
+            "$date": "2026-01-10T01:44:52.111616"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENKRASSE watering can, ivory/gold, 30 oz - IKEA US",
+        "description": "VATTENKRASSE watering can, ivory/gold, 30 oz The idea with this watering can is that it looks so good that you happily leave it out on display when not using it. Then it\u2019s always close at hand \u2013 and makes it easy to remember to water your plants! The watering can is both functional and decorative.",
+        "category": "Plants & planters",
+        "price": 14.99,
+        "inStockQuant": 29,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattenkrasse-watering-can-ivory-gold__0614222_pe686847_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T04:23:03.111677"
+        },
+        "updateAt": {
+            "$date": "2026-01-08T00:29:09.111677"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENKRASSE watering can, black-green/gold, 68 oz - IKEA US",
+        "description": "VATTENKRASSE watering can, black-green/gold, 68 oz Take care of your growing friends. VATTENKRASSE watering can, mister and propagation set help you create a greener home \u2013 and the stylish design also means that you will happily leave them out on display.",
+        "category": "Plants & planters",
+        "price": 19.99,
+        "inStockQuant": 38,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattenkrasse-watering-can-black-green-gold__1227732_pe915654_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T18:00:51.111696"
+        },
+        "updateAt": {
+            "$date": "2026-01-05T07:40:07.111696"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENKRASSE propagation set, clear glass ivory/gold - IKEA US",
+        "description": "VATTENKRASSE propagation set, clear glass ivory/gold Take care of your growing friends. VATTENKRASSE watering can, mister and propagation set help you create a greener home \u2013 and the stylish design also means that you will happily leave them out on display.",
+        "category": "Plants & planters",
+        "price": 19.99,
+        "inStockQuant": 8,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattenkrasse-propagation-set-clear-glass-ivory-gold__1227658_pe915641_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T13:46:56.111715"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T03:52:58.111715"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VATTENKRASSE plant mister, ivory/gold, 12 oz - IKEA US",
+        "description": "VATTENKRASSE plant mister, ivory/gold, 12 oz Take care of your growing friends. VATTENKRASSE watering can, mister and propagation set help you create a greener home \u2013 and the stylish design also means that you will happily leave them out on display.",
+        "category": "Plants & planters",
+        "price": 12.99,
+        "inStockQuant": 92,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vattenkrasse-plant-mister-ivory-gold__1224053_pe914817_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T19:16:31.111733"
+        },
+        "updateAt": {
+            "$date": "2025-12-22T00:00:59.111733"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5THULT LED cabinet/mirror light, aluminum color, 14\" - IKEA US",
+        "description": "V\u00c5THULT LED cab/mirror light, aluminum color, 14\" This lamp's clean design with straight shapes suits almost any bathroom. Easy to mount over a mirror or wall cabinet and gives you a glare-free light while shaving or putting on make-up.",
+        "category": "Lighting",
+        "price": 34.99,
+        "inStockQuant": 45,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vathult-led-cab-mirror-light-aluminum-color__1008969_pe827396_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T12:18:58.111805"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T14:05:59.111805"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VARMFRONT portable charger, blue, 5200 mAh - IKEA US",
+        "description": "VARMFRONT portable charger, blue, 5200 mAh VARMFRONT is the perfect powerbank to bring on your trips. You can charge 2 products at the same time \u2013 and always make sure that your batteries are charged You can charge up to 2 devices at the same time since the charger has 1 USB-A port and 1 USB-C port",
+        "category": "Home electronics",
+        "price": 21.99,
+        "inStockQuant": 80,
+        "imageURI": "https://www.ikea.com/us/en/images/products/varmfront-portable-charger-blue__1172512_pe893329_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T16:33:21.111926"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T09:39:05.111926"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VARMBLIXT LED wall/mirror lamp, dimmable/bronze color round - IKEA US",
+        "description": "VARMBLIXT LED wall/mirror lamp, dimmable/bronze color round A warm light spreads through the lamp's bronze-colored glass while the tinted mirror captures natural light, making it bounce out into the room. An interplay that becomes a picture with shifting motifs.",
+        "category": "Lighting",
+        "price": 129.99,
+        "inStockQuant": 28,
+        "imageURI": "https://www.ikea.com/us/en/images/products/varmblixt-led-wall-mirror-lamp-dimmable-bronze-color-round__1116854_pe872604_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-21T10:08:06.111971"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T00:10:16.111971"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VARMBLIXT LED wall lamp, white metal/circle - IKEA US",
+        "description": "VARMBLIXT LED wall lamp, white metal/circle Have you ever experienced the seconds before a solar eclipse? Then you will probably recognize the glow from this round LED wall lamp. Like a beautiful painting, its soft light is sure to be an eye-catcher.",
+        "category": "Lighting",
+        "price": 99.99,
+        "inStockQuant": 80,
+        "imageURI": "https://www.ikea.com/us/en/images/products/varmblixt-led-wall-lamp-white-metal-circle__1116838_pe872594_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T14:05:08.111991"
+        },
+        "updateAt": {
+            "$date": "2025-12-31T03:01:03.111991"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VARMBLIXT LED table/wall lamp, orange glass/round, 12\" - IKEA US",
+        "description": "VARMBLIXT LED table/wall lamp, orange glass/round, 12\" When the light passes through the lamp\u2019s orange glass, the soft donut-like shape shines with a warm glow. A magical sight that\u2019s an eye-catcher, regardless if it\u2019s on a table or hanging on a wall. Creates a soft, cozy mood light in your home.",
+        "category": "Lighting",
+        "price": 69.99,
+        "inStockQuant": 59,
+        "imageURI": "https://www.ikea.com/us/en/images/products/varmblixt-led-table-wall-lamp-orange-glass-round__1116616_pe872535_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-20T10:22:15.112009"
+        },
+        "updateAt": {
+            "$date": "2025-12-24T10:17:58.112009"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VARMBLIXT LED pendant lamp, white frosted glass, 18\" - IKEA US",
+        "description": "VARMBLIXT LED pendant lamp, white frosted glass, 18\" This pendant lamp has 3 U-shaped arms in frosted glass with LED lighting strips inside that spread a warm light. Let it be an alluring beacon of light that makes the dining table a natural gathering point.",
+        "category": "Lighting",
+        "price": 299.99,
+        "inStockQuant": 86,
+        "imageURI": "https://www.ikea.com/us/en/images/products/varmblixt-led-pendant-lamp-white-frosted-glass__1117321_pe872689_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T02:59:32.112026"
+        },
+        "updateAt": {
+            "$date": "2025-12-20T08:33:24.112026"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5RDTR\u00c4D self-watering plant pot, with wheels indoor/outdoor/transparent anthracite, 12 \u00bd\" - IKEA US",
+        "description": "V\u00c5RDTR\u00c4D self-watering plant pot, with wheels indoor/outdoor/transparent anthracite, 12 \u00bd\" Forgetting to water is human. With V\u00c5RDTR\u00c4D self-watering plant pot, your plants will still forgive you \u2013 great when you're away or have other things on your mind than watering. And it looks nice too!",
+        "category": "Plants & planters",
+        "price": 24.99,
+        "inStockQuant": 98,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vardtraed-self-watering-plant-pot-with-wheels-indoor-outdoor-transparent-anthracite__1361138_pe954680_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T09:48:15.112190"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T07:48:14.112190"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 6\" - IKEA US",
+        "description": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 6\" Forgetting to water is human. With V\u00c5RDTR\u00c4D self-watering plant pot, your plants will still forgive you \u2013 great when you're away or have other things on your mind than watering. And it looks nice too!",
+        "category": "Plants & planters",
+        "price": 7.99,
+        "inStockQuant": 63,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vardtraed-self-watering-plant-pot-indoor-outdoor-transparent-anthracite__1418737_pe976713_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T19:42:01.112216"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T09:36:46.112216"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 7 \u00bd\" - IKEA US",
+        "description": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 7 \u00bd\" Forgetting to water is human. With V\u00c5RDTR\u00c4D self-watering plant pot, your plants will still forgive you \u2013 great when you're away or have other things on your mind than watering. And it looks nice too!",
+        "category": "Plants & planters",
+        "price": 12.99,
+        "inStockQuant": 12,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vardtraed-self-watering-plant-pot-indoor-outdoor-transparent-anthracite__1433943_pe983316_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T06:23:08.112261"
+        },
+        "updateAt": {
+            "$date": "2026-01-11T13:39:54.112261"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 9 \u00bd\" - IKEA US",
+        "description": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 9 \u00bd\" Forgetting to water is human. With V\u00c5RDTR\u00c4D self-watering plant pot, your plants will still forgive you \u2013 great when you're away or have other things on your mind than watering. And it looks nice too!",
+        "category": "Plants & planters",
+        "price": 19.99,
+        "inStockQuant": 61,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vardtraed-self-watering-plant-pot-indoor-outdoor-transparent-anthracite__1361120_pe954703_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T13:37:36.112283"
+        },
+        "updateAt": {
+            "$date": "2026-01-01T17:25:41.112283"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 3 \u00bd\" - IKEA US",
+        "description": "V\u00c5RDTR\u00c4D self-watering plant pot, indoor/outdoor transparent/anthracite, 3 \u00bd\" Forgetting to water is human. With V\u00c5RDTR\u00c4D self-watering plant pot, your plants will still forgive you \u2013 great when you're away or have other things on your mind than watering. And it looks nice too!",
+        "category": "Plants & planters",
+        "price": 3.99,
+        "inStockQuant": 32,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vardtraed-self-watering-plant-pot-indoor-outdoor-transparent-anthracite__1418745_pe976716_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T12:56:43.112303"
+        },
+        "updateAt": {
+            "$date": "2026-01-05T16:08:13.112303"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY portable bluetooth speaker, waterproof/pink - IKEA US",
+        "description": "VAPPEBY portable bluetooth speaker, waterproof/pink Bring your favorite music everywhere \u2013 out in the garden, to the beach and into the bathroom. VAPPEBY portable speaker is waterproof and packs a lot of sound for its size. Pair two to enjoy stereo sound!",
+        "category": "Home electronics",
+        "price": 15.99,
+        "inStockQuant": 26,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-portable-bluetooth-speaker-waterproof-pink__1320825_pe941384_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-02T18:05:38.112821"
+        },
+        "updateAt": {
+            "$date": "2026-01-08T07:53:37.112821"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY portable bluetooth speaker, waterproof/blue - IKEA US",
+        "description": "VAPPEBY portable bluetooth speaker, waterproof/blue Bring your favorite music everywhere \u2013 out in the garden, to the beach and into the bathroom. VAPPEBY portable speaker is waterproof and packs a lot of sound for its size. Pair two to enjoy stereo sound!",
+        "category": "Home electronics",
+        "price": 15.99,
+        "inStockQuant": 11,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-portable-bluetooth-speaker-waterproof-blue__1320823_pe941383_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-23T09:38:30.112844"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T17:16:19.112844"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY portable bluetooth speaker, waterproof/black - IKEA US",
+        "description": "VAPPEBY portable bluetooth speaker, waterproof/black Bring your favorite music everywhere \u2013 out in the garden, to the beach and into the bathroom. VAPPEBY portable speaker is waterproof and packs a lot of sound for its size. Pair two to enjoy stereo sound!",
+        "category": "Home electronics",
+        "price": 15.99,
+        "inStockQuant": 73,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-portable-bluetooth-speaker-waterproof-black__1169651_pe892517_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T03:41:55.112862"
+        },
+        "updateAt": {
+            "$date": "2026-01-11T00:20:50.112862"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY front for bluetooth speaker, black, 8x8\" - IKEA US",
+        "description": "VAPPEBY front for bluetooth speaker, black, 8x8\" With this extra front you can vary the look of your VAPPEBY Bluetooth speaker, gen 3. And perhaps enjoy the clear, powerful sound and the handy Spotify Tap\u2122 playback function even more!",
+        "category": "Home electronics",
+        "price": 10.0,
+        "inStockQuant": 12,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-front-for-bluetooth-speaker-black__1240728_pe919944_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T00:18:34.112883"
+        },
+        "updateAt": {
+            "$date": "2026-01-09T10:25:52.112883"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speakers, white/set of 2 gen 3, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speakers, white/set of 2 gen 3, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 159.98,
+        "inStockQuant": 70,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speakers-white-set-of-2-gen-3__1227336_pe915604_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T05:39:29.112904"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T15:01:48.112904"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speakers, black/set of 2 waterproof - IKEA US",
+        "description": "VAPPEBY bluetooth speakers, black/set of 2 waterproof Bring your favorite music everywhere \u2013 out in the garden, to the beach and into the bathroom. VAPPEBY portable speaker is waterproof and packs a lot of sound for its size. Pair two to enjoy stereo sound!",
+        "category": "Home electronics",
+        "price": 31.98,
+        "inStockQuant": 20,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speakers-black-set-of-2-waterproof__1227562_pe915620_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T13:11:40.112922"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T00:25:03.112922"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speakers, black/set of 2 gen 3, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speakers, black/set of 2 gen 3, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 159.98,
+        "inStockQuant": 81,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speakers-black-set-of-2-gen-3__1227311_pe915600_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-03T11:33:05.112965"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T10:12:56.112965"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, white/gen 3, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, white/gen 3, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 79.99,
+        "inStockQuant": 18,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-white-gen-3__1218130_pe913142_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T05:07:24.112986"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T19:44:40.112986"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, peanut shape/pink - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, peanut shape/pink Dance to disco lights pulsating to favorite music or fall asleep snug with a night light and story. VAPPEBY speaker with lamp is a safe and fun friend for your child \u2013 anytime and anywhere in the home.",
+        "category": "Home electronics",
+        "price": 69.99,
+        "inStockQuant": 70,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-peanut-shape-pink__1098424_pe865394_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T09:27:42.113003"
+        },
+        "updateAt": {
+            "$date": "2025-12-20T01:53:45.113003"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, peanut shape/green - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, peanut shape/green Dance to disco lights pulsating to favorite music or fall asleep snug with a night light and story. VAPPEBY speaker with lamp is a safe and fun friend for your child \u2013 anytime and anywhere in the home.",
+        "category": "Home electronics",
+        "price": 69.99,
+        "inStockQuant": 39,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-peanut-shape-green__1098407_pe865384_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-01T14:02:58.113024"
+        },
+        "updateAt": {
+            "$date": "2026-01-08T08:35:00.113024"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker lamp, outdoor/gray - IKEA US",
+        "description": "VAPPEBY bluetooth speaker lamp, outdoor/gray Music in the garden or on the balcony? Bring VAPPEBY speaker lamp outside and fill relaxing times with your favourite songs. The Spotify Tap playback\u2122 function puts the music at your fingertips!",
+        "category": "Home electronics",
+        "price": 89.99,
+        "inStockQuant": 58,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-lamp-outdoor-gray__1047538_pe843422_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-22T09:32:48.113041"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T23:39:30.113041"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker lamp, outdoor/blue - IKEA US",
+        "description": "VAPPEBY bluetooth speaker lamp, outdoor/blue Music in the garden or on the balcony? Bring VAPPEBY speaker lamp outside and fill relaxing times with your favourite songs. The Spotify Tap playback\u2122 function puts the music at your fingertips!",
+        "category": "Home electronics",
+        "price": 89.99,
+        "inStockQuant": 71,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-lamp-outdoor-blue__1047521_pe843414_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T08:04:31.113058"
+        },
+        "updateAt": {
+            "$date": "2025-12-19T10:35:04.113058"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, gen 3 white/black, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, gen 3 white/black, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 89.99,
+        "inStockQuant": 53,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-gen-3-white-black__1245928_pe921865_s5.jpg",
+        "createAt": {
+            "$date": "2026-01-04T11:28:02.113103"
+        },
+        "updateAt": {
+            "$date": "2026-01-12T12:35:38.113103"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, gen 3/black, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, gen 3/black, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 89.99,
+        "inStockQuant": 21,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-gen-3-black__1240735_pe919460_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T08:32:35.113124"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T15:07:25.113124"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VAPPEBY bluetooth speaker, black/gen 3, 8x8\" - IKEA US",
+        "description": "VAPPEBY bluetooth speaker, black/gen 3, 8x8\" VAPPEBY Bluetooth speaker, gen 3 has a clear, powerful sound \u2013 and comes with the Spotify Tap\u2122 playback function. Get two for stereo sound at home or add a battery and bring your music everywhere.",
+        "category": "Home electronics",
+        "price": 79.99,
+        "inStockQuant": 27,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vappeby-bluetooth-speaker-black-gen-3__1218129_pe913141_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T00:30:10.113142"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T12:30:10.113142"
+        },
+        "__v": 1
+    },
+    {
+        "name": "VALLHORN wireless motion sensor, smart/white - IKEA US",
+        "description": "VALLHORN wireless motion sensor, smart/white Use VALLHORN motion sensor anywhere at home \u2013 place it in a corner, in the middle of a wall or on a shelf or other flat surface. A simple way to always have light where it\u2019s needed, indoors and outdoors.",
+        "category": "Smart home",
+        "price": 11.99,
+        "inStockQuant": 59,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vallhorn-wireless-motion-sensor-smart-white__1181868_pe899222_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-24T11:09:54.113626"
+        },
+        "updateAt": {
+            "$date": "2025-12-26T20:50:37.113626"
+        },
+        "__v": 1
+    },
+    {
+        "name": "V\u00c5GDAL connection cord, white, 1373/4\" - IKEA US",
+        "description": "V\u00c5GDAL connection cord, white, 1373/4\" With this 11.5 foot cord, you can connect one or a group of MITTLED LED lighting strips to one and the same TR\u00c5DFRI driver to control them wirelessly \u2013 and at the same time.",
+        "category": "Smart home",
+        "price": 6.0,
+        "inStockQuant": 26,
+        "imageURI": "https://www.ikea.com/us/en/images/products/vagdal-connection-cord-white__0869948_pe781542_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T19:06:19.114560"
+        },
+        "updateAt": {
+            "$date": "2025-12-18T03:54:48.114560"
+        },
+        "__v": 1
+    },
+    {
+        "name": "UPP\u00c5TVIND filter for particle removal - IKEA US",
+        "description": "UPP\u00c5TVIND filter for particle removal UPP\u00c5TVIND filter for particle removal absorbs airborne particles such as dust, pollen and cigarette smoke. The filter is easy to install and remove to replace with a new filter.",
+        "category": "Home electronics",
+        "price": 14.0,
+        "inStockQuant": 10,
+        "imageURI": "https://www.ikea.com/us/en/images/products/uppatvind-filter-for-particle-removal__1124264_pe875119_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T11:38:59.119683"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T18:50:03.119683"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TV\u00c4RDRAG / TR\u00c5DFRI lighting kit, black - IKEA US",
+        "description": "TV\u00c4RDRAG / TR\u00c5DFRI lighting kit, black With this lamp, it\u2019s simple to direct the light precisely where you want it over your cabinet or wardrobe. And since the lamp head can be angled, you can even direct light on the contents if you like.",
+        "category": "Smart home",
+        "price": 99.99,
+        "inStockQuant": 14,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tvaerdrag-tradfri-lighting-kit-black__1267804_pe928491_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T04:30:13.121696"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T22:19:20.121696"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TV\u00c4RDRAG / TR\u00c5DFRI lighting kit, black - IKEA US",
+        "description": "TV\u00c4RDRAG / TR\u00c5DFRI lighting kit, black With this lamp, it\u2019s simple to direct the light precisely where you want it over your cabinet or wardrobe. And since the lamp head can be angled, you can even direct light on the contents if you like.",
+        "category": "Smart home",
+        "price": 149.99,
+        "inStockQuant": 5,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tvaerdrag-tradfri-lighting-kit-black__1231674_pe916019_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-31T21:07:18.121762"
+        },
+        "updateAt": {
+            "$date": "2026-01-06T13:00:50.121762"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TRETAKT plug with remote control, smart - IKEA US",
+        "description": "TRETAKT plug with remote control, smart With this pre-paired kit with a plug and remote control you can connect any lamp, coffee maker or other household appliance and steer it with the on/off switch. An easy way to use smart products!",
+        "category": "Smart home",
+        "price": 18.99,
+        "inStockQuant": 52,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tretakt-plug-with-remote-control-smart__1286500_pe933579_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T23:20:27.125712"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T01:41:14.125712"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TRETAKT plug, smart - IKEA US",
+        "description": "TRETAKT plug, smart This plug allows you to connect any lamp, coffee maker or other household appliance and control it from a distance, either with a remote control, motion sensor or smart hub. Easy and smart!",
+        "category": "Smart home",
+        "price": 9.99,
+        "inStockQuant": 30,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tretakt-plug-smart__1286526_pe933589_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T16:04:31.125743"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T06:54:22.125743"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN block-out cellular blind w hub kit, white, 34x763/4\" - IKEA US",
+        "description": "TREDANSEN block-out cellular blind w hub kit, white, 34x763/4\" This kit lets you adjust TREDANSEN block-out cellular blind remotely. Combined with DIRIGERA hub you can operate the blind and other IKEA smart products separately or in sync in the IKEA Home smart app.",
+        "category": "Smart home",
+        "price": 268.99,
+        "inStockQuant": 88,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-block-out-cellular-blind-w-hub-kit-white__1152175_pe885174_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-14T14:18:56.125766"
+        },
+        "updateAt": {
+            "$date": "2025-12-21T19:30:07.125766"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 38x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 38x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 169.99,
+        "inStockQuant": 83,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-27T22:36:09.125804"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T04:36:23.125804"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 23x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 23x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 129.99,
+        "inStockQuant": 91,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-17T03:10:13.125827"
+        },
+        "updateAt": {
+            "$date": "2025-12-23T14:22:04.125827"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 32x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 32x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 154.99,
+        "inStockQuant": 25,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-16T01:16:51.125846"
+        },
+        "updateAt": {
+            "$date": "2025-12-25T09:43:56.125846"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 30x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 30x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 149.99,
+        "inStockQuant": 13,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-25T19:21:20.125865"
+        },
+        "updateAt": {
+            "$date": "2026-01-04T22:45:40.125865"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 34x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 34x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 159.99,
+        "inStockQuant": 5,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-19T03:52:39.125886"
+        },
+        "updateAt": {
+            "$date": "2025-12-29T19:45:33.125886"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 48x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 48x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 179.99,
+        "inStockQuant": 95,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-26T15:11:24.125930"
+        },
+        "updateAt": {
+            "$date": "2025-12-28T16:42:52.125930"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 36x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 36x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 164.99,
+        "inStockQuant": 98,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-18T11:09:47.125953"
+        },
+        "updateAt": {
+            "$date": "2025-12-27T06:47:54.125953"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 27x76 \u00be\" - IKEA US",
+        "description": "TREDANSEN black-out cellular blind, smart wireless/battery operated white, 27x76 \u00be\" TREDANSEN cellular blind blocks out light and insulates against window drafts and heat from the sun. Use with remote control or with DIRIGERA hub and IKEA Home smart app for more smart control options.",
+        "category": "Smart home",
+        "price": 139.99,
+        "inStockQuant": 92,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white__0980707_pe815130_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-29T09:59:06.125973"
+        },
+        "updateAt": {
+            "$date": "2026-01-02T22:03:25.125973"
+        },
+        "__v": 1
+    },
+    {
+        "name": "TR\u00c5DFRI / STYRBAR starter kit, smart wireless dimmable/white spectrum globe, P45 E12 - IKEA US",
+        "description": "TR\u00c5DFRI / STYRBAR starter kit, smart wireless dimmable/white spectrum globe, P45 E12 Little and smart. With this small light bulb you can enjoy smart lighting even in lamps with small lampshades and adjust the light exactly as you like. By dimming the lighting, you change the mood in the room.",
+        "category": "Smart home",
+        "price": 24.98,
+        "inStockQuant": 20,
+        "imageURI": "https://www.ikea.com/us/en/images/products/tradfri-styrbar-starter-kit-smart-wireless-dimmable-white-spectrum-globe__1170289_pe892764_s5.jpg",
+        "createAt": {
+            "$date": "2025-12-28T13:08:56.126330"
+        },
+        "updateAt": {
+            "$date": "2026-01-03T07:11:44.126330"
+        },
+        "__v": 1
+    }
+]

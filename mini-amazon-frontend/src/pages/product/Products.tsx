@@ -102,9 +102,9 @@ export default function Products() {
 
 // helper
 const CONFIGS = {
-  "magic-v1-xs": { page_size: 6 },
-  "magic-v1-sm": { page_size: 12 },
-  "magic-v1-md": { page_size: 24 },
+  "magic-v1-xs": { page_size: 3 },
+  "magic-v1-sm": { page_size: 6 },
+  "magic-v1-md": { page_size: 12 },
 };
 type ValidKeys = keyof typeof CONFIGS;
 

@@ -6,8 +6,8 @@ import {
   Select,
   Image,
   Popconfirm,
-  Tooltip,
   Modal,
+  Space,
 } from "antd";
 const { TextArea } = Input;
 import type { ProductCreated, Product } from "@/app/types";
@@ -147,47 +147,45 @@ export default function ProductForm({
           )}
         </Form.Item>
 
-        <Tooltip
-          title={
-            isCreate ? "Create a new product!" : "Upate the product information"
-          }
-        >
-          <Button type="primary" htmlType="submit">
-            Save
-          </Button>
-        </Tooltip>
-
-        <Popconfirm
-          title="Are you sure to cancel?"
-          description={
-            isCreate
-              ? "You will not create a new product!"
-              : "The product information will keep unchanged!"
-          }
-          onConfirm={onCancel}
-        >
-          <Tooltip
-            title={
+        <Space size="large">
+          <Popconfirm
+            title="Are you sure to save the product information?"
+            description={
               isCreate
-                ? "Exit to create a new product!"
-                : "Exit to upate the product information"
+                ? "You will add a new product to the database!"
+                : "You will upate the product information!"
             }
+            trigger="hover"
+          >
+            <Button type="primary" htmlType="submit">
+              Save
+            </Button>
+          </Popconfirm>
+
+          <Popconfirm
+            title="Are you sure to cancel?"
+            description={
+              isCreate
+                ? "You will not create a new product!"
+                : "The product information will keep unchanged!"
+            }
+            onConfirm={onCancel}
+            trigger="hover"
           >
             <Button> Cancel </Button>
-          </Tooltip>
-        </Popconfirm>
-
-        {!isCreate && (
-          <Popconfirm
-            title="Are you sure to delete this product ?"
-            description="This product will be removed from product list!"
-            onConfirm={onDelete}
-          >
-            <Tooltip title="Delete this item from database!">
-              <Button onClick={onDelete}> Delete </Button>
-            </Tooltip>
           </Popconfirm>
-        )}
+
+          {!isCreate && (
+            <Popconfirm
+              title="Are you sure to delete this product ?"
+              description="This product will be removed from product list!"
+              onConfirm={onDelete}
+              trigger="hover"
+            >
+              <Button> Delete </Button>
+            </Popconfirm>
+          )}
+        </Space>
       </Form>
     </>
   );

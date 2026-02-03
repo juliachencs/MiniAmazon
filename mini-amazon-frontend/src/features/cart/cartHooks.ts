@@ -1,12 +1,16 @@
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { authAPI } from "@/features/auth/authAPI";
 import { cartThunks } from "@/features/cart/cartThunks";
+import { message } from "antd";
 
 import { useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function useCart() {
   const mode = useAppSelector((state) => state.cart.mode);
   const data = useAppSelector((state) => state.cart.data);
   const error = useAppSelector((state) => state.cart.error);
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -15,6 +19,19 @@ export function useCart() {
       dispatch(cartThunks.getCart());
     }
   }, [mode, dispatch]);
+
+  useEffect(() => {
+    if (error?.status === 401) {
+      dispatch(authAPI.endpoints.signout.initiate()).then(() => {
+        message.warning(
+          "Your login session is expired! We have signed you out. Please sigin in again",
+        );
+        navigate("/login");
+      });
+
+      console.log("enconter 401");
+    }
+  }, [error, dispatch, navigate]);
 
   return useMemo(() => ({ mode, data, error }), [mode, data, error]);
 }

@@ -1,4 +1,4 @@
-import LinkButton from "@/components/NavButtons";
+import NavButton from "@/components/NavButtons";
 import { AuthQueryError } from "@/errors/AuthQueryError";
 import { handleQueryError } from "@/errors/handlers";
 import { useSignoutMutation } from "@/features/auth/authAPI";
@@ -33,7 +33,7 @@ export default function AuthAvatar() {
         <Button
           icon={<UserOutlined />}
           type="text"
-          onClick={onSignout}
+          onClick={() => onSignout()}
           loading={isLoading}
           style={{ color: "var(--primary-hl-bg-color)" }}
         >
@@ -46,7 +46,7 @@ export default function AuthAvatar() {
         <Button
           icon={<UserOutlined />}
           type="text"
-          onClick={onSignout}
+          onClick={() => onSignout()}
           loading={isLoading}
         >
           Sign out
@@ -55,9 +55,9 @@ export default function AuthAvatar() {
 
     default:
       return (
-        <LinkButton icon={<UserOutlined />} type="text" to="/login">
+        <NavButton icon={<UserOutlined />} type="text" to="/login">
           Sign in
-        </LinkButton>
+        </NavButton>
       );
   }
 }
