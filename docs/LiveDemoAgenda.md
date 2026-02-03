@@ -19,6 +19,8 @@
 	- Error boundary
 	
 ## Code walkthrough(~15min)
+
+### Backend (Jimmy, 6-8min)
 ### Frontend (Julia, 6-8min)
 - General
 	- Libraries
@@ -27,12 +29,11 @@
 - State management and data fetch  
   - Auth - RTK Query  
   - Product - RTK Query
-	- Cart - RTK Thunk
+  - Cart - RTK Thunk
   	- API
   	- Thunks API -> Action creators 
   	- Slice
   	- Hooks
+- Error Handling
 - Responsive page size
   - URL validation and corrections
-
-### Backend (Jimmy, 6-8min)
